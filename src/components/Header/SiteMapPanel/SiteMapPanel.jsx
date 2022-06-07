@@ -38,17 +38,6 @@ const SiteMapPanel = () => {
           })}
         </ul>
       </nav>
-
-      <div>
-        <ul>
-          <li>
-            <a href="">Закладки</a>
-          </li>
-          <li>
-            <a href=""></a>Вход и регистрация
-          </li>
-        </ul>
-      </div>
     </div>
   );
 };
