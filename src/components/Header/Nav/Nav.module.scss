@@ -1,0 +1,26 @@
+@import "./../../../styles/_colors.scss";
+
+.headerNav {
+  height: 60px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerNavList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+.headerNavListItem a {
+  color: #1e2123;
+  text-decoration: none;
+  padding-bottom: 9px;
+}
+.headerNavListItem a:hover {
+  border-bottom: 3px solid $yellow;
+  color: $black;
+}
