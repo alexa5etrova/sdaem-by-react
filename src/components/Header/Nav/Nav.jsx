@@ -1,5 +1,6 @@
 import styles from "./Nav.module.scss";
 import logo from "./../../../assets/images/logo.png";
+import Button from "../../Button/Button";
 const CatalogueNavData = [
   { name: "Квартиры на сутки", id: 111, href: "#" },
   { name: "Коттеджи и усадьбы", id: 112, href: "#" },
@@ -14,14 +15,17 @@ const CatalogueNavData = [
 const Nav = (props) => {
   return (
     <nav className={styles.headerNav}>
-      <img src={logo} alt="logo" />
-      <ul className={styles.headerNavList}>
-        {CatalogueNavData.map((item) => (
-          <li className={styles.headerNavListItem}>
-            <a href={item.href}>{item.name}</a>
-          </li>
-        ))}
-      </ul>
+      <div className={styles.headerNavContainer}>
+        <img src={logo} alt="logo" />
+        <ul className={styles.headerNavList}>
+          {CatalogueNavData.map((item) => (
+            <li key={item.id} className={styles.headerNavListItem}>
+              <a href={item.href}>{item.name}</a>
+            </li>
+          ))}
+        </ul>
+        <Button btnStyle="gradient">+ Разместить объявление</Button>
+      </div>
     </nav>
   );
 };

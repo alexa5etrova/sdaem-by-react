@@ -1,0 +1,49 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
+  cursor: default;
+  text-align: center;
+  border: none;
+  transition: all 0.2s;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btnGradient {
+  border-radius: 19px;
+  padding: 10px 18px;
+  background: linear-gradient(to right, #9d94ff, #6b50e9);
+  color: white;
+  filter: drop-shadow(0px 15px 40px rgba(0, 96, 206, 0.15));
+}
+.btnGradient:hover {
+  background: linear-gradient(to right, #867cfc, #6929f3);
+  color: white;
+}
+.btnWhite {
+  border-radius: 18px;
+  padding: 10px 15px;
+  background-color: white;
+  color: #664ef9;
+  filter: drop-shadow(0px 5px 20px rgba(0, 96, 206, 0.1));
+}
+.btnWhite:hover {
+  background-color: #f5f3ff;
+}
+.btnLightViolet {
+  background-color: rgba(102, 78, 249, 0.1);
+  color: #664ef9;
+  border-radius: 17px;
+  padding: 10px 15px;
+}
+.btnViolet {
+  background-color: #664ef9;
+  color: white;
+  border-radius: 22px;
+  padding: 9px 16px;
+}
+.btnViolet:hover {
+  background-color: #5c35f9;
+}
