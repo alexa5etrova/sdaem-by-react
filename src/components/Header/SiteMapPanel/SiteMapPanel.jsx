@@ -1,37 +1,39 @@
 import { ReactComponent as LocationIcon } from "../../Icons/location.svg";
+
 import styles from "./SiteMapPanel.module.scss";
+import { Link } from "react-router-dom";
 
 const SiteMapData = [
-  { name: "Главная", id: 1, href: "#" },
-  { name: "Новости", id: 2, href: "#" },
-  { name: "Размещение и тарифы", id: 3, href: "#" },
+  { name: "Главная", id: 1, path: "/" },
+  { name: "Новости", id: 2, path: "/news" },
+  { name: "Размещение и тарифы", id: 3, path: "/add" },
   {
     name: "Объявления на карте",
     id: 4,
-    href: "#",
+    path: "/map",
   },
-  { name: "Контакты", id: 5, href: "#" },
+  { name: "Контакты", id: 5, path: "/contacts" },
 ];
 
 const SiteMapPanel = () => {
   return (
-    <div>
+    <div className={styles.siteMapPanelContainer}>
       <nav>
         <ul className={styles.navHeader}>
           {SiteMapData.map(function (item) {
             if (item.name === "Объявления на карте") {
               return (
                 <li className={styles.navHeaderItem} key={item.id}>
-                  <a href={item.href}>
+                  <Link to={item.path}>
                     <LocationIcon width="9" className={styles.locationIcon} />{" "}
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               );
             } else {
               return (
                 <li className={styles.navHeaderItem} key={item.id}>
-                  <a href={item.href}>{item.name}</a>
+                  <Link to={item.path}>{item.name}</Link>
                 </li>
               );
             }

@@ -1,5 +1,14 @@
 @import "./../../../styles/_colors.scss";
 
+.siteMapPanelContainer {
+  max-width: 1280px;
+  padding: 0 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .navHeader {
   list-style-type: none;
   display: flex;
@@ -9,7 +18,8 @@
 .navHeaderItem a {
   color: $grey;
   text-decoration: none;
-  padding-bottom: 9px;
+  padding-bottom: 12px;
+  cursor: default;
 }
 .navHeaderItem a:hover {
   border-bottom: 3px solid $yellow;
