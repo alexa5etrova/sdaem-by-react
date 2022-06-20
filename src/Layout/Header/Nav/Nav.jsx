@@ -1,12 +1,12 @@
 import styles from "./Nav.module.scss";
 import logo from "./../../../assets/images/logo.png";
-import Button from "../../Button/Button";
 import { Link } from "react-router-dom";
 import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
 import { useState } from "react";
-import Dropdown from "../../Dropdown/Dropdown";
 import { Navdata } from "../../../data/Navdata";
 import { FlatNavData } from "./../../../data/Navdata";
+import Button from "./../../../components/Button/Button";
+import Dropdown from "./../../../components/Dropdown/Dropdown";
 
 const Nav = (props) => {
   const [isMenuShown, setIsMenuShown] = useState(false);

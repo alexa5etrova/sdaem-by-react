@@ -1,0 +1,15 @@
+@import "./../../styles/_colors.scss";
+
+.socialMediaList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
+}
+.socialMediaListItem {
+  text-decoration: none;
+}
+.socialMediaListItem a *:hover {
+  fill: $violet;
+  cursor: default;
+}

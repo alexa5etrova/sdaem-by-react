@@ -1,18 +1,18 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header/Header";
 import News from "./pages/News/News";
+import NotFound from "./pages/NotFound/NotFound";
+import Layout from "./Layout/Layout";
 
 function App() {
   return (
     <>
-      <Header></Header>
-
-      <main className="main">
-        <Routes>
-          <Route path="/" element={<News />}></Route>
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<News />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
   );
 }
