@@ -33,3 +33,14 @@ export const FlatNavData = [
   { name: "Квартиры в Гродно", id: 115, path: "/flats/grodno" },
   { name: "Квартиры в Могилеве", id: 116, path: "/flats/mogilev" },
 ];
+export const AddressData = [
+  { body: "ИП Шушкевич Андрей Викторович ", id: 121 },
+  { body: "УНП 192602485 Минским горисполкомом ", id: 122 },
+  { body: "10.02.2016 ", id: 123 },
+  {
+    body: "20068, РБ, г. Минск, ул. Осипенко, 21, кв.23",
+    id: 114,
+  },
+  { body: "+375 29 621 48 33, sdaem@sdaem.by", id: 125 },
+  { body: "Режим работы: 08:00-22:00", id: 126 },
+];

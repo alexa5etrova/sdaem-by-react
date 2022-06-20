@@ -1,6 +1,6 @@
 import styles from "./Dropdown.module.scss";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import cn from "classnames";
 
 const Dropdown = (props) => {
