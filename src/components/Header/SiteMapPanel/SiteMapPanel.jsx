@@ -1,19 +1,10 @@
-import { ReactComponent as LocationIcon } from "../../Icons/location.svg";
+import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
+import { ReactComponent as HeartIcon } from "../../../assets/icons/heart.svg";
 
 import styles from "./SiteMapPanel.module.scss";
 import { Link } from "react-router-dom";
-
-const SiteMapData = [
-  { name: "Главная", id: 1, path: "/" },
-  { name: "Новости", id: 2, path: "/news" },
-  { name: "Размещение и тарифы", id: 3, path: "/add" },
-  {
-    name: "Объявления на карте",
-    id: 4,
-    path: "/map",
-  },
-  { name: "Контакты", id: 5, path: "/contacts" },
-];
+import cn from "classnames";
+import { SiteMapData } from "../../../data/Navdata";
 
 const SiteMapPanel = () => {
   return (
@@ -25,7 +16,7 @@ const SiteMapPanel = () => {
               return (
                 <li className={styles.navHeaderItem} key={item.id}>
                   <Link to={item.path}>
-                    <LocationIcon width="9" className={styles.locationIcon} />{" "}
+                    <LocationIcon width="9" className={styles.locationIcon} />
                     {item.name}
                   </Link>
                 </li>
@@ -40,6 +31,16 @@ const SiteMapPanel = () => {
           })}
         </ul>
       </nav>
+      <ul className={styles.navHeader}>
+        <li className={styles.navHeaderItem}>
+          <Link to="/favorite">
+            Закладки <HeartIcon width="16" className={styles.heartIcon} />
+          </Link>
+        </li>
+        <li className={cn(styles.navHeaderItem, styles.authLink)}>
+          <Link to="/auth">Вход и регистрация</Link>
+        </li>
+      </ul>
     </div>
   );
 };

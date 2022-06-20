@@ -1,0 +1,30 @@
+@import "./../../styles/_colors.scss";
+
+.dropdownList {
+  position: absolute;
+  top: 60px;
+  list-style: none;
+  text-align: start;
+  padding: 0;
+  background-color: white;
+}
+.dropdownListItem {
+  padding: 10px 15px;
+}
+.dropdownListItem:hover {
+  background: $lightgrey;
+}
+.dropdownListItem a {
+  font-weight: 500;
+  cursor: default;
+}
+.dropdownListItem a:hover {
+  border: none;
+}
+
+.closed {
+  display: none;
+}
+.opened {
+  display: absolute;
+}
