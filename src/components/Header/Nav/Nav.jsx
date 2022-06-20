@@ -1,29 +1,54 @@
 import styles from "./Nav.module.scss";
 import logo from "./../../../assets/images/logo.png";
 import Button from "../../Button/Button";
-const CatalogueNavData = [
-  { name: "Квартиры на сутки", id: 111, href: "#" },
-  { name: "Коттеджи и усадьбы", id: 112, href: "#" },
-  { name: "Бани и сауны", id: 113, href: "#" },
-  {
-    name: "Авто напрокат",
-    id: 114,
-    href: "#",
-  },
-];
+import { Link } from "react-router-dom";
+import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
+import { useState } from "react";
+import Dropdown from "../../Dropdown/Dropdown";
+import { Navdata } from "../../../data/Navdata";
+import { FlatNavData } from "./../../../data/Navdata";
 
 const Nav = (props) => {
+  const [isMenuShown, setIsMenuShown] = useState(false);
+
   return (
     <nav className={styles.headerNav}>
       <div className={styles.headerNavContainer}>
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
         <ul className={styles.headerNavList}>
-          {CatalogueNavData.map((item) => (
-            <li key={item.id} className={styles.headerNavListItem}>
-              <a href={item.href}>{item.name}</a>
-            </li>
-          ))}
+          {Navdata.map(function (item) {
+            if (item.name === "Квартиры") {
+              return (
+                <li
+                  className={styles.headerNavListItem}
+                  key={item.id}
+                  onMouseEnter={() => setIsMenuShown(true)}
+                  onMouseLeave={() => setIsMenuShown(false)}
+                >
+                  <Link to={item.path}>
+                    Квартиры на сутки
+                    <LocationIcon
+                      width="12"
+                      className={styles.locationIcon}
+                    />{" "}
+                    {isMenuShown && (
+                      <Dropdown links={FlatNavData} isShowen={true} />
+                    )}
+                  </Link>
+                </li>
+              );
+            } else {
+              return (
+                <li className={styles.headerNavListItem} key={item.id}>
+                  <Link to={item.path}>{item.name}</Link>
+                </li>
+              );
+            }
+          })}
         </ul>
+
         <Button btnStyle="gradient">+ Разместить объявление</Button>
       </div>
     </nav>

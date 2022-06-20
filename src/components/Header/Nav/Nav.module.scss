@@ -20,6 +20,10 @@
   display: flex;
   flex-direction: row;
   gap: 80px;
+  align-items: center;
+}
+.headerNavListItem {
+  height: 100%;
 }
 .headerNavListItem a {
   color: #1e2123;
@@ -31,4 +35,9 @@
 .headerNavListItem a:hover {
   border-bottom: 3px solid $yellow;
   color: $black;
+}
+
+.locationIcon {
+  fill: $yellow;
+  margin-left: 15px;
 }

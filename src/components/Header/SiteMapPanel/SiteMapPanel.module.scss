@@ -3,10 +3,12 @@
 .siteMapPanelContainer {
   max-width: 1280px;
   padding: 0 10px;
+  height: 40px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navHeader {
@@ -14,17 +16,33 @@
   display: flex;
   flex-direction: row;
   gap: 57px;
+  padding: 0;
+  margin: 0;
 }
 .navHeaderItem a {
   color: $grey;
   text-decoration: none;
-  padding-bottom: 12px;
+  padding-bottom: 8px;
   cursor: default;
 }
 .navHeaderItem a:hover {
   border-bottom: 3px solid $yellow;
   color: $black;
 }
+.locationIcon {
+  margin-right: 5px;
+}
 .locationIcon * {
   fill: black;
+}
+.heartIcon {
+  margin-left: 12px;
+}
+.heartIcon * {
+  fill: $grey;
+}
+
+.authLink a {
+  font-weight: 500;
+  color: $violet;
 }
