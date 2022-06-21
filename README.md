@@ -11,7 +11,7 @@ Made with [Create React App](https://github.com/facebook/create-react-app).
 Продолжение проекта
 Использование хуков useState, useRef, useEffect на примере [ToDo app](https://github.com/alexa5etrova/todo)
 
-### Домашнее задание к 21/06/2022
+### Домашнее задание к 22/06/2022
 
 Продолжение проекта
 Реализация кастомного хука на примере usePagination, применение стилей с помощью module.scss, внесение базовой навигации с помощью react-router
