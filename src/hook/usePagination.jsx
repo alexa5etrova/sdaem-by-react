@@ -6,10 +6,8 @@ const usePagination = ({ contentPerPage, count }) => {
   const firstContentIndex = lastContentIndex - contentPerPage;
 
   const setPageSAFE = (num) => {
-    // if number is greater than number of pages, set to last page
     if (num > pageCount) {
       setPage(pageCount);
-      // if number is less than 1, set page to first page
     } else if (num < 1) {
       setPage(1);
     } else {
@@ -18,8 +16,6 @@ const usePagination = ({ contentPerPage, count }) => {
   };
   return {
     totalPages: pageCount,
-    // nextPage: () => changePage(true),
-    // prevPage: () => changePage(false),
     setPage: setPageSAFE,
     firstContentIndex,
     lastContentIndex,

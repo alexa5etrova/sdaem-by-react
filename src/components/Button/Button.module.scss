@@ -17,7 +17,7 @@
   padding: 10px 18px;
   background: linear-gradient(to right, #9d94ff, #6b50e9);
   color: white;
-  filter: drop-shadow(0px 15px 40px rgba(0, 96, 206, 0.15));
+  box-shadow: 0px 15px 40px rgba(0, 96, 206, 0.15);
 }
 .btnGradient:hover {
   background: linear-gradient(to right, #867cfc, #6929f3);
@@ -28,7 +28,7 @@
   padding: 10px 15px;
   background-color: white;
   color: #664ef9;
-  filter: drop-shadow(0px 5px 20px rgba(0, 96, 206, 0.1));
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
 }
 .btnWhite:hover {
   background-color: #f5f3ff;
@@ -41,7 +41,7 @@
 }
 .btnLightViolet:hover {
   background-color: white;
-  filter: drop-shadow(0px 5px 20px rgba(0, 96, 206, 0.1));
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
 }
 
 .btnViolet {

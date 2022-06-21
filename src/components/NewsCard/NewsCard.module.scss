@@ -7,6 +7,7 @@
   background-color: white;
   display: grid;
   grid-template-rows: 220px 200px auto;
+  box-shadow: (0 20px 40px rgb(135 124 202 / 15%));
 }
 .cardText {
   color: $grey;

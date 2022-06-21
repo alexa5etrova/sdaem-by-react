@@ -1,3 +1,5 @@
+export const NewsCrumbs = [{ title: "Новости", url: "/news" }];
+
 export const Newsdata = [
   {
     title: "Линия Сталина: суровый отдых в усадьбах на сутки",
