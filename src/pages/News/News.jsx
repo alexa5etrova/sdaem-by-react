@@ -2,13 +2,27 @@ import Htag from "../../components/Htag/Htag";
 import { Newsdata } from "./../../data/Newsdata";
 import NewsCard from "./../../components/NewsCard/NewsCard";
 import styles from "./News.module.scss";
+import { useState } from "react";
+import Pagination from "../../components/Pagination/Pagination";
 
 const News = (props) => {
+  const [firstContentIndex, setFirstContentIndex] = useState();
+  const [lastContentIndex, setLastContentIndex] = useState();
+
+  const getFirstIndex = (index) => {
+    setFirstContentIndex(index);
+  };
+  const getLastIndex = (index) => {
+    setLastContentIndex(index);
+  };
+
   return (
     <>
       <Htag tag="h1">Новости</Htag>
       <div className={styles.newsContainer}>
-        {Newsdata.map(function (item) {
+        {Newsdata.slice(firstContentIndex, lastContentIndex).map(function (
+          item
+        ) {
           return (
             <NewsCard
               key={item.id}
@@ -19,6 +33,13 @@ const News = (props) => {
             />
           );
         })}
+      </div>
+      <div className={styles.paginationContainer}>
+        <Pagination
+          data={Newsdata}
+          sendFirstIndex={getFirstIndex}
+          sendLastIndex={getLastIndex}
+        />
       </div>
     </>
   );
