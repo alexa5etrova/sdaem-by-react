@@ -7,7 +7,8 @@ const Button = (props) => {
       type="button"
       className={cn(styles.button, {
         [styles.btnGradient]: props.btnStyle === "gradient",
-        [styles.btnSecondary]: props.btnStyle === "secondary",
+        [styles.btnViolet]: props.btnStyle === "violet",
+        [styles.btnLightViolet]: props.btnStyle === "lightViolet",
       })}
     >
       {props.children}
