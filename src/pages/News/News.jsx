@@ -1,9 +1,10 @@
 import Htag from "../../components/Htag/Htag";
-import { Newsdata } from "./../../data/Newsdata";
+import { NewsCrumbs, Newsdata } from "./../../data/Newsdata";
 import NewsCard from "./../../components/NewsCard/NewsCard";
 import styles from "./News.module.scss";
 import { useState } from "react";
 import Pagination from "../../components/Pagination/Pagination";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 
 const News = (props) => {
   const [firstContentIndex, setFirstContentIndex] = useState();
@@ -18,6 +19,7 @@ const News = (props) => {
 
   return (
     <>
+      <Breadcrumbs crumbs={NewsCrumbs} />
       <Htag tag="h1">Новости</Htag>
       <div className={styles.newsContainer}>
         {Newsdata.slice(firstContentIndex, lastContentIndex).map(function (

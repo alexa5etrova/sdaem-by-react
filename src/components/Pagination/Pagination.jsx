@@ -4,18 +4,11 @@ import cn from "classnames";
 
 const Pagination = (props) => {
   const data = props.data;
-  const {
-    firstContentIndex,
-    lastContentIndex,
-    // nextPage,
-    // prevPage,
-    page,
-    setPage,
-    totalPages,
-  } = usePagination({
-    contentPerPage: 9,
-    count: data.length,
-  });
+  const { firstContentIndex, lastContentIndex, page, setPage, totalPages } =
+    usePagination({
+      contentPerPage: 9,
+      count: data.length,
+    });
 
   props.sendFirstIndex(firstContentIndex);
   props.sendLastIndex(lastContentIndex);
