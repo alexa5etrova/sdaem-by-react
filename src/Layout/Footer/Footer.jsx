@@ -68,7 +68,9 @@ const Footer = () => {
             <p>Мы в соцсетях</p>
             <SocialMediaLogo />
           </div>
-          <PaymentsLogo />
+          <div className={styles.payments}>
+            <PaymentsLogo />
+          </div>
         </div>
       </div>
     </footer>

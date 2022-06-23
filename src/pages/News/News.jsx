@@ -17,9 +17,14 @@ const News = (props) => {
     setLastContentIndex(index);
   };
 
+  const crumbs = NewsCrumbs;
+
   return (
     <>
-      <Breadcrumbs crumbs={NewsCrumbs} />
+      <nav className={styles.crumbsContainer}>
+        <Breadcrumbs crumbs={NewsCrumbs} />
+      </nav>
+
       <Htag tag="h1">Новости</Htag>
       <div className={styles.newsContainer}>
         {Newsdata.slice(firstContentIndex, lastContentIndex).map(function (
