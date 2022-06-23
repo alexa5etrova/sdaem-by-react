@@ -1,8 +1,8 @@
-import Date from "../Date/Date";
 import Htag from "../Htag/Htag";
 import styles from "./NewsCard.module.scss";
 import Button from "./../Button/Button";
 import photo from "./../../assets/images/photoNews.jpg";
+import DateTag from "../DateTag/DateTag";
 
 const NewsCard = (props) => {
   return (
@@ -15,7 +15,7 @@ const NewsCard = (props) => {
         <p className={styles.cardText}>{props.short}</p>
       </div>
       <div className={styles.cardBtnContainer}>
-        <Date dateStyle="ghost">{props.date}</Date>
+        <DateTag dateStyle="ghost" date={props.date}></DateTag>
         <Button btnStyle="lightViolet">Читать</Button>
       </div>
     </div>

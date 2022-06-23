@@ -5,17 +5,18 @@ import { ReactComponent as Home } from "../../assets/icons/home.svg";
 const Breadcrumbs = (props) => {
   let crumbs = props.crumbs;
   return (
-    <nav className={styles.breadcrumbs}>
-      <Link to="/">
-        <Home />
-      </Link>
+    <ul className={styles.breadcrumbs}>
+      <li>
+        <Link to="/">
+          <Home />
+        </Link>
+      </li>
       {crumbs.map((crumb) => (
-        <>
-          <span>&bull;</span>
+        <li>
           <Link to={crumb.url}>{crumb.title}</Link>
-        </>
+        </li>
       ))}
-    </nav>
+    </ul>
   );
 };
 

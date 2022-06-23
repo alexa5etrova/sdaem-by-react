@@ -2,9 +2,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
+  margin-top: 59px;
 }
 
 .paginationContainer {
   margin-top: 80px;
   margin-bottom: 102px;
+}
+.crumbsContainer {
+  margin-top: 39px;
+  margin-bottom: 25px;
 }

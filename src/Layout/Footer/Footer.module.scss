@@ -11,8 +11,8 @@
   padding-top: 39px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 297px 1fr;
-  grid-template-rows: 130px auto;
+  grid-template-columns: 327px 1fr;
+  grid-template-rows: 135px auto;
   grid-template-areas:
     "address nav"
     "address icons";
@@ -50,10 +50,14 @@
   gap: 28px;
   align-items: center;
 }
+.payments {
+  margin-right: 80px;
+  margin-top: 5px;
+}
 .footerNav {
   grid-area: nav;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 218px 440px 1fr;
 }
 
 .footerNavList {
@@ -94,5 +98,5 @@
 .navGrid {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 182px 1fr;
 }
