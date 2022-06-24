@@ -17,8 +17,6 @@ const News = (props) => {
     setLastContentIndex(index);
   };
 
-  const crumbs = NewsCrumbs;
-
   return (
     <>
       <nav className={styles.crumbsContainer}>
