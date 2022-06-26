@@ -15,3 +15,8 @@ Made with [Create React App](https://github.com/facebook/create-react-app).
 
 Продолжение проекта
 Реализация кастомного хука на примере usePagination, применение стилей с помощью module.scss, внесение базовой навигации с помощью react-router
+
+### Домашнее задание к 27/06/2022
+
+Продолжение проекта
+Реализация react-router
