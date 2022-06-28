@@ -12,11 +12,11 @@ const News = (props) => {
   const [lastContentIndex, setLastContentIndex] = useState();
   const [search, setSearch] = useState("");
 
-  const getFirstIndex = (index) => {
-    setFirstContentIndex(index);
+  const getFirstIndex = (i) => {
+    setFirstContentIndex(i);
   };
-  const getLastIndex = (index) => {
-    setLastContentIndex(index);
+  const getLastIndex = (i) => {
+    setLastContentIndex(i);
   };
 
   const filteredNewsData = Newsdata.filter(function (item) {

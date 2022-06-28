@@ -1,4 +1,4 @@
-export const NewsCrumbs = [{ title: "Новости", url: "/news" }];
+export const NewsCrumbs = [{ title: "Новости", url: "/news", id: 201 }];
 
 export const Newsdata = [
   {
@@ -6,8 +6,7 @@ export const Newsdata = [
     id: 131,
     photo: "./../assets/images/photoNews.jpg",
     date: "2008-01-14",
-    short:
-      "Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...",
+    short: "",
   },
   {
     title: "Линия Ленина: суровый отдых в усадьбах на сутки",

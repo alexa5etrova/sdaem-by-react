@@ -4,6 +4,8 @@
   background-color: white;
   height: 250px;
   box-shadow: 0 -11px 40px rgba(39, 95, 158, 0.05);
+  z-index: 5;
+  position: relative;
 }
 
 .footerContainer {
