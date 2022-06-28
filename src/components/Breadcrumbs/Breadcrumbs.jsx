@@ -12,7 +12,7 @@ const Breadcrumbs = (props) => {
         </Link>
       </li>
       {crumbs.map((crumb) => (
-        <li>
+        <li key={crumb.id}>
           <Link to={crumb.url}>{crumb.title}</Link>
         </li>
       ))}
