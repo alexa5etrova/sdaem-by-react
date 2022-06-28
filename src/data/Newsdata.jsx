@@ -6,7 +6,7 @@ export const Newsdata = [
     id: 131,
     photo: "./../assets/images/photoNews.jpg",
     date: "2008-01-14",
-    short: "",
+    short: "fffff",
   },
   {
     title: "Линия Ленина: суровый отдых в усадьбах на сутки",
