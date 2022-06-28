@@ -9,7 +9,9 @@ const Button = (props) => {
         [styles.btnGradient]: props.btnStyle === "gradient",
         [styles.btnViolet]: props.btnStyle === "violet",
         [styles.btnLightViolet]: props.btnStyle === "lightViolet",
+        [styles.btnSearch]: props.btnStyle === "search",
       })}
+      onClick={props.onClick}
     >
       {props.children}
     </button>
