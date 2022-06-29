@@ -6,18 +6,21 @@ import SocialMediaLogo from "./../../components/SocialMediaLogo/SocialMediaLogo"
 import photo from "./../../assets/images/photoNews.jpg";
 import { Newsdata } from "../../data/Newsdata";
 import NewsCard from "../../components/NewsCard/NewsCard";
+import { useParams } from "react-router-dom";
 
 const NewsItem = (props) => {
-  let showenNews = Newsdata.find((item) => item.id === props.id);
+  const {newsId} = useParams();
+  
+  let showenNews = Newsdata.find((item) => item.id === Number(newsId));
   let crumbs = [
     ...props.crumbs,
     { title: showenNews.title, url: `/news/${showenNews.id}`, id: 202 },
   ];
 
-  let index = Newsdata.findIndex((item) => item.id === props.id);
+  let index = Newsdata.findIndex((item) => item.id === Number(newsId));
 
-  let readMore = [...Newsdata].splice(index, 3);
-  console.log(readMore);
+  let readMore = [...Newsdata].splice(index+1, 3);
+  
 
   return (
     <>

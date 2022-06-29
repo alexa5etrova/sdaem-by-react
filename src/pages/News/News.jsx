@@ -28,7 +28,7 @@ const News = (props) => {
   });
 
   return (
-    <>
+    <div className={styles.pageContainer}>
       <nav className={styles.crumbsContainer}>
         <Breadcrumbs crumbs={NewsCrumbs} />
       </nav>
@@ -41,6 +41,7 @@ const News = (props) => {
             return (
               <NewsCard
                 key={item.id}
+                id={item.id}
                 title={item.title}
                 date={item.date}
                 short={item.short}
@@ -56,7 +57,7 @@ const News = (props) => {
           sendLastIndex={getLastIndex}
         />
       </div>
-    </>
+    </div>
   );
 };
 
