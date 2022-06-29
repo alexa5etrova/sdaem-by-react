@@ -1,3 +1,7 @@
+.pageContainer{
+  max-width: 1280px;
+  margin: 0 auto;
+}
 .newsContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

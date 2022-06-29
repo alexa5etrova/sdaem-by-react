@@ -44,7 +44,7 @@ const News = (props) => {
                 id={item.id}
                 title={item.title}
                 date={item.date}
-                short={item.short}
+                text={item.short}
                 photo={item.photo}
               />
             );
