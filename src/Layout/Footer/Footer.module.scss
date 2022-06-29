@@ -1,0 +1,104 @@
+@import "./../../styles/_colors.scss";
+
+.footer {
+  background-color: white;
+  height: 250px;
+  box-shadow: 0 -11px 40px rgba(39, 95, 158, 0.05);
+  z-index: 5;
+  position: relative;
+}
+
+.footerContainer {
+  max-width: 1280px;
+  padding-top: 39px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 327px 1fr;
+  grid-template-rows: 135px auto;
+  grid-template-areas:
+    "address nav"
+    "address icons";
+}
+.footerLogo {
+  margin-bottom: 10px;
+}
+.footerAddress {
+  grid-area: address;
+}
+
+.footerAddressLine {
+  font-size: 11px;
+  color: $grey;
+  line-height: 13px;
+  padding: 0;
+  margin: 0;
+}
+.footerTranslitLine {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $grey;
+  font-size: 12px;
+  margin-bottom: 36px;
+}
+.footerIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  grid-area: icons;
+}
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  align-items: center;
+}
+.payments {
+  margin-right: 80px;
+  margin-top: 5px;
+}
+.footerNav {
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: 218px 440px 1fr;
+}
+
+.footerNavList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.footerNavListItem a {
+  color: #1e2123;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: default;
+}
+.footerNavListItem a:hover {
+  border-bottom: 3px solid $yellow;
+}
+
+.footerGreyNavList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footerGreyNav a {
+  color: $grey;
+  font-weight: 400;
+  line-height: 17px;
+  text-decoration: none;
+}
+.footerGreyNav a:hover {
+  color: $black;
+  border-bottom: 3px solid $yellow;
+}
+
+.navGrid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 182px 1fr;
+}
