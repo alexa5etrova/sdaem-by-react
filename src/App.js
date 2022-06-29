@@ -7,18 +7,19 @@ import NewsItem from "./pages/NewsItem/NewsItem";
 import { NewsCrumbs } from "./data/Newsdata";
 
 function App() {
-  // let { newsId } = useParams();
-
+  
+ 
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<News />} />
-
+          <Route path="/news" element={<News />} />
+           
           <Route
-            path="/news/131"
-            element={<NewsItem crumbs={NewsCrumbs} id={131} />}
-          />
+            path="/news/:newsId"
+            element={<NewsItem crumbs={NewsCrumbs}/>}/>
+          
+          
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
