@@ -40,19 +40,28 @@ const NewsItem = (props) => {
         <div className={styles.photo}>
           <img src={photo} alt={showenNews.title} />
         </div>
-        <div className={styles.newsText}>{showenNews.short}</div>
+        <div className={styles.newsText}>{showenNews.body.map(text=><p>{text}</p>)}</div>
       </div>
+
+
       <div className={styles.readMore}>
-        {readMore.map((item) => (
+        <div className={styles.readMoreContainer}>
+          <Htag tag="h2">Читайте также</Htag>
+          <div className={styles.extraNewsContainer}>
+            {readMore.map((item) => (
           <NewsCard
-            key={item.id}
-            title={item.title}
-            date={item.date}
-            short={item.short}
-            photo={item.photo}
+          key={item.id}
+          id={item.id}
+          title={item.title}
+          date={item.date}
+          text={item.short}
+          photo={item.photo}
           />
-        ))}
+        ))}</div>
+        
+        </div>
       </div>
+      
     </>
   );
 };

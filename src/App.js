@@ -1,4 +1,4 @@
-import { Route, Routes, useParams } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import News from "./pages/News/News";
 import NotFound from "./pages/NotFound/NotFound";
@@ -18,10 +18,10 @@ function App() {
           <Route
             path="/news/:newsId"
             element={<NewsItem crumbs={NewsCrumbs}/>}/>
-          
+          <Route path="*" element={<NotFound />} />
           
         </Route>
-        <Route path="*" element={<NotFound />} />
+        
       </Routes>
     </>
   );
