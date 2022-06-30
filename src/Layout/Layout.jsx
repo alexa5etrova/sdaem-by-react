@@ -2,16 +2,20 @@ import Footer from "./Footer/Footer";
 import { Outlet } from "react-router-dom";
 import styles from "./Layout.module.scss";
 import Header from ".//Header/Header";
+import { useSelector } from "react-redux";
 
 const Layout = () => {
+  const { status, error } = useSelector((state) => state.nav);
+
   return (
-    <>
-      <Header />
+    <div className={styles.wrapper}>
+      {status === "resolved" && <Header />}
       <main className={styles.main}>
         <Outlet />
       </main>
-      <Footer />
-    </>
+
+      {status === "resolved" && <Footer />}
+    </div>
   );
 };
 

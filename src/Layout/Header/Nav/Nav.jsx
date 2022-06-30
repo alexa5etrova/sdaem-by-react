@@ -3,12 +3,12 @@ import logo from "./../../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
 import { useState } from "react";
-import { Navdata } from "../../../data/Navdata";
-import { FlatNavData } from "./../../../data/Navdata";
 import Button from "./../../../components/Button/Button";
 import Dropdown from "./../../../components/Dropdown/Dropdown";
+import { useSelector } from "react-redux";
 
 const Nav = (props) => {
+  const { nav, status, error } = useSelector((state) => state.nav);
   const [isMenuShown, setIsMenuShown] = useState(false);
 
   return (
@@ -18,7 +18,7 @@ const Nav = (props) => {
           <img src={logo} alt="logo" />
         </Link>
         <ul className={styles.headerNavList}>
-          {Navdata.map(function (item) {
+          {nav.categories.map(function (item) {
             if (item.name === "Квартиры") {
               return (
                 <li
@@ -29,12 +29,9 @@ const Nav = (props) => {
                 >
                   <Link to={item.path}>
                     Квартиры на сутки
-                    <LocationIcon
-                      width="12"
-                      className={styles.locationIcon}
-                    />{" "}
+                    <LocationIcon width="12" className={styles.locationIcon} />
                     {isMenuShown && (
-                      <Dropdown links={FlatNavData} isShowen={true} />
+                      <Dropdown links={nav.flatCategories} isShowen={true} />
                     )}
                   </Link>
                 </li>
