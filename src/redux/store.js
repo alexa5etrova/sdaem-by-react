@@ -1,5 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from "@reduxjs/toolkit";
+import newsReducer from "./newsSlice";
+import navReducer from "./navSlice";
 
 export const store = configureStore({
-  reducer: {},
-})
+  reducer: {
+    news: newsReducer,
+    nav: navReducer,
+  },
+});
