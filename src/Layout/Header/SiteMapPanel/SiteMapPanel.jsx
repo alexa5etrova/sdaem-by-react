@@ -3,17 +3,15 @@ import { ReactComponent as HeartIcon } from "../../../assets/icons/heart.svg";
 import styles from "./SiteMapPanel.module.scss";
 import { Link } from "react-router-dom";
 import cn from "classnames";
-import { useSelector } from "react-redux";
+import { sitemap } from "./../../../data/Navdata";
 
 const SiteMapPanel = () => {
-  const { nav, status, error } = useSelector((state) => state.nav);
-
   return (
     <div className={styles.siteMapPanel}>
       <div className={styles.siteMapPanelContainer}>
         <nav>
           <ul className={styles.navHeader}>
-            {nav.sitemap.map(function (item) {
+            {sitemap.map(function (item) {
               if (item.name === "Объявления на карте") {
                 return (
                   <li className={styles.navHeaderItem} key={item.id}>

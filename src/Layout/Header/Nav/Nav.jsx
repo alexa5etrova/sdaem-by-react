@@ -5,10 +5,9 @@ import { ReactComponent as LocationIcon } from "../../../assets/icons/location.s
 import { useState } from "react";
 import Button from "./../../../components/Button/Button";
 import Dropdown from "./../../../components/Dropdown/Dropdown";
-import { useSelector } from "react-redux";
+import { categories, flatCategories } from "../../../data/Navdata";
 
 const Nav = (props) => {
-  const { nav, status, error } = useSelector((state) => state.nav);
   const [isMenuShown, setIsMenuShown] = useState(false);
 
   return (
@@ -18,7 +17,7 @@ const Nav = (props) => {
           <img src={logo} alt="logo" />
         </Link>
         <ul className={styles.headerNavList}>
-          {nav.categories.map(function (item) {
+          {categories.map(function (item) {
             if (item.name === "Квартиры") {
               return (
                 <li
@@ -31,7 +30,7 @@ const Nav = (props) => {
                     Квартиры на сутки
                     <LocationIcon width="12" className={styles.locationIcon} />
                     {isMenuShown && (
-                      <Dropdown links={nav.flatCategories} isShowen={true} />
+                      <Dropdown links={flatCategories} isShowen={true} />
                     )}
                   </Link>
                 </li>

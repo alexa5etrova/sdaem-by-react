@@ -4,38 +4,45 @@ import Htag from "./../../components/Htag/Htag";
 import DateTag from "../../components/DateTag/DateTag";
 import SocialMediaLogo from "./../../components/SocialMediaLogo/SocialMediaLogo";
 import photo from "./../../assets/images/photoNews.jpg";
-// import { Newsdata } from "../../data/Newsdata";
 import NewsCard from "../../components/NewsCard/NewsCard";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import Loader from "../../components/Loader/Loader";
+import { useEffect } from "react";
+import { fetchNews } from "./../../redux/newsSlice";
 
 const NewsItem = (props) => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchNews());
+  }, [dispatch]);
   const { newsId } = useParams();
-  const Newsdata = useSelector((state) => state.news.news);
+  const { news, status, error } = useSelector((state) => state.news);
 
-  let showenNews = Newsdata.find((item) => item.id === Number(newsId));
-
+  let showenNews = news.find((item) => item.id === Number(newsId));
   let crumbs = [
     ...props.crumbs,
     { title: showenNews.title, url: `/news/${showenNews.id}`, id: 202 },
   ];
 
-  let index = Newsdata.findIndex((item) => item.id === Number(newsId));
-
-  let readMore = [...Newsdata].splice(index + 1, 3);
+  let index = news.findIndex((item) => item.id === Number(newsId));
+  let readMore = [...news].splice(index + 1, 3);
 
   return (
     <>
       <div className={styles.newsItem}>
         <div className={styles.newsHeader}>
-          <nav className={styles.crumbsContainer}>
-            <Breadcrumbs crumbs={crumbs} />
-          </nav>
-          <Htag tag="h1">{showenNews.title}</Htag>
-          <div className={styles.tags}>
-            <DateTag dateStyle="violet" date={showenNews.date} />
-            <div>
-              Поделиться: <SocialMediaLogo />
+          <div className={styles.newsHeaderContainer}>
+            <nav className={styles.crumbsContainer}>
+              <Breadcrumbs crumbs={crumbs} />
+            </nav>
+            <Htag tag="h1">{showenNews.title}</Htag>
+            <div className={styles.tags}>
+              <DateTag dateStyle="violet" date={showenNews.date} />
+              <div className={styles.socialTags}>
+                <p>Поделиться:</p> <SocialMediaLogo />
+              </div>
             </div>
           </div>
         </div>
@@ -43,9 +50,11 @@ const NewsItem = (props) => {
           <img src={photo} alt={showenNews.title} />
         </div>
         <div className={styles.newsText}>
-          {showenNews.body.map((text) => (
-            <p>{text}</p>
-          ))}
+          {status !== "resolved" ? (
+            <Loader />
+          ) : (
+            showenNews.body.map((text, index) => <p key={index}>{text}</p>)
+          )}
         </div>
       </div>
 
@@ -53,16 +62,20 @@ const NewsItem = (props) => {
         <div className={styles.readMoreContainer}>
           <Htag tag="h2">Читайте также</Htag>
           <div className={styles.extraNewsContainer}>
-            {readMore.map((item) => (
-              <NewsCard
-                key={item.id}
-                id={item.id}
-                title={item.title}
-                date={item.date}
-                text={item.short}
-                photo={item.photo}
-              />
-            ))}
+            {status !== "resolved" ? (
+              <Loader />
+            ) : (
+              readMore.map((item) => (
+                <NewsCard
+                  key={item.id}
+                  id={item.id}
+                  title={item.title}
+                  date={item.date}
+                  text={item.short}
+                  photo={item.photo}
+                />
+              ))
+            )}
           </div>
         </div>
       </div>
