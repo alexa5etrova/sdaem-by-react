@@ -1,4 +1,4 @@
-export const SiteMapData = [
+export const sitemap = [
   { name: "Главная", id: 1, path: "/" },
   { name: "Новости", id: 2, path: "/news" },
   { name: "Размещение и тарифы", id: 3, path: "/add" },
@@ -10,7 +10,7 @@ export const SiteMapData = [
   { name: "Контакты", id: 5, path: "/contacts" },
 ];
 
-export const Navdata = [
+export const categories = [
   { name: "Квартиры", id: 11, path: "/flats" },
   { name: "Коттеджи и усадьбы", id: 12, path: "/cottages" },
   { name: "Бани и сауны", id: 13, path: "/saunas" },
@@ -21,7 +21,7 @@ export const Navdata = [
   },
 ];
 
-export const FlatNavData = [
+export const flatCategories = [
   { name: "Квартиры в Минске", id: 111, path: "/flats/minsk" },
   { name: "Квартиры в Гомеле", id: 112, path: "/flats/gomel" },
   { name: "Квартиры в Бресте", id: 113, path: "/flats/brest" },
@@ -33,7 +33,7 @@ export const FlatNavData = [
   { name: "Квартиры в Гродно", id: 115, path: "/flats/grodno" },
   { name: "Квартиры в Могилеве", id: 116, path: "/flats/mogilev" },
 ];
-export const AddressData = [
+export const address = [
   { body: "ИП Шушкевич Андрей Викторович ", id: 121 },
   { body: "УНП 192602485 Минским горисполкомом ", id: 122 },
   { body: "10.02.2016 ", id: 123 },

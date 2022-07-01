@@ -40,7 +40,10 @@ const newsSlice = createSlice({
       state.status = "resolved";
       state.news = action.payload;
     },
-    [fetchNews.rejected]: (state, action) => {},
+    [fetchNews.rejected]: (state, action) => {
+      state.status = "rejected";
+      state.error = action.payload;
+    },
   },
 });
 
