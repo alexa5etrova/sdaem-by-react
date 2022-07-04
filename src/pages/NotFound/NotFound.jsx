@@ -3,11 +3,12 @@ import photo404 from "./../../assets/images/404.png";
 import Htag from "./../../components/Htag/Htag";
 import { Link } from "react-router-dom";
 import { ReactComponent as HomeIcon } from "./../../assets/icons/home.svg";
+import Background from "../../components/Background/Background";
 
 const NotFound = () => {
   return (
     <div className={styles.notFound}>
-      <div className={styles.notFoundMask}>
+      <Background>
         <div className={styles.notFoundcontainer}>
           <div className={styles.textContainer}>
             <Htag tag="notFound">Ошибка 404</Htag>
@@ -26,7 +27,7 @@ const NotFound = () => {
             <img src={photo404} alt="Изображение 404 ошибки" />
           </div>
         </div>
-      </div>
+      </Background>
     </div>
   );
 };
