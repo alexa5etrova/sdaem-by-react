@@ -8,6 +8,8 @@ const Htag = (props) => {
       return <h2 className={styles.h2}>{props.children}</h2>;
     case "h3":
       return <h3 className={styles.h3}>{props.children}</h3>;
+    case "notFound":
+      return <h1 className={styles.notFound}>{props.children}</h1>;
     default:
       return <></>;
   }
