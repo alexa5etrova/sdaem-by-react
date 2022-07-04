@@ -1,0 +1,17 @@
+.contacts {
+  height: 800px;
+}
+
+.contactsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.contactsHeader * {
+  color: white;
+}
+.contactsParagragh {
+  color: white;
+}

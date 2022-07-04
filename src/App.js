@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchNews } from "./redux/newsSlice";
 import { fetchNav } from "./redux/navSlice";
+import Contacts from "./pages/Contacts/Contacts";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ function App() {
             path="/news/:newsId"
             element={<NewsItem crumbs={NewsCrumbs} />}
           />
+          <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
