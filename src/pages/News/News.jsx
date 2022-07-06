@@ -1,16 +1,15 @@
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import Htag from "../../components/Htag/Htag";
 import { NewsCrumbs } from "./../../data/Newsdata";
 import NewsCard from "./../../components/NewsCard/NewsCard";
-import styles from "./News.module.scss";
-import { useState } from "react";
 import Pagination from "../../components/Pagination/Pagination";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Search from "../../components/Search/Search";
-import { useSelector } from "react-redux";
+import styles from "./News.module.scss";
 
 const News = (props) => {
   const { news, status, error } = useSelector((state) => state.news);
-
   const [firstContentIndex, setFirstContentIndex] = useState();
   const [lastContentIndex, setLastContentIndex] = useState();
   const [search, setSearch] = useState("");
@@ -32,12 +31,14 @@ const News = (props) => {
       return item.title.toLowerCase().includes(search);
     }
   });
+  console.log(filteredNewsData);
 
   return (
     <div className={styles.pageContainer}>
       <nav className={styles.crumbsContainer}>
         <Breadcrumbs crumbs={NewsCrumbs} />
       </nav>
+      
       <Search searchHandler={setSearch}></Search>
       <Htag tag="h1">Новости</Htag>
       <div className={styles.newsContainer}>
@@ -55,7 +56,7 @@ const News = (props) => {
                   photo={item.photo}
                 />
               );
-            })}
+            }) }
       </div>
       <div className={styles.paginationContainer}>
         <Pagination

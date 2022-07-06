@@ -1,6 +1,5 @@
 import cn from "classnames";
 import styles from "./Input.module.scss";
-import React from "react";
 
 const Input = (props) => {
   return (

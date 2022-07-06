@@ -1,7 +1,7 @@
-import styles from "./SocialMediaLogo.module.scss";
 import { ReactComponent as InstaIcon } from "../../assets/icons/instagram.svg";
 import { ReactComponent as VkIcon } from "../../assets/icons/vk.svg";
 import { ReactComponent as FacebookIcon } from "../../assets/icons/facebook.svg";
+import styles from "./SocialMediaLogo.module.scss";
 
 const SocialMediaLogo = () => {
   return (

@@ -1,11 +1,14 @@
-import styles from "./NotFound.module.scss";
-import photo404 from "./../../assets/images/404.png";
-import Htag from "./../../components/Htag/Htag";
 import { Link } from "react-router-dom";
 import { ReactComponent as HomeIcon } from "./../../assets/icons/home.svg";
+import Htag from "./../../components/Htag/Htag";
+import photo404 from "./../../assets/images/404.png";
+import styles from "./NotFound.module.scss";
+
+
+
 import Background from "../../components/Background/Background";
 
-const NotFound = () => {
+const NotFound = (props) => {
   return (
     <div className={styles.notFound}>
       <Background>

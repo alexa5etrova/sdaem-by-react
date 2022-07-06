@@ -1,8 +1,6 @@
-import styles from "./Contacts.module.scss";
 import Htag from "./../../components/Htag/Htag";
-import { Link } from "react-router-dom";
-// import { ReactComponent as HomeIcon } from "./../../assets/icons/home.svg";
 import Background from "../../components/Background/Background";
+import styles from "./Contacts.module.scss";
 
 const Contacts = (props) => {
   return (

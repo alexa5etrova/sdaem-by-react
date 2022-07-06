@@ -1,9 +1,10 @@
 import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
 import { ReactComponent as HeartIcon } from "../../../assets/icons/heart.svg";
-import styles from "./SiteMapPanel.module.scss";
 import { Link } from "react-router-dom";
 import cn from "classnames";
 import { sitemap } from "./../../../data/Navdata";
+import styles from "./SiteMapPanel.module.scss";
+
 
 const SiteMapPanel = () => {
   return (

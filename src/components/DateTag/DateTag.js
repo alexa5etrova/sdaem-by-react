@@ -1,5 +1,6 @@
-import styles from "./DateTag.module.scss";
 import cn from "classnames";
+import styles from "./DateTag.module.scss";
+
 
 const DateTag = (props) => {
   let months = [

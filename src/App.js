@@ -1,28 +1,26 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 import News from "./pages/News/News";
 import NotFound from "./pages/NotFound/NotFound";
 import Layout from "./Layout/Layout";
 import NewsItem from "./pages/NewsItem/NewsItem";
 import { NewsCrumbs } from "./data/Newsdata";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
 import { fetchNews } from "./redux/newsSlice";
-import { fetchNav } from "./redux/navSlice";
 import Contacts from "./pages/Contacts/Contacts";
+import "./App.css";
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchNav());
-    dispatch(fetchNews());
+     dispatch(fetchNews());
   }, [dispatch]);
 
   return (
-    <>
+    
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route exact path="/" element={<Layout />}>
           <Route path="/news" element={<News />} />
           <Route
             path="/news/:newsId"
@@ -32,7 +30,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-    </>
+    
   );
 }
 

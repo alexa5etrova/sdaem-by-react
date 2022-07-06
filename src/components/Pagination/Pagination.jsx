@@ -1,13 +1,15 @@
-import styles from "./Pagination.module.scss";
+
 import usePagination from "./../../hook/usePagination";
 import cn from "classnames";
 import { useEffect } from "react";
+import { NEWS_PER_PAGE } from "../../const/const";
+import styles from "./Pagination.module.scss";
 
 const Pagination = (props) => {
   const data = props.data;
   const { firstContentIndex, lastContentIndex, page, setPage, totalPages } =
     usePagination({
-      contentPerPage: 9,
+      contentPerPage: NEWS_PER_PAGE,
       count: data.length,
     });
 

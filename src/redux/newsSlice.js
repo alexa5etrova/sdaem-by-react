@@ -47,6 +47,6 @@ const newsSlice = createSlice({
   },
 });
 
-export const { addTodo, toggleComplete, removeTodo } = newsSlice.actions;
+// export const { addTodo, toggleComplete, removeTodo } = newsSlice.actions;
 
 export default newsSlice.reducer;

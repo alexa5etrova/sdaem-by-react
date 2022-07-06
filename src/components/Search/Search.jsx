@@ -1,8 +1,8 @@
-import styles from "./Search.module.scss";
+import { useState } from "react";
 import Input from "./../Input/Input";
 import Button from "../Button/Button";
 import { ReactComponent as SearchIcon } from "./../../assets/icons/search.svg";
-import { useState } from "react";
+import styles from "./Search.module.scss";
 
 const Search = (props) => {
   const [searchInput, setSearchInput] = useState("");
