@@ -1,10 +1,9 @@
-import styles from "./NotFound.module.scss";
-import photo404 from "./../../assets/images/404.png";
-import Htag from "./../../components/Htag/Htag";
 import { Link } from "react-router-dom";
 import { ReactComponent as HomeIcon } from "./../../assets/icons/home.svg";
 import Background from "../../components/Background/Background";
-
+import photo404 from "./../../assets/images/404.png";
+import Htag from "./../../components/Htag/Htag";
+import styles from "./NotFound.module.scss";
 const NotFound = () => {
   return (
     <div className={styles.notFound}>
@@ -16,10 +15,10 @@ const NotFound = () => {
               Возможно, у вас опечатка в адресе страницы, или её просто не
               существует
             </p>
-            <Link to="/" className={styles.linkNotFound}>
+            <Link to="/news" className={styles.linkNotFound}>
               <span className={styles.homeIcon}>
                 <HomeIcon />
-              </span>{" "}
+              </span>
               Вернуться на главную
             </Link>
           </div>
