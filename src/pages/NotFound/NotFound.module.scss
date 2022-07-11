@@ -44,6 +44,7 @@
   font-size: 16px;
   text-decoration: none;
   transition: all 0.5s ease-out;
+  z-index: 2;
 }
 .linkNotFound:hover {
   background-color: #fec100;

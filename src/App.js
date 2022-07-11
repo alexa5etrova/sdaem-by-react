@@ -22,7 +22,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route element={<Layout />}>
+          <Route path="/" element={<News />} />
           <Route path="/news" element={<News />} />
           <Route
             path="/news/:newsId"
