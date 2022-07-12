@@ -47,7 +47,7 @@ const Input = (props) => {
         className={cn(styles.input, {
           [styles.search]: props.inputStyle === "search",
           [styles.formInput]: props.inputStyle === "formInput",
-          [styles.error]: props.error === true,
+          [styles.error]: props.error !== undefined,
         })}
       />
       {props.error && (

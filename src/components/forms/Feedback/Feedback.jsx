@@ -26,7 +26,7 @@ const Feedback = (props) => {
     },
   });
 
-  console.log(formik);
+  console.log(formik.errors.name);
 
   return (
     <FormWrapper>
@@ -44,6 +44,7 @@ const Feedback = (props) => {
             onChange={formik.handleChange}
             inputStyle="formInput"
             onBlur={formik.handleBlur}
+            error={formik.errors.name}
           />
         </div>
         <div className={styles.email}>
@@ -59,6 +60,7 @@ const Feedback = (props) => {
             onChange={formik.handleChange}
             inputStyle="formInput"
             onBlur={formik.handleBlur}
+            error={formik.errors.email}
           />
         </div>
         <div className={styles.message}>
@@ -74,6 +76,7 @@ const Feedback = (props) => {
             onChange={formik.handleChange}
             className={styles.textarea}
             onBlur={formik.handleBlur}
+            error={formik.errors.message}
           />
         </div>
         <div className={styles.errorWrapper}>
