@@ -1,0 +1,84 @@
+@import "./../../../styles/_colors.scss";
+.contactDetails {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.contactRow {
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
+  margin-bottom: 11px;
+}
+.contactInfo {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.contactInfo a {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-decoration: none;
+}
+.contactInfo a:hover {
+  color: $yellow;
+}
+
+.contactEmail a {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-decoration: underline;
+}
+.contactEmail:hover a {
+  color: $yellow;
+}
+.openHours {
+  font-weight: 400;
+}
+.contactIcon {
+  width: 30px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding-top: 6px;
+}
+.contactIcon svg {
+  color: white;
+  width: 15px;
+}
+
+.socialIcon {
+  display: block;
+  width: 30px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding-top: 3px;
+}
+.telegram {
+  padding-top: 0px;
+}
+.socialIcon svg {
+  color: white;
+  width: 20px;
+}
+.socialIcon:hover svg {
+  color: $yellow;
+}
+.phones {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.socialContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}

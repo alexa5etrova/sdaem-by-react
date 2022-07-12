@@ -1,12 +1,14 @@
 .contacts {
-  height: 800px;
+  min-height: 688px;
+  height: 100%;
 }
 
 .contactsContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: 40% 51% auto;
   width: 1280px;
   margin: 0 auto;
+  padding-top: 55px;
 }
 
 .contactsHeader * {
@@ -14,4 +16,19 @@
 }
 .contactsParagragh {
   color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 27px;
+}
+
+.company {
+  color: white;
+  line-height: 21px;
+}
+
+.contactsForm {
+  margin-left: 35px;
+  margin-top: 23px;
+  margin-bottom: 78px;
 }

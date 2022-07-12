@@ -5,7 +5,7 @@ import styles from "./News.module.scss";
 import { useState } from "react";
 import Pagination from "../../components/Pagination/Pagination";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
-import Search from "../../components/Search/Search";
+import Search from "../../components/forms/Search/Search";
 import { useSelector } from "react-redux";
 
 const News = (props) => {
