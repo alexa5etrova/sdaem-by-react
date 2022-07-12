@@ -33,3 +33,7 @@ Made with [Create React App](https://github.com/facebook/create-react-app).
 ### Домашнее задание к 04/07/2022
 
 Переход проекта на Redux Toolkit, миграция DB на fake Api JSON server
+
+### Домашнее задание к 13/07/2022
+
+Страничка контакты, форма c иcпользование Formik
