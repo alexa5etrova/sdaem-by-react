@@ -10,7 +10,7 @@
     "button button";
   gap: 30px;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
 }
 .name {
   grid-area: name;
@@ -21,14 +21,14 @@
 .message {
   grid-area: message;
 }
-.errorContainer {
+.errorWrapper {
   grid-area: error;
+  text-align: center;
 }
-.errorContainer {
-  grid-area: message;
-}
+
 .button {
   grid-area: button;
+  text-align: center;
 }
 .error {
   background-color: #eb5757;
