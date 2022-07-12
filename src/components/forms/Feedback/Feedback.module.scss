@@ -20,6 +20,7 @@
 }
 .message {
   grid-area: message;
+  position: relative;
 }
 .errorWrapper {
   grid-area: error;
@@ -64,4 +65,14 @@
 }
 .textarea:hover {
   outline: 2px solid rgba(102, 78, 249, 0.8);
+}
+
+.errorTextarea {
+  outline: 1px solid rgba(235, 87, 87, 1);
+}
+.errorTextAreaIcon {
+  color: rgba(235, 87, 87, 1);
+  top: 12px;
+  right: 21px;
+  position: absolute;
 }

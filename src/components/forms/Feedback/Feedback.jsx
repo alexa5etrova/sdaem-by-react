@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import cn from "classnames";
 import Button from "../../Button/Button";
 import Input from "./../Input/Input";
 import FormWrapper from "../FormWrapper/FormWrapper";
@@ -44,7 +45,7 @@ const Feedback = (props) => {
             onChange={formik.handleChange}
             inputStyle="formInput"
             onBlur={formik.handleBlur}
-            error={formik.errors.name}
+            error={formik.errors.name && formik.touched.name}
           />
         </div>
         <div className={styles.email}>
@@ -60,7 +61,7 @@ const Feedback = (props) => {
             onChange={formik.handleChange}
             inputStyle="formInput"
             onBlur={formik.handleBlur}
-            error={formik.errors.email}
+            error={formik.errors.email && formik.touched.email}
           />
         </div>
         <div className={styles.message}>
@@ -74,13 +75,20 @@ const Feedback = (props) => {
             value={formik.values.message}
             placeholder="Введите сообщение"
             onChange={formik.handleChange}
-            className={styles.textarea}
+            className={cn(styles.textarea, {
+              [styles.errorTextarea]:
+                formik.errors.message && formik.touched.message,
+            })}
             onBlur={formik.handleBlur}
-            error={formik.errors.message}
           />
+          {formik.errors.message && formik.touched.message && (
+            <div className={styles.errorTextAreaIcon}>
+              <AttentionIcon />
+            </div>
+          )}
         </div>
         <div className={styles.errorWrapper}>
-          {formik.touched.name && formik.errors.name ? (
+          {formik.touched.name && formik.errors.name !== undefined ? (
             <p className={styles.error}>
               {formik.errors.name}
               <span>
@@ -88,7 +96,7 @@ const Feedback = (props) => {
               </span>
             </p>
           ) : null}
-          {formik.touched.message && formik.errors.email ? (
+          {formik.touched.email && formik.errors.email !== undefined ? (
             <p className={styles.error}>
               {formik.errors.email}
               <span>
@@ -96,7 +104,7 @@ const Feedback = (props) => {
               </span>
             </p>
           ) : null}
-          {formik.touched.message && formik.errors.message ? (
+          {formik.touched.message && formik.errors.message !== undefined ? (
             <p className={styles.error}>
               {formik.errors.message}
               <span>
