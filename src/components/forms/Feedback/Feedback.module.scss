@@ -1,0 +1,67 @@
+@import "./../../../styles/_colors.scss";
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "name email"
+    "message message"
+    "error error"
+    "button button";
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.name {
+  grid-area: name;
+}
+.email {
+  grid-area: email;
+}
+.message {
+  grid-area: message;
+}
+.errorContainer {
+  grid-area: error;
+}
+.errorContainer {
+  grid-area: message;
+}
+.button {
+  grid-area: button;
+}
+.error {
+  background-color: #eb5757;
+  color: white;
+  border-radius: 33px;
+  padding: 12px 0px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.errorIcon {
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 15px;
+}
+.label {
+  font-weight: 500;
+  color: $darkGrey;
+}
+.textarea {
+  border: none;
+  border-radius: 30px;
+  padding: 16px 21px 16px 21px;
+  max-width: 548px;
+  text-align: left;
+  background-color: $lightgrey;
+  height: 200px;
+  resize: none;
+}
+
+.textarea:focus {
+  outline: 2px solid rgba(102, 78, 249, 0.8);
+}
+.textarea:hover {
+  outline: 2px solid rgba(102, 78, 249, 0.8);
+}

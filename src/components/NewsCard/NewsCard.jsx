@@ -1,13 +1,14 @@
 import Htag from "../Htag/Htag";
-import styles from "./NewsCard.module.scss";
-import photo from "./../../assets/images/photoNews.jpg";
+import { Link } from "react-router-dom";
 import photo2 from "./../../assets/images/photoNewsCard.jpg";
 import DateTag from "../DateTag/DateTag";
-import { Link } from "react-router-dom";
+import { NEWS_PREVIEW_LENGTH } from "../../data/const";
+import styles from "./NewsCard.module.scss";
 
 const NewsCard = (props) => {
   let id = props.id;
-  let text = props.text.substr(0, 218) + "...";
+  let text = props.text.substr(0, NEWS_PREVIEW_LENGTH) + "...";
+
   return (
     <div className={styles.card}>
       <div className={styles.cardImg}>
