@@ -1,11 +1,13 @@
 @import "./../../../styles/_colors.scss";
 .inputWrapper {
   position: relative;
+  width: inherit;
 }
 
 .input {
   border: none;
   font-weight: 500;
+  width: inherit;
 }
 .input::placeholder {
   font-weight: 500;
@@ -50,7 +52,7 @@
 }
 .errorIcon {
   color: rgba(235, 87, 87, 1);
-  top: 12px;
-  right: 21px;
+  top: 13px;
+  right: -54px;
   position: absolute;
 }

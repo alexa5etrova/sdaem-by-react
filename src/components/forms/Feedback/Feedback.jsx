@@ -27,12 +27,10 @@ const Feedback = (props) => {
     },
   });
 
-  console.log(formik.errors.name);
-
   return (
     <FormWrapper>
       <form onSubmit={formik.handleSubmit} className={styles.form}>
-        <div className={styles.name}>
+        <div className={cn(styles.name, styles.inputWrapper)}>
           <label for="name" className={styles.label}>
             Ваше имя
           </label>
@@ -48,7 +46,7 @@ const Feedback = (props) => {
             error={formik.errors.name && formik.touched.name}
           />
         </div>
-        <div className={styles.email}>
+        <div className={cn(styles.email, styles.inputWrapper)}>
           <label for="email" className={styles.label}>
             Ваша электронная почта
           </label>
@@ -64,7 +62,7 @@ const Feedback = (props) => {
             error={formik.errors.email && formik.touched.email}
           />
         </div>
-        <div className={styles.message}>
+        <div className={cn(styles.inputWrapper, styles.message)}>
           <label for="message" className={styles.label}>
             Ваше сообщение
           </label>
