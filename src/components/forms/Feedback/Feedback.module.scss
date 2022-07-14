@@ -8,19 +8,30 @@
     "message message"
     "error error"
     "button button";
-  gap: 30px;
   align-items: center;
-  justify-items: center;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  display: inline-block;
+  margin-bottom: 15px;
 }
 .name {
   grid-area: name;
+  width: 180px;
 }
 .email {
   grid-area: email;
+  width: 180px;
+  margin-left: 18px;
 }
 .message {
   grid-area: message;
   position: relative;
+  margin-top: 30px;
+  margin-bottom: 41px;
 }
 .errorWrapper {
   grid-area: error;
@@ -35,15 +46,17 @@
   background-color: #eb5757;
   color: white;
   border-radius: 33px;
-  padding: 12px 0px;
+  padding: 12px 21px;
   text-align: center;
   font-size: 16px;
   font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .errorIcon {
   color: rgba(255, 255, 255, 0.5);
   margin-left: 15px;
+  margin-top: 3px;
 }
 .label {
   font-weight: 500;
@@ -56,7 +69,7 @@
   max-width: 548px;
   text-align: left;
   background-color: $lightgrey;
-  height: 200px;
+  height: 170px;
   resize: none;
 }
 
@@ -72,7 +85,7 @@
 }
 .errorTextAreaIcon {
   color: rgba(235, 87, 87, 1);
-  top: 12px;
+  top: 46px;
   right: 21px;
   position: absolute;
 }
