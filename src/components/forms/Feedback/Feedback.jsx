@@ -6,8 +6,12 @@ import Input from "./../Input/Input";
 import FormWrapper from "../FormWrapper/FormWrapper";
 import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
 import styles from "./Feedback.module.scss";
+import { useDispatch } from "react-redux";
+import { sendMessage } from "../../../redux/messageSlice";
 
 const Feedback = (props) => {
+  const dispatch = useDispatch();
+
   const formik = useFormik({
     initialValues: { name: "", email: "", message: "" },
     validationSchema: Yup.object({
@@ -24,6 +28,13 @@ const Feedback = (props) => {
     }),
     onSubmit: (values) => {
       console.log(values);
+      dispatch(
+        sendMessage({
+          name: formik.values.name,
+          email: formik.values.email,
+          message: formik.values.message,
+        })
+      );
     },
   });
 
