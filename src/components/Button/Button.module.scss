@@ -73,3 +73,13 @@
 .btnSend:hover {
   background-color: #5c35f9;
 }
+.btnYellow {
+  background-color: #ffd54f;
+  color: $black;
+  border-radius: 33px;
+  padding: 12px 24px;
+  font-size: 16px;
+}
+.btnYeelow:hover {
+  background-color: #fec100;
+}

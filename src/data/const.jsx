@@ -16,3 +16,11 @@ export const COMPANY = {
 
 export const NEWS_PREVIEW_LENGTH = 270;
 export const NEWS_PER_PAGE = 9;
+export const MESSAGE_SENT = {
+  header: "Ваше письмо отправлено!",
+  text: "Какое-то сообщение о том, что письмо отправлено, какое-то сообщение, что письмо отправлено.",
+};
+export const MESSAGE_SENT_FAILED = {
+  header: "Сообщение не отправлено, произошла какая-то ошибка",
+  text: "",
+};

@@ -1,16 +1,22 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import cn from "classnames";
+import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { sendMessage } from "../../../redux/messageSlice";
 import Button from "../../Button/Button";
 import Input from "./../Input/Input";
 import FormWrapper from "../FormWrapper/FormWrapper";
+import Dialog from "./../Dialog/Dialog";
 import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
+import { MESSAGE_SENT, MESSAGE_SENT_FAILED } from "../../../data/const";
+import Loader from "../../Loader/Loader";
 import styles from "./Feedback.module.scss";
-import { useDispatch } from "react-redux";
-import { sendMessage } from "../../../redux/messageSlice";
 
 const Feedback = (props) => {
   const dispatch = useDispatch();
+  const { status, error } = useSelector((state) => state.messages);
+  const [showModal, setShowModal] = useState(false);
 
   const formik = useFormik({
     initialValues: { name: "", email: "", message: "" },
@@ -27,19 +33,38 @@ const Feedback = (props) => {
         .required("Необходимо заполнить поле сообщения"),
     }),
     onSubmit: (values) => {
-      console.log(values);
       dispatch(
         sendMessage({
-          name: formik.values.name,
-          email: formik.values.email,
-          message: formik.values.message,
+          name: values.name,
+          email: values.email,
+          message: values.message,
         })
       );
+      setShowModal(true);
+      formik.resetForm();
     },
   });
 
   return (
     <FormWrapper>
+      {status === "resolved" && (
+        <Dialog
+          isOpen={showModal}
+          text={MESSAGE_SENT.text}
+          header={MESSAGE_SENT.header}
+          onClose={setShowModal}
+        />
+      )}
+      {status === "rejected" && (
+        <Dialog
+          isOpen={showModal}
+          header={MESSAGE_SENT_FAILED.header}
+          text={error}
+          onClose={setShowModal}
+        />
+      )}
+      {status === "loading" && <Loader />}
+
       <form onSubmit={formik.handleSubmit} className={styles.form}>
         <div className={cn(styles.name, styles.inputWrapper)}>
           <label for="name" className={styles.label}>
