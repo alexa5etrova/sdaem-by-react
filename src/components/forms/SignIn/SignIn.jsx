@@ -6,10 +6,11 @@ import FormWrapper from "../FormWrapper/FormWrapper";
 import Input from "../Input/Input";
 import Htag from "../../Htag/Htag";
 import Button from "../../Button/Button";
+import Switch from "./../Switch/Switch";
 
-import styles from "./Signup.module.scss";
+import styles from "./SignIn.module.scss";
 
-const SignUp = (props) => {
+const SignIn = (props) => {
   const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: { login: "", password: "" },
@@ -62,6 +63,7 @@ const SignUp = (props) => {
               onBlur={formik.handleBlur}
               error={formik.errors.password && formik.touched.password}
             />
+            <Switch>Запомнить меня</Switch>
             Забыли пароль?
             <Button btnStyle="yellow">Войти</Button>
             <p className={styles.text}>
@@ -81,4 +83,4 @@ const SignUp = (props) => {
   );
 };
 
-export default SignUp;
+export default SignIn;

@@ -11,6 +11,7 @@ const Button = (props) => {
         [styles.btnSend]: props.btnStyle === "send",
         [styles.btnLightViolet]: props.btnStyle === "lightViolet",
         [styles.btnSearch]: props.btnStyle === "search",
+        [styles.btnYellow]: props.btnStyle === "yellow",
       })}
       onClick={props.onClick}
     >

@@ -17,7 +17,10 @@ const Input = (props) => {
   });
 
   switch (props.name) {
-    case "name":
+    case "name" || "login":
+      icon = <UserIcon className={iconStyles} />;
+      break;
+    case "login":
       icon = <UserIcon className={iconStyles} />;
       break;
     case "email":

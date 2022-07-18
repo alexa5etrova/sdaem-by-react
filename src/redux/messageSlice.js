@@ -2,20 +2,29 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const sendMessage = createAsyncThunk(
   "messages/sendMessage",
-  async function (message) {
-    const responce = await fetch("http://127.0.0.1:3004/messages", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        message: message.message,
-        name: message.name,
-        email: message.email,
-      }),
-    });
-    const data = await responce.json();
-    return data;
+  async function (message, { rejectWithValue }) {
+    try {
+      const responce = await fetch("http://127.0.0.1:3004/messages", {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: message.message,
+          name: message.name,
+          email: message.email,
+        }),
+      });
+      if (!responce.ok) {
+        throw new Error("Server error!");
+      }
+      console.log(responce);
+      const data = await responce.json();
+
+      return data;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
   }
 );
 
@@ -36,10 +45,13 @@ const messagesSlice = createSlice({
       state.status = "resolved";
       state.nav = action.payload;
     },
-    [sendMessage.rejected]: (state, action) => {},
+    [sendMessage.rejected]: (state, action) => {
+      state.status = "rejected";
+      state.error = action.payload;
+    },
   },
 });
 
-export const {} = messagesSlice.actions;
+// export const {} = messagesSlice.actions;
 
 export default messagesSlice.reducer;
