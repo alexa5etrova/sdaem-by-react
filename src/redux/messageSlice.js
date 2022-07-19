@@ -4,7 +4,7 @@ export const sendMessage = createAsyncThunk(
   "messages/sendMessage",
   async function (message, { rejectWithValue }) {
     try {
-      const responce = await fetch("http://127.0.0.1:3004/messages", {
+      const responce = await fetch("http://127.0.0.1:3004/messag", {
         method: "post",
         headers: {
           "Content-Type": "application/json",
