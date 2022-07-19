@@ -54,7 +54,11 @@ const Input = (props) => {
         })}
       />
       {props.error && (
-        <div className={styles.errorIcon}>
+        <div
+          className={cn(styles.errorIcon, {
+            [styles.errorAuth]: props.errorStyle === "auth",
+          })}
+        >
           <AttentionIcon />
         </div>
       )}
