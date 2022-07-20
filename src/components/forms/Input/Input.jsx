@@ -29,6 +29,9 @@ const Input = (props) => {
     case "password":
       icon = <LockIcon className={iconStyles} />;
       break;
+    case "pswdRepeat":
+      icon = <LockIcon className={iconStyles} />;
+      break;
     default:
       icon = <></>;
   }

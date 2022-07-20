@@ -306,5 +306,12 @@
       "id": 4
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "aleksa.5etrova@gmail.com",
+      "password": "$2a$10$f18TIi4N3zi66pp85zzXSe/EFe4XsBUCuF1KZMpUKeiQ018wmqY1G",
+      "login": "aleksa",
+      "id": 1
+    }
+  ]
 }
