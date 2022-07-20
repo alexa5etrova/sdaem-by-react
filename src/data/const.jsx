@@ -28,6 +28,11 @@ export const AUTH_SENT_FAILED = {
   header: "К сожалению, произошла ошибка",
   text: "",
 };
+export const SIGNUP_FAILED = {
+  header: "К сожалению, произошла ошибка",
+  text: "",
+};
+
 export const USER_AGREEMENT = {
   header: "Пользователь обязуется:",
   p1: "предоставлять достоверную и актуальную информацию при регистрации и добавлении объекта; ",

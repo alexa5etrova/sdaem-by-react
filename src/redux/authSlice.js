@@ -16,7 +16,7 @@ export const userSignUp = createAsyncThunk(
         }),
       });
       if (!responce.ok) {
-        throw new Error("Server error!");
+        throw new Error("Пользователь с таким email уже существует");
       }
       const data = await responce.json();
       return data;
@@ -43,7 +43,12 @@ export const userSignIn = createAsyncThunk(
       });
       console.log(responce);
       if (responce.status === 400) {
-        throw new Error("Пользователь не найден");
+        throw new Error(
+          "Такого пользователя не существует или введен неверный пароль"
+        );
+      }
+      if (responce.status === 500) {
+        throw new Error("Ошибка сервера");
       }
       const data = await responce.json();
       return data;

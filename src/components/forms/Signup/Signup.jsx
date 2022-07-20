@@ -5,15 +5,14 @@ import cn from "classnames";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import { userSignIn } from "../../../redux/authSlice";
+import { userSignUp } from "../../../redux/authSlice";
 import FormWrapper from "../FormWrapper/FormWrapper";
 import Input from "../Input/Input";
 import Htag from "../../Htag/Htag";
 import Button from "../../Button/Button";
 import Dialog from "./../Dialog/Dialog";
 import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
-import { AUTH_SENT_FAILED } from "../../../data/const";
-import { USER_AGREEMENT } from "./../../../data/const";
+import { SIGNUP_FAILED, USER_AGREEMENT } from "./../../../data/const";
 
 import styles from "./Signup.module.scss";
 
@@ -23,20 +22,35 @@ const SignUp = (props) => {
 
   const dispatch = useDispatch();
   const formik = useFormik({
-    initialValues: { login: "", password: "", reCaptcha: true },
+    initialValues: {
+      login: "",
+      email: "",
+      password: "",
+      pswdRepeat: "",
+      reCaptcha: true,
+    },
     validationSchema: Yup.object({
       login: Yup.string()
-        .email("Введите корректный email адрес")
+        .min(5, "Введите не менее 5 символов")
+        .max(20, "Введите не более 20 символов")
         .required("Необходимо ввести логин"),
-      password: Yup.string().required("Введите пароль"),
+      email: Yup.string()
+        .email("Введите корректный email адрес")
+        .required("Необходимо заполнить поле email"),
+      password: Yup.string()
+        .required("Введите пароль")
+        .matches(/[a-zA-Z]/, "Пароль должен содержать только латинские буквы"),
+      pswdRepeat: Yup.string()
+        .required("Повторите пароль")
+        .oneOf([Yup.ref("password")], "Пароль не совпадает!"),
     }),
 
     onSubmit: (values) => {
       dispatch(
-        userSignIn({
-          email: values.login,
+        userSignUp({
+          login: values.login,
+          email: values.email,
           password: values.password,
-          rememberMe: values.rememberMe,
         })
       );
       setShowModal(true);
@@ -49,7 +63,7 @@ const SignUp = (props) => {
       {status === "rejected" && (
         <Dialog
           isOpen={showModal}
-          header={AUTH_SENT_FAILED.header}
+          header={SIGNUP_FAILED.header}
           text={error}
           onClose={setShowModal}
         />
@@ -62,12 +76,24 @@ const SignUp = (props) => {
               type="text"
               name="login"
               id="login"
-              value={formik.values.email}
+              value={formik.values.login}
               placeholder="Логин"
               onChange={formik.handleChange}
               inputStyle="formInput"
               onBlur={formik.handleBlur}
               error={formik.errors.login && formik.touched.login}
+              errorStyle="auth"
+            />
+            <Input
+              type="email"
+              name="email"
+              id="email"
+              value={formik.values.email}
+              placeholder="Электронная почта"
+              onChange={formik.handleChange}
+              inputStyle="formInput"
+              onBlur={formik.handleBlur}
+              error={formik.errors.email && formik.touched.email}
               errorStyle="auth"
             />
             <Input
@@ -80,6 +106,18 @@ const SignUp = (props) => {
               inputStyle="formInput"
               onBlur={formik.handleBlur}
               error={formik.errors.password && formik.touched.password}
+              errorStyle="auth"
+            />
+            <Input
+              type="password"
+              name="pswdRepeat"
+              id="pswdRepeat"
+              value={formik.values.pswdRepeat}
+              placeholder="Повторите пароль"
+              onChange={formik.handleChange}
+              inputStyle="formInput"
+              onBlur={formik.handleBlur}
+              error={formik.errors.pswdRepeat && formik.touched.pswdRepeat}
               errorStyle="auth"
             />
             <ReCAPTCHA
@@ -97,36 +135,47 @@ const SignUp = (props) => {
                 </span>
               </p>
             ) : null}
-            {formik.touched.password && formik.errors.password !== undefined ? (
+
+            {formik.touched.email && formik.errors.email !== undefined ? (
               <p className={styles.error}>
-                {formik.errors.password}
+                {formik.errors.email}
                 <span>
                   <AttentionIcon className={styles.errorIcon} />
                 </span>
               </p>
             ) : null}
+            {formik.touched.pswdRepeat &&
+            formik.errors.pswdRepeat !== undefined ? (
+              <p className={styles.error}>
+                {formik.errors.pswdRepeat}
+                <span>
+                  <AttentionIcon className={styles.errorIcon} />
+                </span>
+              </p>
+            ) : null}
+
             <Button type="submit" btnStyle="yellow">
-              Войти
+              Зарегистрироваться
             </Button>
-            <p className={cn(styles.text, styles.signUpholder)}>
-              Еще нет аккаунта?
-              <span
-                className={styles.toSignUp}
-                onClick={() => {
-                  props.toSignUp("signUp");
-                }}
-              >
-                Создайте аккаунт
-              </span>
-            </p>
           </form>
         </div>
         <div>
-          <p>{USER_AGREEMENT.header}</p>
-          <ul>
+          <p className={styles.agreeHeader}>{USER_AGREEMENT.header}</p>
+          <ul className={styles.agreeParag}>
             <li>{USER_AGREEMENT.p1}</li>
             <li>{USER_AGREEMENT.p2}</li>
           </ul>
+          <p className={styles.text}>
+            Уже есть аккаунт?
+            <span
+              className={styles.toLogin}
+              onClick={() => {
+                props.toLogin("login");
+              }}
+            >
+              Войдите
+            </span>
+          </p>
         </div>
       </FormWrapper>
     </div>
