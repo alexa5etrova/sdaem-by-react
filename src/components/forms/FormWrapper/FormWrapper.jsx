@@ -6,6 +6,7 @@ const FormWrapper = (props) => {
     <div
       className={cn(styles.formWrapper, {
         [styles.wrAuth]: props.wrStyle === "auth",
+        [styles.wrSignup]: props.wrStyle === "signup",
       })}
     >
       {props.children}
