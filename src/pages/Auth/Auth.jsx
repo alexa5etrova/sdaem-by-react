@@ -9,7 +9,7 @@ import Confirmed from "./../../components/forms/Confirmed/Confirmed";
 import styles from "./Auth.module.scss";
 
 const Auth = (props) => {
-  const [showenDialog, setShowenDialog] = useState("confirmed");
+  const [showenDialog, setShowenDialog] = useState("login");
 
   return ReactDOM.createPortal(
     <div class={styles.background}>

@@ -68,6 +68,7 @@ const SignUp = (props) => {
           onClose={setShowModal}
         />
       )}
+      {status === "resolved" && props.toLogin("confirmed")}
       <FormWrapper wrStyle="signup">
         <div className={styles.authWrapper}>
           <Htag tag="h2">Регистрация</Htag>

@@ -312,6 +312,12 @@
       "password": "$2a$10$f18TIi4N3zi66pp85zzXSe/EFe4XsBUCuF1KZMpUKeiQ018wmqY1G",
       "login": "aleksa",
       "id": 1
+    },
+    {
+      "email": "zshghgkjl@hjhk.yu",
+      "password": "$2a$10$Z0BxaS0c4I6320oM/bcbMe8d.l0iwjBnvIXkCrEBM8UJqFtrbYkqq",
+      "login": "dddddd",
+      "id": 2
     }
   ]
 }
