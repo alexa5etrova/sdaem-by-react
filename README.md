@@ -12,13 +12,15 @@ Made with [Create React App](https://github.com/facebook/create-react-app).
 
 Продолжение проекта
 
-Использование хуков useState, useRef, useEffect на примере [ToDo app](https://github.com/alexa5etrova/todo)
+Использование хуков useState, useRef, useEffect на примере
+[ToDo app](https://github.com/alexa5etrova/todo)
 
 ### Домашнее задание к 22/06/2022
 
 Продолжение проекта
 
-Реализация кастомного хука на примере usePagination, применение стилей с помощью module.scss, внесение базовой навигации с помощью react-router
+Реализация кастомного хука на примере usePagination, применение стилей с помощью module.scss,
+внесение базовой навигации с помощью react-router
 
 ### Домашнее задание к 27/06/2022
 
@@ -37,3 +39,9 @@ Made with [Create React App](https://github.com/facebook/create-react-app).
 ### Домашнее задание к 13/07/2022
 
 Страничка контакты, форма c иcпользование Formik
+
+### Домашнее задание к 25/07/2022
+
+Практика по [Видео Next.js](https://www.youtube.com/watch?v=_EOrSmjdOZQ).
+
+Ссылка на [Github репозиторий](https://github.com/alexa5etrova/next-course)
