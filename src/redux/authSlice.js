@@ -15,9 +15,12 @@ export const userSignUp = createAsyncThunk(
           password: user.password,
         }),
       });
+
       if (!responce.ok) {
-        throw new Error("Пользователь с таким email уже существует");
+        let error = await responce.json();
+        throw new Error(error);
       }
+
       const data = await responce.json();
       return data;
     } catch (error) {
@@ -41,15 +44,12 @@ export const userSignIn = createAsyncThunk(
           rememberMe: user.rememberMe,
         }),
       });
-      console.log(responce);
-      if (responce.status === 400) {
-        throw new Error(
-          "Такого пользователя не существует или введен неверный пароль"
-        );
+
+      if (!responce.ok) {
+        let error = await responce.json();
+        throw new Error(error);
       }
-      if (responce.status === 500) {
-        throw new Error("Ошибка сервера");
-      }
+
       const data = await responce.json();
       return data;
     } catch (error) {

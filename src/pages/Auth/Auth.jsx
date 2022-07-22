@@ -16,9 +16,7 @@ const Auth = (props) => {
       <Background>
         {showenDialog === "login" && <SignIn toSignUp={setShowenDialog} />}
         {showenDialog === "signUp" && <SignUp toLogin={setShowenDialog} />}
-        {showenDialog === "confirmed" && (
-          <Confirmed toLogin={setShowenDialog} />
-        )}
+        {showenDialog === "confirmed" && <Confirmed toLogin={setShowenDialog} />}
       </Background>
     </div>,
     document.body
