@@ -42,6 +42,5 @@ Made with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Домашнее задание к 25/07/2022
 
-Практика по [Видео Next.js](https://www.youtube.com/watch?v=_EOrSmjdOZQ).
-
-Ссылка на [Github репозиторий](https://github.com/alexa5etrova/next-course)
+Практика по [Видео Next.js](https://www.youtube.com/watch?v=_EOrSmjdOZQ). Ссылка на
+[Github репозиторий](https://github.com/alexa5etrova/next-course)
