@@ -20,70 +20,69 @@ const NewsItem = (props) => {
   useEffect(() => {
     dispatch(fetchNews());
   }, [dispatch]);
+
   const { newsId } = useParams();
   const { news, status } = useSelector((state) => state.news);
 
-  let showenNews = news.find((item) => item.id === Number(newsId));
-  let crumbs = [
-    ...CRUMBS.news,
-    { title: showenNews.title, url: `/news/${showenNews.id}`, id: 202 },
-  ];
+  if (status === "resolved") {
+    let showenNews = news.find((item) => item.id === Number(newsId));
 
-  let index = news.findIndex((item) => item.id === Number(newsId));
-  let readMore = [...news].splice(index + 1, 3);
+    let crumbs = [
+      ...CRUMBS.news,
+      { title: showenNews.title, url: `/news/${showenNews.id}`, id: 202 },
+    ];
 
-  return (
-    <>
-      <div className={styles.newsItem}>
-        <div className={styles.newsHeader}>
-          <div className={styles.newsHeaderContainer}>
-            <nav className={styles.crumbsContainer}>
-              <Breadcrumbs crumbs={crumbs} />
-            </nav>
-            <Htag tag="h1">{showenNews.title}</Htag>
-            <div className={styles.tags}>
-              <DateTag dateStyle="violet" date={showenNews.date} />
-              <div className={styles.socialTags}>
-                <p>Поделиться:</p> <SocialMediaLogo />
+    let index = news.findIndex((item) => item.id === Number(newsId));
+    let readMore = [...news].splice(index + 1, 3);
+
+    return (
+      <>
+        <div className={styles.newsItem}>
+          <div className={styles.newsHeader}>
+            <div className={styles.newsHeaderContainer}>
+              <nav className={styles.crumbsContainer}>
+                <Breadcrumbs crumbs={crumbs} />
+              </nav>
+              <Htag tag="h1">{showenNews.title}</Htag>
+              <div className={styles.tags}>
+                <DateTag dateStyle="violet" date={showenNews.date} />
+                <div className={styles.socialTags}>
+                  <p>Поделиться:</p> <SocialMediaLogo />
+                </div>
               </div>
             </div>
           </div>
+          <div className={styles.photo}>
+            <img src={`./../${showenNews.photo}`} alt={showenNews.title} />
+          </div>
+          <div className={styles.newsText}>
+            {showenNews.body.map((text, index) => (
+              <p key={index}>{text}</p>
+            ))}
+          </div>
         </div>
-        <div className={styles.photo}>
-          <img src={showenNews.src} alt={showenNews.title} />
-        </div>
-        <div className={styles.newsText}>
-          {status !== "resolved" ? (
-            <Loader />
-          ) : (
-            showenNews.body.map((text, index) => <p key={index}>{text}</p>)
-          )}
-        </div>
-      </div>
 
-      <div className={styles.readMore}>
-        <div className={styles.readMoreContainer}>
-          <Htag tag="h2">Читайте также</Htag>
-          <div className={styles.extraNewsContainer}>
-            {status !== "resolved" ? (
-              <Loader />
-            ) : (
-              readMore.map((item) => (
+        <div className={styles.readMore}>
+          <div className={styles.readMoreContainer}>
+            <Htag tag="h2">Читайте также</Htag>
+            <div className={styles.extraNewsContainer}>
+              {readMore.map((item) => (
                 <NewsCard
                   key={item.id}
                   id={item.id}
                   title={item.title}
                   date={item.date}
                   text={item.short}
-                  photo={item.photo}
+                  photo={`./../${item.photo}`}
                 />
-              ))
-            )}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+    );
+  }
+  return <Loader />;
 };
 
 export default NewsItem;
