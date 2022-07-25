@@ -4,8 +4,8 @@ import cn from "classnames";
 import PaymentsLogo from "../../components/PaymentsLogo/PaymentsLogo";
 import SocialMediaLogo from "../../components/SocialMediaLogo/SocialMediaLogo";
 import logo from "./../../assets/images/logo.png";
-import { CATEGORIES, COMPANY, FLAT_CATEGORIES, SITEMAP } from "./../../data/const";
-
+import { CATEGORIES, FLAT_CATEGORIES, SITEMAP } from "./../../data/nav";
+import { COMPANY } from "./../../data/contacts";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {

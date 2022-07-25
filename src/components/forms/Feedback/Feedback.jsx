@@ -9,7 +9,7 @@ import Input from "./../Input/Input";
 import FormWrapper from "../FormWrapper/FormWrapper";
 import Dialog from "./../Dialog/Dialog";
 import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
-import { MESSAGE_SENT, MESSAGE_SENT_FAILED } from "../../../data/const";
+import { MESSAGE_SENT, MESSAGE_SENT_FAILED } from "../../../data/contacts";
 import Loader from "../../Loader/Loader";
 import styles from "./Feedback.module.scss";
 
@@ -110,8 +110,7 @@ const Feedback = (props) => {
             placeholder="Введите сообщение"
             onChange={formik.handleChange}
             className={cn(styles.textarea, {
-              [styles.errorTextarea]:
-                formik.errors.message && formik.touched.message,
+              [styles.errorTextarea]: formik.errors.message && formik.touched.message,
             })}
             onBlur={formik.handleBlur}
           />

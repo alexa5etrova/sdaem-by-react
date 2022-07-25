@@ -2,7 +2,7 @@ import { ReactComponent as InstaIcon } from "../../assets/icons/instagram.svg";
 import { ReactComponent as VkIcon } from "../../assets/icons/vk.svg";
 import { ReactComponent as FacebookIcon } from "../../assets/icons/facebook.svg";
 
-import { COMPANY } from "./../../data/const";
+import { COMPANY } from "./../../data/contacts";
 
 import styles from "./SocialMediaLogo.module.scss";
 

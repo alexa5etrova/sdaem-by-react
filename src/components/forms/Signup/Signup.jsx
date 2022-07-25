@@ -11,7 +11,7 @@ import Htag from "../../Htag/Htag";
 import Button from "../../Button/Button";
 import Dialog from "./../Dialog/Dialog";
 import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
-import { SIGNUP_FAILED, USER_AGREEMENT } from "./../../../data/const";
+import { SIGNUP_FAILED, USER_AGREEMENT } from "./../../../data/auth";
 
 import styles from "./Signup.module.scss";
 

@@ -3,7 +3,7 @@ import cn from "classnames";
 
 import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
 import { ReactComponent as HeartIcon } from "../../../assets/icons/heart.svg";
-import { SITEMAP } from "./../../../data/const";
+import { SITEMAP } from "./../../../data/nav";
 
 import styles from "./SiteMapPanel.module.scss";
 
