@@ -1,14 +1,19 @@
-import styles from "./Nav.module.scss";
-import logo from "./../../../assets/images/logo.png";
 import { Link } from "react-router-dom";
-import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
 import { useState } from "react";
+
 import Button from "./../../../components/Button/Button";
 import Dropdown from "./../../../components/Dropdown/Dropdown";
-import { categories, flatCategories } from "../../../data/Navdata";
+import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
+import logo from "./../../../assets/images/logo.png";
+import { CATEGORIES, FLAT_CATEGORIES } from "../../../data/const";
+
+import styles from "./Nav.module.scss";
 
 const Nav = (props) => {
   const [isMenuShown, setIsMenuShown] = useState(false);
+
+  const openMenu = () => setIsMenuShown(true);
+  const closeMenu = () => setIsMenuShown(false);
 
   return (
     <nav className={styles.headerNav}>
@@ -17,22 +22,27 @@ const Nav = (props) => {
           <img src={logo} alt="logo" />
         </Link>
         <ul className={styles.headerNavList}>
-          {categories.map(function (item) {
+          {CATEGORIES.map(function (item) {
             if (item.name === "Квартиры") {
               return (
                 <li
-                  className={styles.headerNavListItem}
+                  className={styles.flats}
                   key={item.id}
-                  onMouseEnter={() => setIsMenuShown(true)}
-                  onMouseLeave={() => setIsMenuShown(false)}
+                  onMouseEnter={() => openMenu()}
+                  onMouseLeave={() => closeMenu()}
                 >
-                  <Link to={item.path}>
+                  <Link to={item.path} className={styles.flatsLinks}>
                     Квартиры на сутки
                     <LocationIcon width="12" className={styles.locationIcon} />
-                    {isMenuShown && (
-                      <Dropdown links={flatCategories} isShowen={true} />
-                    )}
                   </Link>
+                  {isMenuShown && (
+                    <Dropdown
+                      links={FLAT_CATEGORIES}
+                      isMenuShown={isMenuShown}
+                      openMenu={openMenu}
+                      closeMenu={closeMenu}
+                    />
+                  )}
                 </li>
               );
             } else {

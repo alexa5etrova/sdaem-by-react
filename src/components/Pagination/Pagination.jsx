@@ -1,16 +1,17 @@
 import cn from "classnames";
 import { useEffect } from "react";
+
 import usePagination from "./../../hook/usePagination";
 import { NEWS_PER_PAGE } from "./../../data/const";
+
 import styles from "./Pagination.module.scss";
 
 const Pagination = (props) => {
   const data = props.data;
-  const { firstContentIndex, lastContentIndex, page, setPage, totalPages } =
-    usePagination({
-      contentPerPage: NEWS_PER_PAGE,
-      count: data.length,
-    });
+  const { firstContentIndex, lastContentIndex, page, setPage, totalPages } = usePagination({
+    contentPerPage: NEWS_PER_PAGE,
+    count: data.length,
+  });
 
   useEffect(() => {
     props.sendFirstIndex(firstContentIndex);

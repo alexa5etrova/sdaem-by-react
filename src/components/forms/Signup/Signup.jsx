@@ -1,7 +1,6 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
-import cn from "classnames";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -145,8 +144,7 @@ const SignUp = (props) => {
                 </span>
               </p>
             ) : null}
-            {formik.touched.pswdRepeat &&
-            formik.errors.pswdRepeat !== undefined ? (
+            {formik.touched.pswdRepeat && formik.errors.pswdRepeat !== undefined ? (
               <p className={styles.error}>
                 {formik.errors.pswdRepeat}
                 <span>

@@ -10,11 +10,7 @@
 }
 
 .background::after {
-  background: linear-gradient(
-    to top,
-    rgba(126, 106, 243, 1),
-    rgba(101, 64, 205, 1)
-  );
+  background: linear-gradient(to top, rgba(126, 106, 243, 1), rgba(101, 64, 205, 1));
   content: " ";
   display: block;
   position: absolute;
@@ -23,4 +19,14 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+.homeFilter {
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  // height: 430px;
+}
+.homeFilter::after {
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
 }

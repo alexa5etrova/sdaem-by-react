@@ -1,9 +1,11 @@
-import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
-import { ReactComponent as HeartIcon } from "../../../assets/icons/heart.svg";
-import styles from "./SiteMapPanel.module.scss";
 import { Link } from "react-router-dom";
 import cn from "classnames";
-import { sitemap } from "./../../../data/Navdata";
+
+import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
+import { ReactComponent as HeartIcon } from "../../../assets/icons/heart.svg";
+import { SITEMAP } from "./../../../data/const";
+
+import styles from "./SiteMapPanel.module.scss";
 
 const SiteMapPanel = () => {
   return (
@@ -11,7 +13,7 @@ const SiteMapPanel = () => {
       <div className={styles.siteMapPanelContainer}>
         <nav>
           <ul className={styles.navHeader}>
-            {sitemap.map(function (item) {
+            {SITEMAP.map(function (item) {
               if (item.name === "Объявления на карте") {
                 return (
                   <li className={styles.navHeaderItem} key={item.id}>
@@ -31,7 +33,7 @@ const SiteMapPanel = () => {
             })}
           </ul>
         </nav>
-        <ul className={styles.navHeader}>
+        <ul className={styles.accountLink}>
           <li className={styles.navHeaderItem}>
             <Link to="/favorite">
               Закладки <HeartIcon width="16" className={styles.heartIcon} />
