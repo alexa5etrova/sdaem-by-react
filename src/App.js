@@ -5,17 +5,15 @@ import { useEffect } from "react";
 import { fetchNews } from "./redux/newsSlice";
 import { fetchNav } from "./redux/navSlice";
 
-import Home from './pages/Home/Home';
+import Home from "./pages/Home/Home";
 import News from "./pages/News/News";
 import NotFound from "./pages/NotFound/NotFound";
 import Layout from "./Layout/Layout";
 import NewsItem from "./pages/NewsItem/NewsItem";
-import { NewsCrumbs } from "./data/Newsdata";
 import Contacts from "./pages/Contacts/Contacts";
 import Auth from "./pages/Auth/Auth";
 
 import "./App.css";
-
 
 function App() {
   const dispatch = useDispatch();
@@ -32,10 +30,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/news" element={<News />} />
-          <Route
-            path="/news/:newsId"
-            element={<NewsItem crumbs={NewsCrumbs} />}
-          />
+          <Route path="/news/:newsId" element={<NewsItem />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<NotFound />} />
         </Route>
