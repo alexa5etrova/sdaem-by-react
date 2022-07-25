@@ -1,0 +1,11 @@
+@import "./../../styles/_colors.scss";
+
+.socialTags {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.shareText {
+  margin-right: -8px;
+}
