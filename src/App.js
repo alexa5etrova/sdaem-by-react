@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 
 import { fetchNews } from "./redux/newsSlice";
-import { fetchNav } from "./redux/navSlice";
 
 import Home from "./pages/Home/Home";
 import News from "./pages/News/News";
@@ -19,7 +18,6 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchNav());
     dispatch(fetchNews());
   }, [dispatch]);
 
