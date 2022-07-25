@@ -2,18 +2,17 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 
+import { fetchNews } from "./../../redux/newsSlice";
 import Breadcrumbs from "./../../components/Breadcrumbs/Breadcrumbs";
 import Htag from "./../../components/Htag/Htag";
 import DateTag from "../../components/DateTag/DateTag";
-import SocialMediaLogo from "./../../components/SocialMediaLogo/SocialMediaLogo";
 import NewsCard from "../../components/NewsCard/NewsCard";
 import Loader from "../../components/Loader/Loader";
-
-import { fetchNews } from "./../../redux/newsSlice";
+import SocialsShared from "../../components/SocialsShared/SocialsShared";
+import { CRUMBS } from "./../../data/nav";
+import { HOME_URL } from "./../../data/admin";
 
 import styles from "./NewsItem.module.scss";
-import { CRUMBS } from "./../../data/nav";
-import { VKShareButton } from "react-share";
 
 const NewsItem = (props) => {
   const dispatch = useDispatch();
@@ -47,11 +46,11 @@ const NewsItem = (props) => {
               <Htag tag="h1">{showenNews.title}</Htag>
               <div className={styles.tags}>
                 <DateTag dateStyle="violet" date={showenNews.date} />
-                <div className={styles.socialTags}>
-                  <p>Поделиться:</p>
-                  <VKShareButton></VKShareButton>
-                  {/* <SocialMediaLogo /> */}
-                </div>
+                <SocialsShared
+                  title={showenNews.title}
+                  sharedLink={`${HOME_URL}/news/${showenNews.id}`}
+                  photo={`${HOME_URL}/images/${showenNews.photo}`}
+                />
               </div>
             </div>
           </div>
