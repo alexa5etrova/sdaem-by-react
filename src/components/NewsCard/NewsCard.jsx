@@ -1,7 +1,6 @@
 import Htag from "../Htag/Htag";
 import { Link } from "react-router-dom";
 
-import photo2 from "./../../assets/images/photoNewsCard.jpg";
 import DateTag from "../DateTag/DateTag";
 import { NEWS_PREVIEW_LENGTH } from "../../data/const";
 

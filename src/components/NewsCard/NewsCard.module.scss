@@ -15,8 +15,10 @@
   line-height: 17px;
 }
 .cardImg img {
+  object-fit: cover;
+  width: 406px;
+  height: 227px;
   border-radius: 10px;
-  width: 100%;
 }
 .cardTextContainer {
   padding: 20px;
