@@ -13,7 +13,7 @@ const Contacts = (props) => {
       <Background>
         <div className={styles.contactsContainer}>
           <div className={styles.contactsText}>
-            <Htag tag="h1white" lassName={styles.contactsHeader}>
+            <Htag tag="h1white" className={styles.contactsHeader}>
               Контакты
             </Htag>
             <p className={styles.contactsParagragh}>
