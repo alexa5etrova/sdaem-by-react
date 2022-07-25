@@ -1,16 +1,20 @@
-import PaymentsLogo from "../../components/PaymentsLogo/PaymentsLogo";
-import SocialMediaLogo from "../../components/SocialMediaLogo/SocialMediaLogo";
-import styles from "./Footer.module.scss";
-import logo from "./../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import cn from "classnames";
-import { address, categories, sitemap } from "../../data/Navdata";
-import { flatCategories } from "./../../data/Navdata";
+
+import PaymentsLogo from "../../components/PaymentsLogo/PaymentsLogo";
+import SocialMediaLogo from "../../components/SocialMediaLogo/SocialMediaLogo";
+import logo from "./../../assets/images/logo.png";
+import { CATEGORIES, COMPANY, FLAT_CATEGORIES, SITEMAP } from "./../../data/const";
+
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
-  const navList = categories.filter((item) => item.name !== "Квартиры");
-  const flats = categories.filter((item) => item.name === "Квартиры");
-  const siteMap = sitemap.filter((item) => item.name !== "Главная");
+  const navList = CATEGORIES.filter((item) => item.name !== "Квартиры");
+  const flats = CATEGORIES.filter((item) => item.name === "Квартиры");
+  const siteMap = SITEMAP.filter((item) => item.name !== "Главная");
+
+  let phone = "tel:" + COMPANY.phone;
+  let email = "mailto:" + COMPANY.email;
 
   return (
     <footer className={styles.footer}>
@@ -18,11 +22,15 @@ const Footer = () => {
         <div className={styles.footerAddress}>
           <img className={styles.footerLogo} src={logo} alt="Сдаем бай лого" />
           <p className={styles.footerTranslitLine}>Сдаём бай</p>
-          {address.map((line) => (
-            <p className={styles.footerAddressLine} key={line.id}>
-              {line.body}
-            </p>
-          ))}
+          <p className={styles.footerAddressLine}>{COMPANY.name}</p>
+          <p className={styles.footerAddressLine}>{COMPANY.registration}</p>
+          <p className={styles.footerAddressLine}>{COMPANY.registrationDate}</p>
+          <p className={styles.footerAddressLine}>{COMPANY.address}</p>
+          <p className={styles.footerAddressLine}>
+            <a href={phone}>{COMPANY.phone}</a>
+            <a href={email}>{COMPANY.email}</a>
+          </p>
+          <p className={styles.footerAddressLine}>Режим работы: {COMPANY.openHours}</p>
         </div>
         <div className={styles.footerNav}>
           <ul className={styles.footerNavList}>
@@ -43,7 +51,7 @@ const Footer = () => {
               );
             })}
             <ul className={cn(styles.footerGreyNavList, styles.navGrid)}>
-              {flatCategories.map(function (item) {
+              {FLAT_CATEGORIES.map(function (item) {
                 return (
                   <li key={item.id} className={styles.footerGreyNav}>
                     <Link to={item.path}>{item.name}</Link>

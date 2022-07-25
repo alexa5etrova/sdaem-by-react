@@ -304,6 +304,12 @@
       "name": "alexa5etroгггг",
       "email": "zaxarez@gmail.com",
       "id": 4
+    },
+    {
+      "message": "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "name": "ggg",
+      "email": "zaxarez@gmail.com",
+      "id": 5
     }
   ],
   "users": [
@@ -318,6 +324,44 @@
       "password": "$2a$10$Z0BxaS0c4I6320oM/bcbMe8d.l0iwjBnvIXkCrEBM8UJqFtrbYkqq",
       "login": "dddddd",
       "id": 2
+    }
+  ],
+  "flats": [
+    {
+      "id": 1,
+      "price": 65,
+      "city": "Минск",
+      "address": "б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "mainPhoto": "./images/photo1",
+      "district": "Шабаны",
+      "sleepPlace": "4 (2+2)",
+      "rooms": "4 комн",
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 2,
+      "price": 85,
+      "city": "Минск",
+      "address": "б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "mainPhoto": "./images/photo2",
+      "district": "Шабаны",
+      "sleepPlace": "4 (2+2)",
+      "rooms": "4 комн",
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 2,
+      "price": 85,
+      "city": "Гродно",
+      "address": "б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "mainPhoto": "./images/photo2",
+      "district": "Шабаны",
+      "sleepPlace": "4 (2+2)",
+      "rooms": "4 комн",
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
     }
   ]
 }
