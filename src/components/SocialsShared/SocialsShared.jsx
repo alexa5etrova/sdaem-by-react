@@ -1,4 +1,3 @@
-import styles from "./SocialsShared.module.scss";
 import {
   VKShareButton,
   FacebookShareButton,
@@ -11,6 +10,8 @@ import {
   TelegramIcon,
   WhatsappIcon,
 } from "react-share";
+
+import styles from "./SocialsShared.module.scss";
 
 const SocialsShared = ({ title, photo, sharedLink }) => {
   return (

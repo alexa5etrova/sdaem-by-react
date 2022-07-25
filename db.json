@@ -222,8 +222,8 @@
     {
       "id": 1,
       "price": 65,
-      "city": "Минск",
-      "address": "б-р Мулявина, д. 10",
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
       "metro": "Грушевка",
       "mainPhoto": "./images/photo1",
       "district": "Шабаны",
@@ -234,8 +234,8 @@
     {
       "id": 2,
       "price": 85,
-      "city": "Минск",
-      "address": "б-р Мулявина, д. 10",
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
       "metro": "Грушевка",
       "mainPhoto": "./images/photo2",
       "district": "Шабаны",
@@ -246,8 +246,8 @@
     {
       "id": 2,
       "price": 85,
-      "city": "Гродно",
-      "address": "б-р Мулявина, д. 10",
+      "city": "grodno",
+      "address": "Гродно, б-р Мулявина, д. 10",
       "metro": "Грушевка",
       "mainPhoto": "./images/photo2",
       "district": "Шабаны",

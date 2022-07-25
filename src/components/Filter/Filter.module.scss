@@ -1,0 +1,19 @@
+.wrapper {
+  height: 100%;
+  position: relative;
+}
+.filter {
+  position: absolute;
+  width: 1010px;
+  height: 64px;
+  background-color: white;
+  border-radius: 10px;
+  left: 50%;
+  top: 61%;
+  margin-left: -528px;
+  margin-top: -50px;
+  padding: 15px 33px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 42px;
+}

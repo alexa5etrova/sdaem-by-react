@@ -3,14 +3,16 @@ import * as Yup from "yup";
 import cn from "classnames";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
+
 import { sendMessage } from "../../../redux/messageSlice";
+import Loader from "../../Loader/Loader";
 import Button from "../../Button/Button";
 import Input from "./../Input/Input";
 import FormWrapper from "../FormWrapper/FormWrapper";
 import Dialog from "./../Dialog/Dialog";
 import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
 import { MESSAGE_SENT, MESSAGE_SENT_FAILED } from "../../../data/contacts";
-import Loader from "../../Loader/Loader";
+
 import styles from "./Feedback.module.scss";
 
 const Feedback = (props) => {
@@ -67,7 +69,7 @@ const Feedback = (props) => {
 
       <form onSubmit={formik.handleSubmit} className={styles.form}>
         <div className={cn(styles.name, styles.inputWrapper)}>
-          <label for="name" className={styles.label}>
+          <label htmlFor="name" className={styles.label}>
             Ваше имя
           </label>
           <Input
@@ -83,7 +85,7 @@ const Feedback = (props) => {
           />
         </div>
         <div className={cn(styles.email, styles.inputWrapper)}>
-          <label for="email" className={styles.label}>
+          <label htmlFor="email" className={styles.label}>
             Ваша электронная почта
           </label>
           <Input

@@ -1,4 +1,4 @@
-import Select from "../../components/Filter/Select/Select";
+import Filter from "../../components/Filter/Filter";
 import Background from "./../../components/Background/Background";
 
 import styles from "./Home.module.scss";
@@ -8,7 +8,7 @@ const Home = (props) => {
     <div className={styles.container}>
       <Background bgStyle="homeFilter">
         <div className={styles.violetWrapper}>
-          <Select />
+          <Filter />
         </div>
       </Background>
     </div>

@@ -1,0 +1,42 @@
+@import "./../../../styles/_colors.scss";
+.selectWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.label {
+  color: #bdbdbd;
+}
+.select {
+  width: 150px;
+  height: 37px;
+  background-color: #f8f8f8;
+  color: #686868;
+  border-radius: 20px;
+  border: none;
+  appearance: none;
+  padding-left: 8px;
+}
+.select:hover {
+  border: 2px solid rgba(102, 78, 249, 0.8);
+  background-color: white;
+}
+
+.selectArrow {
+  position: absolute;
+  color: $violet;
+  top: 36px;
+  left: 121px;
+}
+
+.option {
+  margin: 10px 20px;
+  text-align: left;
+  background-color: white;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  color: #1e2123;
+}
