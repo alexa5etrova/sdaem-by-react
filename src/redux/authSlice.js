@@ -1,10 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { HOME_URL } from "./../data/admin";
 
 export const userSignUp = createAsyncThunk(
   "users/userSignUp",
   async function (user, { rejectWithValue }) {
     try {
-      const responce = await fetch("http://127.0.0.1:3004/users", {
+      const responce = await fetch(`${HOME_URL}/users`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",
@@ -33,7 +34,7 @@ export const userSignIn = createAsyncThunk(
   "users/userSignIn",
   async function (user, { rejectWithValue }) {
     try {
-      const responce = await fetch("http://127.0.0.1:3004/login", {
+      const responce = await fetch(`${HOME_URL}/login`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",

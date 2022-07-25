@@ -1,10 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { HOME_URL } from "./../data/admin";
 
 export const sendMessage = createAsyncThunk(
   "messages/sendMessage",
   async function (message, { rejectWithValue }) {
     try {
-      const responce = await fetch("http://127.0.0.1:3004/messages", {
+      const responce = await fetch(`${HOME_URL}/messages`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",

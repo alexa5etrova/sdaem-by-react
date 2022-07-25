@@ -13,6 +13,7 @@ import { fetchNews } from "./../../redux/newsSlice";
 
 import styles from "./NewsItem.module.scss";
 import { CRUMBS } from "./../../data/nav";
+import { VKShareButton } from "react-share";
 
 const NewsItem = (props) => {
   const dispatch = useDispatch();
@@ -47,7 +48,9 @@ const NewsItem = (props) => {
               <div className={styles.tags}>
                 <DateTag dateStyle="violet" date={showenNews.date} />
                 <div className={styles.socialTags}>
-                  <p>Поделиться:</p> <SocialMediaLogo />
+                  <p>Поделиться:</p>
+                  <VKShareButton></VKShareButton>
+                  {/* <SocialMediaLogo /> */}
                 </div>
               </div>
             </div>
