@@ -2,7 +2,7 @@ import Htag from "../Htag/Htag";
 import { Link } from "react-router-dom";
 
 import DateTag from "../DateTag/DateTag";
-import { NEWS_PREVIEW_LENGTH } from "../../data/const";
+import { NEWS_PREVIEW_LENGTH } from "../../data/news";
 
 import styles from "./NewsCard.module.scss";
 

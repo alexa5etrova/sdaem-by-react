@@ -5,7 +5,7 @@ import Button from "./../../../components/Button/Button";
 import Dropdown from "./../../../components/Dropdown/Dropdown";
 import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
 import logo from "./../../../assets/images/logo.png";
-import { CATEGORIES, FLAT_CATEGORIES } from "../../../data/const";
+import { CATEGORIES, FLAT_CATEGORIES } from "../../../data/nav";
 
 import styles from "./Nav.module.scss";
 

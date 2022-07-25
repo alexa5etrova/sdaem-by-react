@@ -1,4 +1,4 @@
-import { PAYMENTS_METHOD } from "./../../data/const";
+import { PAYMENTS_METHOD } from "./../../data/contacts";
 
 import styles from "./PaymentsLogo.module.scss";
 

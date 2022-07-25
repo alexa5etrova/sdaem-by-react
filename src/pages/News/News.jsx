@@ -6,12 +6,12 @@ import NewsCard from "./../../components/NewsCard/NewsCard";
 import Pagination from "../../components/Pagination/Pagination";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Search from "../../components/forms/Search/Search";
-import { CRUMBS } from "./../../data/const";
+import { CRUMBS } from "./../../data/nav";
 
 import styles from "./News.module.scss";
 
 const News = (props) => {
-  const { news, status, error } = useSelector((state) => state.news);
+  const { news, status } = useSelector((state) => state.news);
 
   const [firstContentIndex, setFirstContentIndex] = useState();
   const [lastContentIndex, setLastContentIndex] = useState();

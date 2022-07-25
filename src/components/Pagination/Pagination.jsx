@@ -2,7 +2,7 @@ import cn from "classnames";
 import { useEffect } from "react";
 
 import usePagination from "./../../hook/usePagination";
-import { NEWS_PER_PAGE } from "./../../data/const";
+import { NEWS_PER_PAGE } from "./../../data/news";
 
 import styles from "./Pagination.module.scss";
 

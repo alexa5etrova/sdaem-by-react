@@ -12,7 +12,7 @@ import Button from "../../Button/Button";
 import Switch from "./../Switch/Switch";
 import Dialog from "./../Dialog/Dialog";
 import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
-import { AUTH_SENT_FAILED } from "../../../data/const";
+import { AUTH_SENT_FAILED } from "../../../data/auth";
 
 import styles from "./SignIn.module.scss";
 
@@ -56,9 +56,7 @@ const SignIn = (props) => {
       <FormWrapper wrStyle="auth">
         <div className={styles.authWrapper}>
           <Htag tag="h2">Авторизация</Htag>
-          <p className={styles.text}>
-            Авторизируйтесь, чтобы начать публиковать свои объявления
-          </p>
+          <p className={styles.text}>Авторизируйтесь, чтобы начать публиковать свои объявления</p>
           <form onSubmit={formik.handleSubmit} className={styles.form}>
             <Input
               type="email"
@@ -85,11 +83,7 @@ const SignIn = (props) => {
               errorStyle="auth"
             />
             <div className={styles.textWrapper}>
-              <Switch
-                onChange={formik.handleChange}
-                name="rememberMe"
-                value={formik.values.email}
-              >
+              <Switch onChange={formik.handleChange} name="rememberMe" value={formik.values.email}>
                 Запомнить меня
               </Switch>
               <p className={styles.toSignUp}>Забыли пароль?</p>

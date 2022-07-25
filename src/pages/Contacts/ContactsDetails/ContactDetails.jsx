@@ -1,4 +1,6 @@
-import { COMPANY } from "./../../../data/const";
+import cn from "classnames";
+
+import { COMPANY } from "./../../../data/contacts";
 import { ReactComponent as LocationIcon } from "./../../../assets/icons/location.svg";
 import { ReactComponent as PhoneIcon } from "./../../../assets/icons/phone.svg";
 import { ReactComponent as EmailIcon } from "./../../../assets/icons/envelope.svg";
@@ -6,7 +8,7 @@ import { ReactComponent as ClockIcon } from "./../../../assets/icons/clock.svg";
 import { ReactComponent as TelegramIcon } from "./../../../assets/icons/telegram.svg";
 import { ReactComponent as ViberIcon } from "./../../../assets/icons/viber.svg";
 import { ReactComponent as WhatsappIcon } from "./../../../assets/icons/whatsapp.svg";
-import cn from "classnames";
+
 import styles from "./ContactDetails.module.scss";
 
 const ContactDetails = (props) => {

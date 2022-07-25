@@ -12,7 +12,7 @@ import Loader from "../../components/Loader/Loader";
 import { fetchNews } from "./../../redux/newsSlice";
 
 import styles from "./NewsItem.module.scss";
-import { CRUMBS } from "./../../data/const";
+import { CRUMBS } from "./../../data/nav";
 
 const NewsItem = (props) => {
   const dispatch = useDispatch();
