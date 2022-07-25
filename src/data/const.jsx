@@ -50,6 +50,9 @@ export const FLAT_CATEGORIES = [
   { name: "Квартиры в Могилеве", id: 6, path: "/flats/mogilev" },
 ];
 
+export const CRUMBS = {
+  news: [{ title: "Новости", id: 1, url: "/news" }],
+};
 export const PAYMENTS_METHOD = [
   { src: "./images/visa.png", name: "Visa", id: 1 },
   { src: "./images/webpay.png", name: "Webpay", id: 2 },

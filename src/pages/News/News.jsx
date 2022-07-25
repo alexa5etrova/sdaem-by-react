@@ -1,12 +1,14 @@
-import Htag from "../../components/Htag/Htag";
-import { NewsCrumbs } from "./../../data/Newsdata";
-import NewsCard from "./../../components/NewsCard/NewsCard";
-import styles from "./News.module.scss";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+
+import Htag from "../../components/Htag/Htag";
+import NewsCard from "./../../components/NewsCard/NewsCard";
 import Pagination from "../../components/Pagination/Pagination";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Search from "../../components/forms/Search/Search";
-import { useSelector } from "react-redux";
+import { CRUMBS } from "./../../data/const";
+
+import styles from "./News.module.scss";
 
 const News = (props) => {
   const { news, status, error } = useSelector((state) => state.news);
@@ -36,26 +38,24 @@ const News = (props) => {
   return (
     <div className={styles.pageContainer}>
       <nav className={styles.crumbsContainer}>
-        <Breadcrumbs crumbs={NewsCrumbs} />
+        <Breadcrumbs crumbs={CRUMBS.news} />
       </nav>
       <Search searchHandler={setSearch}></Search>
       <Htag tag="h1">Новости</Htag>
       <div className={styles.newsContainer}>
         {status === "resolved" &&
-          filteredNewsData
-            .slice(firstContentIndex, lastContentIndex)
-            .map(function (item) {
-              return (
-                <NewsCard
-                  key={item.id}
-                  id={item.id}
-                  title={item.title}
-                  date={item.date}
-                  text={item.short}
-                  photo={item.photo}
-                />
-              );
-            })}
+          filteredNewsData.slice(firstContentIndex, lastContentIndex).map(function (item) {
+            return (
+              <NewsCard
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                date={item.date}
+                text={item.short}
+                photo={item.photo}
+              />
+            );
+          })}
       </div>
       <div className={styles.paginationContainer}>
         <Pagination

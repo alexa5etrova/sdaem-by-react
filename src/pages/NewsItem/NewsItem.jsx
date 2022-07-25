@@ -1,15 +1,18 @@
-import styles from "./NewsItem.module.scss";
+import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+
 import Breadcrumbs from "./../../components/Breadcrumbs/Breadcrumbs";
 import Htag from "./../../components/Htag/Htag";
 import DateTag from "../../components/DateTag/DateTag";
 import SocialMediaLogo from "./../../components/SocialMediaLogo/SocialMediaLogo";
-import photo from "./../../assets/images/photoNews.jpg";
 import NewsCard from "../../components/NewsCard/NewsCard";
-import { useParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
 import Loader from "../../components/Loader/Loader";
-import { useEffect } from "react";
+
 import { fetchNews } from "./../../redux/newsSlice";
+
+import styles from "./NewsItem.module.scss";
+import { CRUMBS } from "./../../data/const";
 
 const NewsItem = (props) => {
   const dispatch = useDispatch();
@@ -18,11 +21,11 @@ const NewsItem = (props) => {
     dispatch(fetchNews());
   }, [dispatch]);
   const { newsId } = useParams();
-  const { news, status, error } = useSelector((state) => state.news);
+  const { news, status } = useSelector((state) => state.news);
 
   let showenNews = news.find((item) => item.id === Number(newsId));
   let crumbs = [
-    ...props.crumbs,
+    ...CRUMBS.news,
     { title: showenNews.title, url: `/news/${showenNews.id}`, id: 202 },
   ];
 
@@ -47,7 +50,7 @@ const NewsItem = (props) => {
           </div>
         </div>
         <div className={styles.photo}>
-          <img src={photo} alt={showenNews.title} />
+          <img src={showenNews.src} alt={showenNews.title} />
         </div>
         <div className={styles.newsText}>
           {status !== "resolved" ? (

@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./Breadcrumbs.module.scss";
 import { ReactComponent as Home } from "../../assets/icons/home.svg";
 
-const Breadcrumbs = (props) => {
-  let crumbs = props.crumbs;
+const Breadcrumbs = ({ crumbs }) => {
   return (
     <ul className={styles.breadcrumbs}>
       <li>

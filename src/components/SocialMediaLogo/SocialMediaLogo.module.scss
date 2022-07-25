@@ -9,7 +9,13 @@
 .socialMediaListItem {
   text-decoration: none;
 }
-.socialMediaListItem a *:hover {
-  fill: $violet;
+.socialMediaListItem a * {
+  color: $black;
+}
+.socialMediaListItem a:hover {
+  * {
+    color: $violet;
+  }
+
   cursor: default;
 }
