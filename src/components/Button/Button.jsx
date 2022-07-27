@@ -12,6 +12,7 @@ const Button = (props) => {
         [styles.btnLightViolet]: props.btnStyle === "lightViolet",
         [styles.btnSearch]: props.btnStyle === "search",
         [styles.btnYellow]: props.btnStyle === "yellow",
+        [styles.btnFilter]: props.btnStyle === "filter",
       })}
       onClick={props.onClick}
     >

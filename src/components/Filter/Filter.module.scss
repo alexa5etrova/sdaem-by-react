@@ -1,3 +1,4 @@
+@import "./../../styles/_colors.scss";
 .wrapper {
   height: 100%;
   position: relative;
@@ -13,7 +14,77 @@
   margin-left: -528px;
   margin-top: -50px;
   padding: 15px 33px 20px 20px;
+}
+
+.filterForm {
   display: flex;
   flex-direction: row;
   gap: 42px;
+  align-items: center;
+  position: relative;
+}
+
+.priceWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.label {
+  color: #bdbdbd;
+}
+.price {
+  width: 63px;
+  height: 37px;
+  background-color: #f8f8f8;
+  color: #686868;
+  border-radius: 20px;
+  border: none;
+  appearance: textfield;
+  padding-left: 11px;
+}
+.price:hover {
+  outline: 2px solid rgba(102, 78, 249, 0.8);
+  background-color: white;
+}
+.text {
+  color: #4e64f9;
+  margin: 0 5px;
+}
+.toMap {
+  text-decoration: none;
+  color: $black;
+  align-self: center;
+}
+.toMap:hover {
+  color: #664ef9;
+}
+.icon {
+  color: #664ef9;
+  margin-left: 5px;
+}
+.moreOptions {
+  position: absolute;
+  top: 68px;
+  left: -20px;
+  width: 1010px;
+
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 33px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  border: rgba(78, 100, 249, 0.1);
+  box-shadow: 0 20px 40px 0 rgba(135, 124, 202, 0.15);
+}
+.moreSelect {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  margin: 32px 0;
+}
+.moreEquipment {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 13px 5px;
 }
