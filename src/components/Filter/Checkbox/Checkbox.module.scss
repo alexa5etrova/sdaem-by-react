@@ -1,0 +1,33 @@
+@import "./../../../styles/_colors.scss";
+
+.checkboxWrapper {
+  padding-left: 30px;
+}
+
+.label {
+  position: relative;
+}
+
+.label::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  outline: 1px solid rgba(240, 240, 240, 1);
+  position: absolute;
+  top: 0;
+  left: -31px;
+  background-color: #f8f8f8;
+}
+.checkbox {
+  display: none;
+}
+.checked::after {
+  content: "\2714";
+  color: white;
+  background-color: $violet;
+  padding-left: 4px;
+  padding-top: 2px;
+  height: 18px;
+  width: 16px;
+}

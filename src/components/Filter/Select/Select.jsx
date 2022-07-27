@@ -1,5 +1,5 @@
 import styles from "./Select.module.scss";
-
+import { Field } from "formik";
 import { ReactComponent as Arrow } from "./chevronDown.svg";
 
 const Select = ({ label, name, id, choise }) => {
@@ -11,8 +11,8 @@ const Select = ({ label, name, id, choise }) => {
       <span className={styles.selectArrow}>
         <Arrow width="18" />
       </span>
-      <select id={id} className={styles.select} name={name}>
-        <option className={styles.option} selected>
+      <Field as="select" id={id} className={styles.select} name={name}>
+        <option className={styles.option} defaultValue>
           Выберите
         </option>
         {choise.map((item) => (
@@ -20,7 +20,7 @@ const Select = ({ label, name, id, choise }) => {
             {item.name}
           </option>
         ))}
-      </select>
+      </Field>
     </div>
   );
 };

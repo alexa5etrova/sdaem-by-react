@@ -2,6 +2,7 @@ import Filter from "../../components/Filter/Filter";
 import Background from "./../../components/Background/Background";
 
 import styles from "./Home.module.scss";
+import PhotoLink from "./../../components/PhotoLink/PhotoLink";
 
 const Home = (props) => {
   return (
@@ -11,6 +12,9 @@ const Home = (props) => {
           <Filter />
         </div>
       </Background>
+      <div className={styles.catalogueWrapper}>
+        <PhotoLink />
+      </div>
     </div>
   );
 };
