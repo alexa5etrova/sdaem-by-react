@@ -1,8 +1,7 @@
-.container1 {
-  background-image: url("./../../assets/images/Home1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 520px;
-  height: 271px;
-  border-radius: 14px;
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 28px 30px;
+  width: 967px;
 }

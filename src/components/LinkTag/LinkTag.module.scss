@@ -1,0 +1,33 @@
+@import "./../../styles/_colors.scss";
+
+.link {
+  text-decoration: none;
+}
+.violet {
+  padding: 8px 14px;
+  border-radius: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  background-color: $violet;
+}
+.violet:hover {
+  color: white;
+  background-color: #5c35f9;
+}
+.round {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+}
+.round:hover {
+  border: 2px solid $lightgrey;
+}
+
+.icon {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+}
