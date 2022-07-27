@@ -1,0 +1,44 @@
+.sidebar {
+  width: 293px;
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+}
+.navSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.total {
+  color: #bdbdbd;
+}
+.more {
+  font-size: 14px;
+  font-weight: 400;
+  color: #feb700;
+  line-height: 8px;
+  position: relative;
+  margin-bottom: 8px;
+  margin-top: 13px;
+}
+
+.more:after {
+  display: block;
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-bottom: 1px solid #feb700;
+  border-right: 1px solid #feb700;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 3px;
+  left: 35px;
+}
+.more:hover {
+  text-decoration: underline;
+}

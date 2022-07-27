@@ -11,4 +11,7 @@
 
 .catalogueWrapper {
   margin-top: 86px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }

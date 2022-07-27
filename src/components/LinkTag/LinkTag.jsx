@@ -17,6 +17,18 @@ const LinkTag = ({ children, linkStyle, to, ...props }) => {
           <ChevronIcon width="10" height="16" className={styles.icon} />
         </Link>
       );
+    case "black":
+      return (
+        <Link to={to} className={cn(styles.link, styles.black)} {...props}>
+          {children}
+        </Link>
+      );
+    case "yellow":
+      return (
+        <Link to={to} className={cn(styles.link, styles.yellow)} {...props}>
+          {children}
+        </Link>
+      );
     default:
       return <></>;
   }
