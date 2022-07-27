@@ -3,11 +3,7 @@
 
 .newsHeader {
   width: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(148, 175, 255, 0.1),
-    rgba(78, 100, 249, 0.1)
-  );
+  background: linear-gradient(90deg, rgba(148, 175, 255, 0.1), rgba(78, 100, 249, 0.1));
   height: 280px;
 }
 .newsHeaderContainer {
@@ -23,11 +19,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.socialTags {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+
 .photo {
   width: 844px;
   margin: -44px auto 0 auto;
@@ -50,11 +42,7 @@
 }
 .readMore {
   width: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(148, 175, 255, 0.1),
-    rgba(78, 100, 249, 0.1)
-  );
+  background: linear-gradient(90deg, rgba(148, 175, 255, 0.1), rgba(78, 100, 249, 0.1));
 }
 .readMoreContainer {
   max-width: 1280px;

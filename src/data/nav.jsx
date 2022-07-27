@@ -27,7 +27,7 @@ export const FLAT_CATEGORIES = [
   { name: "Квартиры в Бресте", id: 3, path: "/flats/brest" },
   {
     name: "Квартиры в Витебске",
-    id: 114,
+    id: 4,
     path: "/flats/vitebsk",
   },
   { name: "Квартиры в Гродно", id: 5, path: "/flats/grodno" },
