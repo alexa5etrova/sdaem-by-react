@@ -3,6 +3,7 @@ import Background from "./../../components/Background/Background";
 
 import styles from "./Home.module.scss";
 import PhotoLink from "./../../components/PhotoLink/PhotoLink";
+import SidebarNav from "../../components/SidebarNav/SidebarNav";
 
 const Home = (props) => {
   return (
@@ -14,6 +15,7 @@ const Home = (props) => {
       </Background>
       <div className={styles.catalogueWrapper}>
         <PhotoLink />
+        <SidebarNav />
       </div>
     </div>
   );

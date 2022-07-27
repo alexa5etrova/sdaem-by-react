@@ -14,6 +14,7 @@
   color: white;
   background-color: #5c35f9;
 }
+// круглая кнопка ссо трелкой
 .round {
   display: block;
   width: 40px;
@@ -30,4 +31,27 @@
   position: absolute;
   top: 11px;
   left: 16px;
+}
+// черная ссылка из боковой наигации
+.black {
+  font-size: 18px;
+  font-weight: 700;
+  color: $black;
+  line-height: 22px;
+  transition: 0.5s ease-in-out;
+}
+.black:hover {
+  margin-left: 15px;
+}
+// желтая ссылка из боковой наигации
+.yellow {
+  font-size: 14px;
+  font-weight: 400;
+  color: #feb700;
+  line-height: 8px;
+  transition: 0.5s ease-in-out;
+  line-height: 17px;
+}
+.yellow:hover {
+  margin-left: 8px;
 }
