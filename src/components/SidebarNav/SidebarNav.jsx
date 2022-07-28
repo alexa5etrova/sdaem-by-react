@@ -1,10 +1,9 @@
 import { useState } from "react";
-import LinkTag from "../LinkTag/LinkTag";
-import { ReactComponent as ChevronIcon } from "../../assets/icons/chevron.svg";
-
+import cn from "classnames";
 import { COTTAGES_CATEGORIES, FLAT_CATEGORIES, POPULAR } from "./../../data/nav";
-import styles from "./SidebarNav.module.scss";
+import LinkTag from "../LinkTag/LinkTag";
 import Htag from "./../Htag/Htag";
+import styles from "./SidebarNav.module.scss";
 
 const SidebarNav = () => {
   const [showMoreCottages, setShowMoreCottages] = useState(false);
@@ -25,7 +24,7 @@ const SidebarNav = () => {
         ))}
       </div>
 
-      <div className={styles.navSection}>
+      <div className={cn(styles.navSection, styles.cottagesMg)}>
         <LinkTag linkStyle="black" to="/flats">
           Коттеджи и усадьбы
         </LinkTag>
@@ -53,7 +52,7 @@ const SidebarNav = () => {
           ))}
       </div>
       {!showMoreCottages && (
-        <div className={styles.navSection}>
+        <div className={cn(styles.navSection, styles.popularMg)}>
           <Htag tag="h3bigger">Популярные направления</Htag>
           {POPULAR.map((collection) => (
             <div key={collection.id} className={styles.row}>

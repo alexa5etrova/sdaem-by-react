@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import { fetchFlats } from "./../../redux/flatsSlice";
-import dotsYellow from "./../../assets/images/dotsYellow.png";
 import Filter from "../../components/Filter/Filter";
 import Background from "./../../components/Background/Background";
 import PhotoLink from "./../../components/PhotoLink/PhotoLink";

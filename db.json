@@ -232,6 +232,7 @@
       "rooms": "4 комн",
       "period": "day",
       "sqM": "179",
+      "status": "gold",
       "contacts": [
         {
           "photo": "./images/users/user",
