@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import Htag from "../../components/Htag/Htag";
 import NewsCard from "./../../components/NewsCard/NewsCard";
@@ -9,10 +9,17 @@ import Search from "../../components/forms/Search/Search";
 import { CRUMBS } from "./../../data/nav";
 
 import styles from "./News.module.scss";
+import { fetchNews } from "./../../redux/newsSlice";
+import Loader from "../../components/Loader/Loader";
 
 const News = (props) => {
-  const { news, status } = useSelector((state) => state.news);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(fetchNews());
+  }, [dispatch]);
+
+  const { news, status, error } = useSelector((state) => state.news);
   const [firstContentIndex, setFirstContentIndex] = useState();
   const [lastContentIndex, setLastContentIndex] = useState();
   const [search, setSearch] = useState("");
@@ -26,46 +33,53 @@ const News = (props) => {
   };
 
   // реализация поиска - значения для  переменной search приходят из компонента Search
+  if (status === "loading") {
+    return <Loader />;
+  }
+  if (status === "rejected") {
+    return <p>{error}</p>;
+  }
+  if (status === "resolved") {
+    const filteredNewsData = news.filter(function (item) {
+      if (search === "") {
+        return item;
+      } else {
+        return item.title.toLowerCase().includes(search);
+      }
+    });
 
-  const filteredNewsData = news.filter(function (item) {
-    if (search === "") {
-      return item;
-    } else {
-      return item.title.toLowerCase().includes(search);
-    }
-  });
-
-  return (
-    <div className={styles.pageContainer}>
-      <nav className={styles.crumbsContainer}>
-        <Breadcrumbs crumbs={CRUMBS.news} />
-      </nav>
-      <Search searchHandler={setSearch}></Search>
-      <Htag tag="h1">Новости</Htag>
-      <div className={styles.newsContainer}>
-        {status === "resolved" &&
-          filteredNewsData.slice(firstContentIndex, lastContentIndex).map(function (item) {
-            return (
-              <NewsCard
-                key={item.id}
-                id={item.id}
-                title={item.title}
-                date={item.date}
-                text={item.short}
-                photo={item.photo}
-              />
-            );
-          })}
+    return (
+      <div className={styles.pageContainer}>
+        <nav className={styles.crumbsContainer}>
+          <Breadcrumbs crumbs={CRUMBS.news} />
+        </nav>
+        <Search searchHandler={setSearch}></Search>
+        <Htag tag="h1">Новости</Htag>
+        <div className={styles.newsContainer}>
+          {status === "resolved" &&
+            filteredNewsData.slice(firstContentIndex, lastContentIndex).map(function (item) {
+              return (
+                <NewsCard
+                  key={item.id}
+                  id={item.id}
+                  title={item.title}
+                  date={item.date}
+                  text={item.short}
+                  photo={item.photo}
+                />
+              );
+            })}
+        </div>
+        <div className={styles.paginationContainer}>
+          <Pagination
+            data={filteredNewsData}
+            sendFirstIndex={getFirstIndex}
+            sendLastIndex={getLastIndex}
+          />
+        </div>
       </div>
-      <div className={styles.paginationContainer}>
-        <Pagination
-          data={filteredNewsData}
-          sendFirstIndex={getFirstIndex}
-          sendLastIndex={getLastIndex}
-        />
-      </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default News;
