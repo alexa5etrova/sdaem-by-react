@@ -2,7 +2,6 @@
   width: 293px;
   display: flex;
   flex-direction: column;
-  gap: 43px;
 }
 .navSection {
   display: flex;
@@ -16,6 +15,12 @@
 }
 .total {
   color: #bdbdbd;
+}
+.cottagesMg {
+  margin-top: 43px;
+}
+.popularMg {
+  margin-top: 28px;
 }
 .more {
   font-size: 14px;
