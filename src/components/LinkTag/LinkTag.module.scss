@@ -55,3 +55,19 @@
 .yellow:hover {
   margin-left: 8px;
 }
+// желтая ссылка-кнопка из карточки квартиры
+.lightYellow {
+  background-color: rgba(255, 213, 79, 0.1);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fec100;
+  line-height: 17px;
+  transition: 0.5s ease-in-out;
+  border-radius: 17px;
+  padding: 10px 15px;
+  width: fit-content;
+  height: fit-content;
+}
+.lightYellow:hover {
+  background-color: rgba(255, 213, 79, 0.2);
+}

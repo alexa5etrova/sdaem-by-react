@@ -57,3 +57,5 @@ export const EQUIPMENT = [
   { id: 24, title: "Кофеварка", value: "coffeeMashine2" },
   { id: 25, title: "Микроволновая печь", value: "microwave2" },
 ];
+
+export const FLAT_PREVIEW_LENGTH = 188;

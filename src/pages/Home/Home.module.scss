@@ -8,6 +8,22 @@
   width: 100%;
   border-radius: 50px;
 }
+.headerWrapper {
+  margin-top: 137px;
+  margin-left: 4px;
+  position: relative;
+}
+.headerWrapper::before {
+  content: "";
+  background-image: url("./../../assets/images/dotsYellow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -105px;
+  left: -36px;
+  width: 82px;
+  height: 71px;
+}
 
 .catalogueWrapper {
   margin-top: 86px;
