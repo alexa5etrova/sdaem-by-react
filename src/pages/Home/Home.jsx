@@ -16,7 +16,7 @@ const Home = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchFlats("flats"));
+    dispatch(fetchFlats("flats?city=minsk"));
   }, [dispatch]);
 
   const { flats, status, error } = useSelector((state) => state.flats);
@@ -32,6 +32,7 @@ const Home = (props) => {
       <div className={styles.container}>
         <Background bgStyle="homeFilter">
           <div className={styles.violetWrapper}>
+            <Htag tag="h1home">Sdaem.by - у нас живут ваши объявления</Htag>
             <Filter />
           </div>
         </Background>

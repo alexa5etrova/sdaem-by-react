@@ -6,6 +6,8 @@ const Htag = (props) => {
       return <h1 className={styles.h1}>{props.children}</h1>;
     case "h1white":
       return <h1 className={styles.h1white}>{props.children}</h1>;
+    case "h1home":
+      return <h1 className={styles.h1home}>{props.children}</h1>;
     case "h2":
       return <h2 className={styles.h2}>{props.children}</h2>;
     case "h3":

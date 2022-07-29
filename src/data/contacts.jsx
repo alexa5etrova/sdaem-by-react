@@ -26,8 +26,6 @@ export const COMPANY = {
   email: "sdaem@sdaem.by",
   openHours: "08:00-22:00",
   telegram: "",
-  whatsapp: "",
-  viber: "",
   instagram: "",
   vk: "",
   facebook: "",

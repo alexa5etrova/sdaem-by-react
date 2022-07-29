@@ -14,6 +14,8 @@ import styles from "./ContactDetails.module.scss";
 const ContactDetails = (props) => {
   let phone = "tel:" + COMPANY.phone;
   let email = "mailto:" + COMPANY.email;
+  let viber = "viber://chat?number=%2B" + COMPANY.phone.replace(/[^0-9]/g, "");
+  let whatsapp = "https://wa.me/" + COMPANY.phone.replace(/[^0-9]/g, "");
 
   return (
     <div className={styles.contactDetails}>
@@ -30,12 +32,7 @@ const ContactDetails = (props) => {
         <div className={cn(styles.contactInfo, styles.phones)}>
           <a href={phone}>{COMPANY.phone}</a>
           <div className={styles.socialContainer}>
-            <a
-              href={COMPANY.viber}
-              className={styles.socialIcon}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
+            <a href={viber} className={styles.socialIcon} target="_blank" rel="noreferrer noopener">
               <ViberIcon />
             </a>
             <a
@@ -47,7 +44,7 @@ const ContactDetails = (props) => {
               <TelegramIcon />
             </a>
             <a
-              href={COMPANY.whatsapp}
+              href={whatsapp}
               className={styles.socialIcon}
               target="_blank"
               rel="noreferrer noopener"
