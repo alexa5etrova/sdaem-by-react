@@ -29,11 +29,11 @@
   padding: 0;
   margin: 0;
 }
+
 .navHeaderItem a {
   color: $grey;
   text-decoration: none;
   padding-bottom: 8px;
-  cursor: default;
 }
 .navHeaderItem a:hover {
   border-bottom: 3px solid $yellow;

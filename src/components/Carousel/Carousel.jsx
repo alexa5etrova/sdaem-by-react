@@ -5,17 +5,38 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import FlatCard from "../FlatCard/FlatCard";
 import { SwiperButton } from "./SwiperButton/SwiperButton";
+import CarouselFilter from "../forms/CarouselFilter/CarouselFilter";
+import styles from "./Carousel.module.scss";
+import { useState } from "react";
 
 const Carousel = ({ flats }) => {
+  const [metro, setMetro] = useState("");
+  const [district, setDistrict] = useState("");
+  console.log(metro);
+  const updFlats = flats.filter(function (item) {
+    if (metro !== "" && district === "") {
+      return item.metro.includes(metro);
+    } else if (district !== "" && metro === "") {
+      return item.district.includes(district);
+    } else return item;
+  });
+
   return (
-    <Swiper slidesPerView={3} spaceBetween={30} loop={true}>
-      {flats.map((item) => (
-        <SwiperSlide key={item.id}>
-          <FlatCard flat={item} />
-        </SwiperSlide>
-      ))}
-      <SwiperButton />
-    </Swiper>
+    <div className={styles.carousel}>
+      <CarouselFilter setDistrict={setDistrict} setMetro={setMetro} />
+      <Swiper slidesPerView={3} spaceBetween={30} loop={true}>
+        {updFlats.length > 0 ? (
+          updFlats.map((item) => (
+            <SwiperSlide key={item.id}>
+              <FlatCard flat={item} />
+            </SwiperSlide>
+          ))
+        ) : (
+          <p>Нет квартир по заданному местоположению</p>
+        )}
+        <SwiperButton />
+      </Swiper>
+    </div>
   );
 };
 

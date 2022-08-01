@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import { fetchFlats } from "./../../redux/flatsSlice";
-import Filter from "../../components/Filter/Filter";
+import Filter from "../../components/forms/Filter/Filter";
 import Background from "./../../components/Background/Background";
 import PhotoLink from "./../../components/PhotoLink/PhotoLink";
 import SidebarNav from "../../components/SidebarNav/SidebarNav";
