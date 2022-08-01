@@ -1,0 +1,41 @@
+@import "./../../../styles/_colors.scss";
+.btnContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+  justify-content: center;
+  align-content: center;
+  padding: 39px 0;
+}
+
+.swiperbtn {
+  display: block;
+  width: 36px;
+  height: 35px;
+  border-radius: 50%;
+  outline: 1px solid $violet;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: default;
+  border: none;
+  transition: all 0.2s;
+  background-color: transparent;
+}
+.iconPrev {
+  color: $violet;
+  position: absolute;
+  top: -1px;
+  left: 2px;
+  transform: rotate(180deg);
+}
+.iconNext {
+  color: $violet;
+  position: absolute;
+  top: -1px;
+  left: 3px;
+}
+.swiperbtn:hover {
+  background-color: rgba(102, 78, 249, 0.1);
+}
