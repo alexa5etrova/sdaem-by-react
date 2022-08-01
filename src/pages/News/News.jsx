@@ -56,6 +56,9 @@ const News = (props) => {
         <Search searchHandler={setSearch}></Search>
         <Htag tag="h1">Новости</Htag>
         <div className={styles.newsContainer}>
+          {status === "resolved" && filteredNewsData.length === 0 ? (
+            <p>Нет статей соответсвующих поиску</p>
+          ) : null}
           {status === "resolved" &&
             filteredNewsData.slice(firstContentIndex, lastContentIndex).map(function (item) {
               return (
