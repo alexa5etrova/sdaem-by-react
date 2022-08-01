@@ -1,11 +1,11 @@
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 100px auto 250px;
+}
 .main {
   // max-width: 1280px;
   // padding: 0 10px;
   // margin: 0 auto;
   z-index: 1;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-rows: 100px 1fr 250px;
 }
