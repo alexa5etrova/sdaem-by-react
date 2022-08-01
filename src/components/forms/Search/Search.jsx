@@ -3,34 +3,38 @@ import Input from "../Input/Input";
 import Button from "../../Button/Button";
 import { ReactComponent as SearchIcon } from "./../../../assets/icons/search.svg";
 import { useState } from "react";
+import SearchContainer from "../SearchContainer/SearchContainer";
 
-const Search = (props) => {
+const Search = ({ searchHandler }) => {
   const [searchInput, setSearchInput] = useState("");
 
-  const changelHandler = (e) => {
+  const changeHandler = (e) => {
     setSearchInput(e.target.value);
   };
 
-  const onSearch = () => {
-    let toFind = searchInput.toLowerCase();
-    props.searchHandler(toFind);
+  const onSearch = (e) => {
+    e.preventDefault();
+    let toFind = searchInput.trim().toLowerCase();
+    searchHandler(toFind);
     setSearchInput("");
   };
   return (
-    <div className={styles.searchContainer}>
-      <Input
-        placeholder="Поиск по статьям"
-        type="text"
-        inputStyle="search"
-        value={searchInput}
-        onChange={changelHandler}
-      ></Input>
-      <div className={styles.btnContainer}>
-        <Button className={styles.button} btnStyle="search" onClick={onSearch}>
-          <SearchIcon />
-        </Button>
-      </div>
-    </div>
+    <SearchContainer>
+      <form onSubmit={onSearch}>
+        <Input
+          placeholder="Поиск по статьям"
+          type="text"
+          inputStyle="search"
+          value={searchInput}
+          onChange={changeHandler}
+        ></Input>
+        <div className={styles.btnContainer}>
+          <Button type="submit" className={styles.button} btnStyle="search">
+            <SearchIcon />
+          </Button>
+        </div>
+      </form>
+    </SearchContainer>
   );
 };
 
