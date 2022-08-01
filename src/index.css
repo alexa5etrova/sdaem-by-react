@@ -29,3 +29,9 @@ ul {
   outline: 0;
   outline-offset: 0;
 }
+button:hover {
+  cursor: pointer;
+}
+a:hover {
+  cursor: pointer;
+}

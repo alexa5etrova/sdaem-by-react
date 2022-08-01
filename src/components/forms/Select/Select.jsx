@@ -1,13 +1,17 @@
-import styles from "./Select.module.scss";
 import { Field } from "formik";
 import { ReactComponent as Arrow } from "./chevronDown.svg";
+
+import styles from "./Select.module.scss";
 
 const Select = ({ label, name, id, choise }) => {
   return (
     <div className={styles.selectWrapper}>
-      <label htmlFor={id} className={styles.label}>
-        {label}
-      </label>
+      {label !== "none" ? (
+        <label htmlFor={id} className={styles.label}>
+          {label}
+        </label>
+      ) : null}
+
       <span className={styles.selectArrow}>
         <Arrow width="18" />
       </span>

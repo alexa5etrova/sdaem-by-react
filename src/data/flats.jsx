@@ -19,16 +19,21 @@ export const SLEEPING_PLACES = [
   { id: 4, name: "2+2" },
 ];
 export const DISTRICT = [
-  { id: 1, name: "" },
-  { id: 2, name: "" },
-  { id: 3, name: "" },
-  { id: 4, name: "" },
+  { id: 1, name: "Шабаны" },
+  { id: 2, name: "Академгородок" },
+  { id: 3, name: "Ангарская" },
+  { id: 4, name: "Аэродромная" },
+  { id: 5, name: "Восток" },
+  { id: 6, name: "Веснянка" },
 ];
 export const METRO = [
-  { id: 1, name: "" },
-  { id: 2, name: "" },
-  { id: 3, name: "" },
-  { id: 4, name: "" },
+  { id: 1, name: "Автозаводская" },
+  { id: 2, name: "Академия наук" },
+  { id: 3, name: "Борисовский тракт" },
+  { id: 4, name: "Восток" },
+  { id: 5, name: "Грушевка" },
+  { id: 6, name: "Каменная горка" },
+  { id: 7, name: "Институт культуры" },
 ];
 export const EQUIPMENT = [
   { id: 1, title: "Газовая плита", value: "gasStove" },
@@ -51,7 +56,7 @@ export const EQUIPMENT = [
   { id: 18, title: "Микроволновая печь", value: "microwave3" },
   { id: 19, title: "Посуда", value: "dishes3" },
   { id: 20, title: "Посудомоечная машина", value: "dishwasher3" },
-  { id: 21, title: "Микроволновая печь", value: "microwave3" },
+  { id: 21, title: "Микроволновая печь", value: "microwave1" },
   { id: 22, title: "Газовая плита", value: "gasStove2" },
   { id: 23, title: "Духовка", value: "oven2" },
   { id: 24, title: "Кофеварка", value: "coffeeMashine2" },

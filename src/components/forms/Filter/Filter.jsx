@@ -2,15 +2,14 @@ import { Form, Formik, Field } from "formik";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-import Select from "./Select/Select";
-import Button from "../Button/Button";
-import { CITIES, ROOMS, SLEEPING_PLACES, DISTRICT, METRO, EQUIPMENT } from "./../../data/flats";
-
-import { ReactComponent as LocationIcon } from "./../../assets/icons/location.svg";
-import { ReactComponent as SetupIcon } from "./../../assets/icons/setup.svg";
+import Button from "./../../Button/Button";
+import Select from "./../Select/Select";
+import Checkbox from "./../Checkbox/Checkbox";
+import { CITIES, ROOMS, SLEEPING_PLACES, DISTRICT, METRO, EQUIPMENT } from "./../../../data/flats";
+import { ReactComponent as LocationIcon } from "./../../../assets/icons/location.svg";
+import { ReactComponent as SetupIcon } from "./../../../assets/icons/setup.svg";
 
 import styles from "./Filter.module.scss";
-import Checkbox from "./Checkbox/Checkbox";
 
 const Filter = (props) => {
   const [showOptions, setShowOptions] = useState(false);
@@ -33,7 +32,7 @@ const Filter = (props) => {
             metro: "",
           }}
           onSubmit={(values) => {
-            console.log(values.checked);
+            console.log(values);
             // добавить линк на результаты +передать фильтр через редакс
           }}
         >

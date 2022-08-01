@@ -5,6 +5,7 @@ import DateTag from "../DateTag/DateTag";
 import { NEWS_PREVIEW_LENGTH } from "../../data/news";
 
 import styles from "./NewsCard.module.scss";
+import LinkTag from "../LinkTag/LinkTag";
 
 const NewsCard = ({ id, text, title, photo, date }) => {
   let cutText = text.substr(0, NEWS_PREVIEW_LENGTH) + "...";
@@ -20,9 +21,9 @@ const NewsCard = ({ id, text, title, photo, date }) => {
       </div>
       <div className={styles.cardBtnContainer}>
         <DateTag dateStyle="ghost" date={date}></DateTag>
-        <div className={styles.linkViolet}>
-          <Link to={"/news/" + id}>Читать</Link>
-        </div>
+        <LinkTag linkStyle="lightViolet" to={"/news/" + id}>
+          Читать
+        </LinkTag>
       </div>
     </div>
   );

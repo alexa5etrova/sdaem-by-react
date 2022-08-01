@@ -1,0 +1,52 @@
+@import "./../../../styles/_colors.scss";
+.selectContainer {
+  margin-left: 225px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.selectWrapper {
+  position: relative;
+}
+.select {
+  width: fit-content;
+  min-width: 185px;
+  height: 40px;
+  background-color: white;
+  color: #686868;
+  border-radius: 20px;
+  border: none;
+  appearance: none;
+  padding-left: 13px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 96, 206, 0.1);
+}
+.metroSelect {
+  padding-left: 38px;
+}
+.select:hover {
+  outline: 2px solid rgba(102, 78, 249, 0.8);
+  background-color: white;
+}
+
+.selectArrow {
+  position: absolute;
+  color: $violet;
+  top: 13px;
+  left: 156px;
+}
+.metroIcon {
+  position: absolute;
+  color: #bdbdbd;
+  top: 13px;
+  left: 15px;
+}
+
+.option {
+  margin: 10px 20px;
+  text-align: left;
+  background-color: white;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  color: #1e2123;
+}

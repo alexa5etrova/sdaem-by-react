@@ -19,7 +19,7 @@ const Search = ({ searchHandler }) => {
     setSearchInput("");
   };
   return (
-    <SearchContainer>
+    <SearchContainer stl="search">
       <form onSubmit={onSearch}>
         <Input
           placeholder="Поиск по статьям"

@@ -11,6 +11,12 @@ const LinkTag = ({ children, linkStyle, to, ...props }) => {
           {children}
         </Link>
       );
+    case "lightViolet":
+      return (
+        <Link to={to} {...props} className={cn(styles.link, styles.lightViolet)}>
+          {children}
+        </Link>
+      );
     case "roundArrow":
       return (
         <Link to={to} className={styles.round} {...props}>
