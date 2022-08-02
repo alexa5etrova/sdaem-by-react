@@ -41,6 +41,12 @@ const LinkTag = ({ children, linkStyle, to, ...props }) => {
           {children}
         </Link>
       );
+    case "gradientHome":
+      return (
+        <Link to={to} className={cn(styles.link, styles.gradientHome)} {...props}>
+          {children}
+        </Link>
+      );
     default:
       return <></>;
   }
