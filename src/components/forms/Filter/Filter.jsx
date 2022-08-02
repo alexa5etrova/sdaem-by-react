@@ -8,6 +8,7 @@ import Checkbox from "./../Checkbox/Checkbox";
 import { CITIES, ROOMS, SLEEPING_PLACES, DISTRICT, METRO, EQUIPMENT } from "./../../../data/flats";
 import { ReactComponent as LocationIcon } from "./../../../assets/icons/location.svg";
 import { ReactComponent as SetupIcon } from "./../../../assets/icons/setup.svg";
+import { ReactComponent as ArrowIcon } from "./../../../assets/icons/chevron.svg";
 
 import styles from "./Filter.module.scss";
 
@@ -59,6 +60,7 @@ const Filter = (props) => {
               </Link>
               <Button type="submit" btnStyle="filter">
                 Показать
+                <ArrowIcon width="7" height="11" className={styles.toFlatsIcon} />
               </Button>
 
               {showOptions && (

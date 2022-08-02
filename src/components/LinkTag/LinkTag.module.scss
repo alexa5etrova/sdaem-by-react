@@ -37,6 +37,7 @@
   border-radius: 50%;
   border: 1px solid white;
   position: relative;
+  color: white;
 }
 .round:hover {
   border: 2px solid $lightgrey;
@@ -85,4 +86,23 @@
 }
 .lightYellow:hover {
   background-color: rgba(255, 213, 79, 0.2);
+}
+
+//ссылка-кнопка на главной градиентная расцветка
+.gradientHome {
+  box-shadow: 0px 15px 40px 0px rgba(0, 96, 206, 0.15);
+  background: linear-gradient(#9d94ff, #6b50e9);
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  line-height: 17px;
+  transition: 0.5s ease-in-out;
+  border-radius: 17px;
+  padding: 10px 20px 10px 18px;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 25px;
+}
+.gradientHome:hover {
+  background: linear-gradient(#867cfc, #6929f3);
 }

@@ -10,8 +10,10 @@ import SidebarNav from "../../components/SidebarNav/SidebarNav";
 import Loader from "./../../components/Loader/Loader";
 import Carousel from "../../components/Carousel/Carousel";
 import Htag from "./../../components/Htag/Htag";
+import Total from "./../../components/Total/Total";
 
 import styles from "./Home.module.scss";
+
 const Home = (props) => {
   const dispatch = useDispatch();
 
@@ -32,7 +34,9 @@ const Home = (props) => {
       <div className={styles.container}>
         <Background bgStyle="homeFilter">
           <div className={styles.violetWrapper}>
-            <Htag tag="h1home">Sdaem.by - у нас живут ваши объявления</Htag>
+            <h1 className={styles.h1}>
+              Sdaem.by - у нас живут <span>ваши объявления</span>
+            </h1>
             <Filter />
           </div>
         </Background>
@@ -46,6 +50,7 @@ const Home = (props) => {
         </div>
         <div className={styles.carousel}>
           <Carousel flats={flats} />
+          <Total total={flats.length} />
         </div>
       </div>
     );
