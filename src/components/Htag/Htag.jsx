@@ -12,6 +12,8 @@ const Htag = (props) => {
       return <h3 className={styles.h3}>{props.children}</h3>;
     case "h3bigger":
       return <h3 className={styles.h3bigger}>{props.children}</h3>;
+    case "h3violet":
+      return <h3 className={styles.h3violet}>{props.children}</h3>;
     case "notFound":
       return <h1 className={styles.notFound}>{props.children}</h1>;
     case "homeViolet":

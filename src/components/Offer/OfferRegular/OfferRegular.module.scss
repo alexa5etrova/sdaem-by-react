@@ -1,0 +1,27 @@
+.offer {
+  width: 330px;
+  height: 319px;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px 0 rgba(135, 124, 202, 0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 25px 39px 0px 37px;
+  background-color: white;
+  z-index: 2;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  img {
+    margin-left: -20px;
+    margin-top: -7px;
+  }
+  h3 {
+    margin-top: 32px;
+    margin-left: 11px;
+  }
+}
+.text {
+  margin-top: -6px;
+  margin-bottom: 45px;
+}

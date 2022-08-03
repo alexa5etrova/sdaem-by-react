@@ -1,6 +1,6 @@
 .container {
   position: absolute;
-  border-radius: 40px;
+
   background: linear-gradient(to right, rgba(148, 175, 255, 0.1), rgba(78, 100, 249, 0.1));
 }
 .search {
@@ -11,13 +11,16 @@
   z-index: 1;
   top: 132px;
   right: -143px;
+  border-radius: 40px;
 }
 .carousel {
   padding-top: 60px;
   padding-left: 97px;
   width: 850px;
-  height: 800px;
+  height: 909px;
   z-index: 1;
   top: -154px;
   right: -225px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
