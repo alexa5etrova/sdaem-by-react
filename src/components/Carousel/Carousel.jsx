@@ -13,6 +13,7 @@ const Carousel = ({ flats }) => {
   const [metro, setMetro] = useState("");
   const [district, setDistrict] = useState("");
   console.log(metro);
+
   const updFlats = flats.filter(function (item) {
     if (metro !== "" && district === "") {
       return item.metro.includes(metro);

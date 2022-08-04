@@ -59,6 +59,18 @@ const LinkTag = ({ children, linkStyle, to, ...props }) => {
           {children}
         </Link>
       );
+    case "newsList":
+      return (
+        <Link to={to} className={cn(styles.link, styles.newsList)} {...props}>
+          {children}
+        </Link>
+      );
+    case "newsSeeAll":
+      return (
+        <Link to={to} className={cn(styles.link, styles.newsSeeAll)} {...props}>
+          {children}
+        </Link>
+      );
     default:
       return <></>;
   }

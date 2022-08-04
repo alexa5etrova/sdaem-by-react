@@ -1,27 +1,18 @@
 import LinkTag from "../../LinkTag/LinkTag";
 import { ReactComponent as ArrowIcon } from "./../../../assets/icons/chevron.svg";
 import styles from "./OfferGold.module.scss";
+import { OFFERS } from "./../../../data/home";
 
-const OfferGold = ({ photo, title, text, children }) => {
+const OfferGold = () => {
+  let offer = OFFERS.offerGold;
   return (
     <div className={styles.offer}>
-      <h3>Приоритет Gold</h3>
-
-      <p className={styles.text}>
-        Приоритетное размещение <span className={styles.textBold}>Gold </span>позволяет
-        <span className={styles.textBold}> закрепить ваше объявление</span> в верхней части
-        каталога!
-      </p>
-      <p className={styles.text}>
-        Gold объявления{" "}
-        <span className={styles.textBold}>
-          перемещаются
-          <br /> каждые 5 мин
-        </span>{" "}
-        на 1 позицию, что делает размещение одинаковым для всех.
-      </p>
-      <LinkTag to="" linkStyle="gradientHome">
-        Еще о тарифе Gold <ArrowIcon width="9" height="11" className={styles.arrow} />
+      <h3>{offer.title}</h3>
+      {offer.text.map((item) => (
+        <p className={styles.text} dangerouslySetInnerHTML={{ __html: item }}></p>
+      ))}
+      <LinkTag to={offer.linkTo} linkStyle="gradientHome">
+        {offer.linkText} <ArrowIcon width="9" height="11" className={styles.arrow} />
       </LinkTag>
     </div>
   );

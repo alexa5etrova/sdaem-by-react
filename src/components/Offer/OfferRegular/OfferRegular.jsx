@@ -8,7 +8,7 @@ const OfferRegular = ({ photo, title, text, children }) => {
         <img src={photo} alt={title} />
         <Htag tag="h3violet">{title}</Htag>
       </div>
-      <p className={styles.text}>{text}</p>
+      <p className={styles.text} dangerouslySetInnerHTML={{ __html: text }}></p>
       <div>{children}</div>
     </div>
   );

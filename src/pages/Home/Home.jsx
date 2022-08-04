@@ -1,8 +1,10 @@
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import cn from "classnames";
 
 import { fetchFlats } from "./../../redux/flatsSlice";
+import { fetchNews } from "./../../redux/newsSlice";
 import Filter from "../../components/forms/Filter/Filter";
 import Background from "./../../components/Background/Background";
 import PhotoLink from "./../../components/PhotoLink/PhotoLink";
@@ -12,6 +14,8 @@ import Carousel from "../../components/Carousel/Carousel";
 import Htag from "./../../components/Htag/Htag";
 import Total from "./../../components/Total/Total";
 import Offer from "./../../components/Offer/Offer";
+import HomeArticle from "../../components/HomeArticle/HomeArticle";
+import HomeNewsNav from "./../../components/HomeNewsNav/HomeNewsNav";
 
 import styles from "./Home.module.scss";
 
@@ -46,7 +50,7 @@ const Home = (props) => {
             <PhotoLink />
             <SidebarNav />
           </div>
-          <div className={styles.headerWrapper}>
+          <div className={cn(styles.headerWrapper, styles.dotsLeft)}>
             <Htag tag="homeVioletBigger">Квартиры на сутки</Htag>
             <Htag tag="h2">Аренда квартир в Минске</Htag>
           </div>
@@ -56,6 +60,16 @@ const Home = (props) => {
           </div>
         </div>
         <Offer />
+        <div className={styles.container}>
+          <div className={cn(styles.headerWrapper, styles.dotsRight)}>
+            <Htag tag="homeVioletBigger">ЧТО ТАКОЕ SDAEM.BY</Htag>
+            <Htag tag="h2">Квартира на сутки в Минске</Htag>
+          </div>
+          <div className={styles.news}>
+            <HomeArticle />
+            <HomeNewsNav />
+          </div>
+        </div>
       </>
     );
 };
