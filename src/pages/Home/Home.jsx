@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import cn from "classnames";
 
 import { fetchFlats } from "./../../redux/flatsSlice";
-import { fetchNews } from "./../../redux/newsSlice";
 import Filter from "../../components/forms/Filter/Filter";
 import Background from "./../../components/Background/Background";
 import PhotoLink from "./../../components/PhotoLink/PhotoLink";
@@ -23,7 +22,7 @@ const Home = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchFlats("flats?city=minsk"));
+    dispatch(fetchFlats("/flats?city=minsk"));
   }, [dispatch]);
 
   const { flats, status, error } = useSelector((state) => state.flats);

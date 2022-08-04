@@ -13,7 +13,7 @@ import styles from "./FlatCard.module.scss";
 
 import OwnerContacts from "../OwnerContacts/OwnerContacts";
 
-const FlatCard = ({ flat }) => {
+const FlatCard = ({ flat, view }) => {
   const [showContacts, setShowContacts] = useState(false);
   const {
     id,
@@ -35,64 +35,125 @@ const FlatCard = ({ flat }) => {
   const openContacts = () => {
     setShowContacts((prev) => !prev);
   };
-
-  return (
-    <div className={styles.card}>
-      <Tag tagType={status} />
-      <div className={styles.flatImg}>
-        <img src={photoes[0].src} alt={photoes[0].alt} />
-      </div>
-      <div className={styles.flatContainer}>
-        <div className={styles.infoRow}>
-          <div className={styles.priceContainer}>
-            <p className={styles.price}>{price.toFixed(2)} BYN</p>
-            <p className={styles.period}>{period === "day" ? "за сутки" : "в месяц"}</p>
-          </div>
-          <Tag tagType="info">
-            <UserIcon width="15" height="15" className={styles.icon} />
-            {places}
-          </Tag>
-          <Tag tagType="info">{rooms}</Tag>
-          <Tag tagType="info">
-            {sqM} м<sup>2</sup>
-          </Tag>
+  if (view === "tile") {
+    return (
+      <div className={styles.card}>
+        <Tag tagType={status} />
+        <div className={styles.flatImg}>
+          <img src={photoes[0].src} alt={photoes[0].alt} />
         </div>
-        <div className={styles.address}>
-          <div className={styles.addressWrapper}>
-            <LocationIcon className={styles.locationIcon} width="12" height="15" />
-            <p className={cn(styles.addressText, styles.street)}>{address}</p>
-          </div>
-          <div className={styles.districts}>
-            <div className={styles.addressWrapper}>
-              <MetroIcon className={styles.locationIcon} width="20" height="13" />
-              <p className={cn(styles.addressText, styles.metro)}>{metro}</p>
+        <div className={styles.flatContainer}>
+          <div className={styles.infoRow}>
+            <div className={styles.priceContainer}>
+              <p className={styles.price}>{price.toFixed(2)} BYN</p>
+              <p className={styles.period}>{period === "day" ? "за сутки" : "в месяц"}</p>
             </div>
+            <Tag tagType="info">
+              <UserIcon width="15" height="15" className={styles.icon} />
+              {places}
+            </Tag>
+            <Tag tagType="info">{rooms}</Tag>
+            <Tag tagType="info">
+              {sqM} м<sup>2</sup>
+            </Tag>
+          </div>
+          <div className={styles.address}>
             <div className={styles.addressWrapper}>
-              <span className={styles.marker}></span>
-              <p className={cn(styles.addressText, styles.district)}>{district}</p>
+              <LocationIcon className={styles.locationIcon} width="12" height="15" />
+              <p className={cn(styles.addressText, styles.street)}>{address}</p>
+            </div>
+            <div className={styles.districts}>
+              <div className={styles.addressWrapper}>
+                <MetroIcon className={styles.locationIcon} width="20" height="13" />
+                <p className={cn(styles.addressText, styles.metro)}>{metro}</p>
+              </div>
+              <div className={styles.addressWrapper}>
+                <span className={styles.marker}></span>
+                <p className={cn(styles.addressText, styles.district)}>{district}</p>
+              </div>
             </div>
           </div>
-        </div>
-        <p className={styles.description}>{cutDesc}</p>
-        <div className={styles.buttons}>
-          <Button btnStyle="white" onClick={openContacts}>
-            <PhoneIcon className={styles.phoneIcon} width="9" height="15" />
-            Контакты
-          </Button>
-          <LinkTag linkStyle="lightYellow" to={"/flats/" + id}>
-            Подробнее
-          </LinkTag>
-          {showContacts && (
-            <OwnerContacts
-              photo={contacts.photo}
-              email={contacts.email}
-              phone={contacts.phone}
-              name={contacts.name}
-            />
-          )}
+          <p className={styles.description}>{cutDesc}</p>
+          <div className={styles.buttons}>
+            <Button btnStyle="white" onClick={openContacts}>
+              <PhoneIcon className={styles.phoneIcon} width="9" height="15" />
+              Контакты
+            </Button>
+            <LinkTag linkStyle="lightYellow" to={"/flats/" + id}>
+              Подробнее
+            </LinkTag>
+            {showContacts && (
+              <OwnerContacts
+                photo={contacts.photo}
+                email={contacts.email}
+                phone={contacts.phone}
+                name={contacts.name}
+              />
+            )}
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
+  if (view === "list") {
+    return (
+      <div className={styles.card}>
+        <Tag tagType={status} />
+        <div className={styles.flatImg}>
+          <img src={photoes[0].src} alt={photoes[0].alt} />
+        </div>
+        <div className={styles.flatContainer}>
+          <div className={styles.infoRow}>
+            <div className={styles.priceContainer}>
+              <p className={styles.price}>{price.toFixed(2)} BYN</p>
+              <p className={styles.period}>{period === "day" ? "за сутки" : "в месяц"}</p>
+            </div>
+            <Tag tagType="info">
+              <UserIcon width="15" height="15" className={styles.icon} />
+              {places}
+            </Tag>
+            <Tag tagType="info">{rooms}</Tag>
+            <Tag tagType="info">
+              {sqM} м<sup>2</sup>
+            </Tag>
+          </div>
+          <div className={styles.address}>
+            <div className={styles.addressWrapper}>
+              <LocationIcon className={styles.locationIcon} width="12" height="15" />
+              <p className={cn(styles.addressText, styles.street)}>{address}</p>
+            </div>
+            <div className={styles.districts}>
+              <div className={styles.addressWrapper}>
+                <MetroIcon className={styles.locationIcon} width="20" height="13" />
+                <p className={cn(styles.addressText, styles.metro)}>{metro}</p>
+              </div>
+              <div className={styles.addressWrapper}>
+                <span className={styles.marker}></span>
+                <p className={cn(styles.addressText, styles.district)}>{district}</p>
+              </div>
+            </div>
+          </div>
+          <p className={styles.description}>{cutDesc}</p>
+          <div className={styles.buttons}>
+            <Button btnStyle="white" onClick={openContacts}>
+              <PhoneIcon className={styles.phoneIcon} width="9" height="15" />
+              Контакты
+            </Button>
+            <LinkTag linkStyle="lightYellow" to={"/flats/" + id}>
+              Подробнее
+            </LinkTag>
+            {showContacts && (
+              <OwnerContacts
+                photo={contacts.photo}
+                email={contacts.email}
+                phone={contacts.phone}
+                name={contacts.name}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
 };
 export default FlatCard;

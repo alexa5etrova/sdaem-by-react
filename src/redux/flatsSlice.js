@@ -5,7 +5,7 @@ export const fetchFlats = createAsyncThunk(
   "flats/fetchFlats",
   async function (url, { rejectWithValue }) {
     try {
-      const responce = await fetch(`${HOME_URL}/${url}`);
+      const responce = await fetch(`${HOME_URL}${url}`);
 
       if (!responce.ok) {
         let error = await responce.json();

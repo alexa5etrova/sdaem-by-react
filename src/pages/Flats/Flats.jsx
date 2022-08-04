@@ -1,29 +1,33 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import cn from "classnames";
 
+import FlatCard from "./../../components/FlatCard/FlatCard";
 import Htag from "../../components/Htag/Htag";
-import NewsCard from "./../../components/NewsCard/NewsCard";
 import Pagination from "../../components/Pagination/Pagination";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
-import Search from "../../components/forms/Search/Search";
-import Loader from "../../components/Loader/Loader";
-import { fetchNews } from "./../../redux/newsSlice";
 import { CRUMBS } from "./../../data/nav";
-import { NEWS_PER_PAGE } from "../../data/news";
+import Loader from "../../components/Loader/Loader";
+import { fetchFlats } from "./../../redux/flatsSlice";
 
-import styles from "./News.module.scss";
+import styles from "./Flats.module.scss";
+import { FLATS_PER_PAGE } from "../../data/flats";
+import { useLocation } from "react-router-dom";
 
-const News = (props) => {
+const Flats = (props) => {
+  const request = useLocation();
+  console.log(request);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchNews());
-  }, [dispatch]);
+    dispatch(fetchFlats(`/flats${request.search}`));
+  }, [dispatch, request]);
 
-  const { news, status, error } = useSelector((state) => state.news);
+  const { flats, status, error } = useSelector((state) => state.flats);
   const [firstContentIndex, setFirstContentIndex] = useState();
   const [lastContentIndex, setLastContentIndex] = useState();
-  const [search, setSearch] = useState("");
+  const [view, setView] = useState("tile");
 
   //функции для постраничного вывода, передаем их в props компонента Pagination
   const getFirstIndex = (i) => {
@@ -41,12 +45,8 @@ const News = (props) => {
     return <p>{error}</p>;
   }
   if (status === "resolved") {
-    const filteredNewsData = news.filter(function (item) {
-      if (search === "") {
-        return item;
-      } else {
-        return item.title.toLowerCase().includes(search);
-      }
+    const filteredFlats = flats.filter(function (item) {
+      return item;
     });
 
     return (
@@ -54,32 +54,23 @@ const News = (props) => {
         <nav className={styles.crumbsContainer}>
           <Breadcrumbs crumbs={CRUMBS.news} />
         </nav>
-        <Search searchHandler={setSearch}></Search>
-        <Htag tag="h1">Новости</Htag>
-        <div className={styles.newsContainer}>
-          {status === "resolved" && filteredNewsData.length === 0 ? (
+
+        <Htag tag="h1">Квартиры</Htag>
+        <div className={cn(styles.flatsContainer, { [styles.list]: view === "list" })}>
+          {status === "resolved" && filteredFlats.length === 0 ? (
             <p>Нет статей соответсвующих поиску</p>
           ) : null}
           {status === "resolved" &&
-            filteredNewsData.slice(firstContentIndex, lastContentIndex).map(function (item) {
-              return (
-                <NewsCard
-                  key={item.id}
-                  id={item.id}
-                  title={item.title}
-                  date={item.date}
-                  text={item.short}
-                  photo={item.photo}
-                />
-              );
+            filteredFlats.slice(firstContentIndex, lastContentIndex).map(function (item) {
+              return <FlatCard key={item.id} flat={item} view={view} />;
             })}
         </div>
         <div className={styles.paginationContainer}>
           <Pagination
-            data={filteredNewsData}
+            data={filteredFlats}
             sendFirstIndex={getFirstIndex}
             sendLastIndex={getLastIndex}
-            contentPerPage={NEWS_PER_PAGE}
+            contentPerPage={FLATS_PER_PAGE[view]}
           />
         </div>
       </div>
@@ -87,4 +78,4 @@ const News = (props) => {
   }
 };
 
-export default News;
+export default Flats;
