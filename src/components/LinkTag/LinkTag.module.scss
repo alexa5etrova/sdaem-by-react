@@ -138,3 +138,21 @@
 .yellowBtn:hover {
   background-color: #fec100;
 }
+//ссылка из списка новостей на главной
+.newsList {
+  font-weight: 600;
+  line-height: 17px;
+  color: $black;
+}
+.newsList:hover {
+  color: $violet;
+}
+//ссылка из списка новостей на главной
+.newsSeeAll {
+  font-weight: 600;
+  line-height: 17px;
+  color: $violet;
+}
+.newsSeeAll:hover {
+  color: $black;
+}

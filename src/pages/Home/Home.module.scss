@@ -14,7 +14,7 @@
   margin-left: 4px;
   position: relative;
 }
-.headerWrapper::before {
+.dotsLeft::before {
   content: "";
   background-image: url("./../../assets/images/dotsYellow.png");
   background-repeat: no-repeat;
@@ -22,6 +22,17 @@
   position: absolute;
   top: -105px;
   left: -36px;
+  width: 82px;
+  height: 71px;
+}
+.dotsRight::before {
+  content: "";
+  background-image: url("./../../assets/images/dotsYellow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -95px;
+  right: 72px;
   width: 82px;
   height: 71px;
 }
@@ -46,4 +57,10 @@
   flex-direction: row;
   gap: 16px;
   height: 576px;
+}
+.news {
+  display: flex;
+  flex-direction: row;
+  gap: 33px;
+  margin-bottom: 92px;
 }

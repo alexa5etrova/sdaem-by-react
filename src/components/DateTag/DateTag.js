@@ -1,7 +1,7 @@
 import styles from "./DateTag.module.scss";
 import cn from "classnames";
 
-const DateTag = (props) => {
+const DateTag = ({ date, dateStyle }) => {
   let months = [
     "Январь",
     "Февраль",
@@ -16,21 +16,21 @@ const DateTag = (props) => {
     "Ноябрь",
     "Декабрь",
   ];
-  let date = new Date(props.date);
+  console.log(date);
+  let updDate = new Date(date);
+  let fullDate = updDate.getDay() + " " + months[updDate.getMonth()] + " " + updDate.getFullYear();
+  let withoutYear = updDate.getDay() + " " + months[updDate.getMonth()];
 
-  let updDate =
-    date.getDay() + " " + months[date.getMonth()] + " " + date.getFullYear();
-
-  return (
-    <div
-      className={cn(styles.date, {
-        [styles.dateViolet]: props.dateStyle === "violet",
-        [styles.dateGhost]: props.dateStyle === "ghost",
-      })}
-    >
-      {updDate}
-    </div>
-  );
+  switch (dateStyle) {
+    case "violet":
+      return <div className={cn(styles.date, styles.dateViolet)}>{fullDate}</div>;
+    case "ghost":
+      return <div className={cn(styles.date, styles.dateGhost)}>{fullDate}</div>;
+    case "withoutYear":
+      return <div className={cn(styles.withoutYear)}>{withoutYear}</div>;
+    default:
+      return <></>;
+  }
 };
 
 export default DateTag;
