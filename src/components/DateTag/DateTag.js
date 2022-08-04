@@ -16,7 +16,7 @@ const DateTag = ({ date, dateStyle }) => {
     "Ноябрь",
     "Декабрь",
   ];
-  console.log(date);
+
   let updDate = new Date(date);
   let fullDate = updDate.getDay() + " " + months[updDate.getMonth()] + " " + updDate.getFullYear();
   let withoutYear = updDate.getDay() + " " + months[updDate.getMonth()];

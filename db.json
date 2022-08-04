@@ -223,8 +223,8 @@
     {
       "id": 1,
       "price": 65,
-      "city": "minsk",
-      "address": "Минск, б-р Мулявина, д. 10",
+      "city": "grodno",
+      "address": "Гродно, б-р Мулявина, д. 10",
       "metro": "Грушевка",
       "photoes": [{ "src": "./images/flats/flat1.jpg", "alt": "4-х комнатная квартира в Минске" }],
       "district": "Шабаны",

@@ -64,3 +64,4 @@ export const EQUIPMENT = [
 ];
 
 export const FLAT_PREVIEW_LENGTH = 188;
+export const FLATS_PER_PAGE = { tile: 9, list: 3 };
