@@ -29,7 +29,7 @@ const Carousel = ({ flats }) => {
         {updFlats.length > 0 ? (
           updFlats.map((item) => (
             <SwiperSlide key={item.id}>
-              <FlatCard flat={item} />
+              <FlatCard flat={item} view="tile" />
             </SwiperSlide>
           ))
         ) : (

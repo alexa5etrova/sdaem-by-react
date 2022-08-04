@@ -50,9 +50,9 @@ const FlatCard = ({ flat, view }) => {
             </div>
             <Tag tagType="info">
               <UserIcon width="15" height="15" className={styles.icon} />
-              {places}
+              {places.value + " " + places.name}
             </Tag>
-            <Tag tagType="info">{rooms}</Tag>
+            <Tag tagType="info">{rooms} комн</Tag>
             <Tag tagType="info">
               {sqM} м<sup>2</sup>
             </Tag>

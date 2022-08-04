@@ -1,5 +1,5 @@
 import { Form, Formik, Field } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 import Button from "./../../Button/Button";
@@ -14,6 +14,7 @@ import styles from "./Filter.module.scss";
 
 const Filter = (props) => {
   const [showOptions, setShowOptions] = useState(false);
+  const navigate = useNavigate();
 
   const toggleFilter = () => {
     setShowOptions((prev) => !prev);
@@ -33,8 +34,32 @@ const Filter = (props) => {
             metro: "",
           }}
           onSubmit={(values) => {
-            console.log(values);
-            // добавить линк на результаты +передать фильтр через редакс
+            const { city, rooms, priceMin, priceMax, places, district, metro, checked } = values;
+            let searchArr = [];
+            if (city !== "") {
+              searchArr.push(`city=${city}`);
+            }
+            if (rooms !== "") {
+              searchArr.push(`rooms=${rooms}`);
+            }
+            if (priceMin !== "") {
+              searchArr.push(`price_gte=${priceMin}`);
+            }
+            if (priceMax !== "") {
+              searchArr.push(`price_lte=${priceMax}`);
+            }
+            if (district !== "") {
+              searchArr.push(`district=${district}`);
+            }
+            if (metro !== "") {
+              searchArr.push(`metro=${metro}`);
+            }
+            if (checked) {
+              checked.map((item) => searchArr.push(`equipment.${item}=true`));
+            }
+
+            let search = `?${searchArr.join("&")}`;
+            navigate(`/flats${search}`);
           }}
         >
           {(formik) => (

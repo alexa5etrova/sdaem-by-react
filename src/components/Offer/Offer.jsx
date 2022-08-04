@@ -19,7 +19,11 @@ const Offer = () => {
       <div className={styles.dots}>
         <img src={dots} alt="Декорация точки" />
       </div>
-      <ToMap header="Поиск квартир на карте" />
+      <ToMap
+        header="Поиск квартир на карте"
+        page="home"
+        body="Ищите квартиры на сутки в центре города, возле парка или в живописном районе"
+      />
       <div className={styles.offers}>
         <OfferRegular photo={photo1} title={offer1.title} text={offer1.text}>
           <LinkTag to={offer1.linkTo} linkStyle="yellowBtn">
