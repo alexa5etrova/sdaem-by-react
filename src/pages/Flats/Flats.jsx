@@ -13,6 +13,7 @@ import { fetchFlats } from "./../../redux/flatsSlice";
 import styles from "./Flats.module.scss";
 import { FLATS_PER_PAGE } from "../../data/flats";
 import { useLocation } from "react-router-dom";
+import ToMap from "../../components/ToMap/ToMap";
 
 const Flats = (props) => {
   const request = useLocation();
@@ -50,30 +51,37 @@ const Flats = (props) => {
     });
 
     return (
-      <div className={styles.pageContainer}>
-        <nav className={styles.crumbsContainer}>
-          <Breadcrumbs crumbs={CRUMBS.news} />
-        </nav>
+      <>
+        <div className={styles.pageContainer}>
+          <nav className={styles.crumbsContainer}>
+            <Breadcrumbs crumbs={CRUMBS.news} />
+          </nav>
 
-        <Htag tag="h1">Квартиры</Htag>
-        <div className={cn(styles.flatsContainer, { [styles.list]: view === "list" })}>
-          {status === "resolved" && filteredFlats.length === 0 ? (
-            <p>Нет статей соответсвующих поиску</p>
-          ) : null}
-          {status === "resolved" &&
-            filteredFlats.slice(firstContentIndex, lastContentIndex).map(function (item) {
-              return <FlatCard key={item.id} flat={item} view={view} />;
-            })}
+          <Htag tag="h1">Квартиры</Htag>
+          <div className={cn(styles.flatsContainer, { [styles.list]: view === "list" })}>
+            {status === "resolved" && filteredFlats.length === 0 ? (
+              <p>Нет статей соответсвующих поиску</p>
+            ) : null}
+            {status === "resolved" &&
+              filteredFlats.slice(firstContentIndex, lastContentIndex).map(function (item) {
+                return <FlatCard key={item.id} flat={item} view={view} />;
+              })}
+          </div>
+          <div className={styles.paginationContainer}>
+            <Pagination
+              data={filteredFlats}
+              sendFirstIndex={getFirstIndex}
+              sendLastIndex={getLastIndex}
+              contentPerPage={FLATS_PER_PAGE[view]}
+            />
+          </div>
         </div>
-        <div className={styles.paginationContainer}>
-          <Pagination
-            data={filteredFlats}
-            sendFirstIndex={getFirstIndex}
-            sendLastIndex={getLastIndex}
-            contentPerPage={FLATS_PER_PAGE[view]}
-          />
-        </div>
-      </div>
+        <ToMap
+          page="flats"
+          header="Показать найденные квартиры на карте"
+          body="Ищите новостройки рядом с работой, парком или родственниками"
+        />
+      </>
     );
   }
 };

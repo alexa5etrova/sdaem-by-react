@@ -8,8 +8,8 @@ const OfferGold = () => {
   return (
     <div className={styles.offer}>
       <h3>{offer.title}</h3>
-      {offer.text.map((item) => (
-        <p className={styles.text} dangerouslySetInnerHTML={{ __html: item }}></p>
+      {offer.text.map((item, index) => (
+        <p key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: item }}></p>
       ))}
       <LinkTag to={offer.linkTo} linkStyle="gradientHome">
         {offer.linkText} <ArrowIcon width="9" height="11" className={styles.arrow} />

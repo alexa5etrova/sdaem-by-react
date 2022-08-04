@@ -15,7 +15,7 @@ const HomeNewsNav = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchNews());
+    dispatch(fetchNews("/news"));
   }, [dispatch]);
 
   const { news, status, error } = useSelector((state) => state.news);

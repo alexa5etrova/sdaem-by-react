@@ -9,8 +9,8 @@ const HomeArticle = () => {
         <img src={photo} alt="Фото квартиры"></img>
       </div>
       <div className={styles.textWrapper}>
-        {HOME_ARTICLE.body.map((item) => (
-          <p className={styles.text} dangerouslySetInnerHTML={{ __html: item }}></p>
+        {HOME_ARTICLE.body.map((item, index) => (
+          <p key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: item }}></p>
         ))}
       </div>
     </article>
