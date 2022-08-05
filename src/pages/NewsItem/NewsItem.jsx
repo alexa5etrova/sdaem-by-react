@@ -18,7 +18,7 @@ const NewsItem = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchNews());
+    dispatch(fetchNews("/news"));
   }, [dispatch]);
 
   const { newsId } = useParams();
