@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import cn from "classnames";
 
@@ -14,6 +14,7 @@ import styles from "./Flats.module.scss";
 import { FLATS_PER_PAGE } from "../../data/flats";
 import { useLocation } from "react-router-dom";
 import ToMap from "../../components/ToMap/ToMap";
+import Button from "./../../components/Button/Button";
 
 const Flats = (props) => {
   const request = useLocation();
@@ -28,7 +29,7 @@ const Flats = (props) => {
   const { flats, status, error } = useSelector((state) => state.flats);
   const [firstContentIndex, setFirstContentIndex] = useState();
   const [lastContentIndex, setLastContentIndex] = useState();
-  const [view, setView] = useState("tile");
+  const [view, setView] = useState("list");
 
   //функции для постраничного вывода, передаем их в props компонента Pagination
   const getFirstIndex = (i) => {
@@ -36,6 +37,14 @@ const Flats = (props) => {
   };
   const getLastIndex = (i) => {
     setLastContentIndex(i);
+  };
+  const handleView = () => {
+    if (view === "tile") {
+      setView("list");
+    }
+    if (view === "list") {
+      setView("tile");
+    }
   };
 
   // реализация поиска - значения для  переменной search приходят из компонента Search
@@ -58,7 +67,10 @@ const Flats = (props) => {
           </nav>
 
           <Htag tag="h1">Квартиры</Htag>
-          <div className={cn(styles.flatsContainer, { [styles.list]: view === "list" })}>
+          <Button btnStyle="white" onClick={() => handleView()}>
+            {view}
+          </Button>
+          <div className={cn({ [styles.list]: view === "list", [styles.tile]: view === "tile" })}>
             {status === "resolved" && filteredFlats.length === 0 ? (
               <p>Нет статей соответсвующих поиску</p>
             ) : null}

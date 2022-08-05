@@ -2,9 +2,15 @@
   max-width: 1280px;
   margin: 0 auto;
 }
-.flatsContainer {
+.tile {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-top: 59px;
+}
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 30px;
   margin-top: 59px;
 }
