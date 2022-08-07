@@ -1,4 +1,3 @@
-import cn from "classnames";
 import styles from "./Tag.module.scss";
 
 const Tag = ({ children, tagType, ...props }) => {
@@ -12,6 +11,12 @@ const Tag = ({ children, tagType, ...props }) => {
     case "info":
       return (
         <div className={styles.info} {...props}>
+          {children}
+        </div>
+      );
+    case "infoTile":
+      return (
+        <div className={styles.infoTile} {...props}>
           {children}
         </div>
       );

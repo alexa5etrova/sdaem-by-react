@@ -1,19 +1,18 @@
 import { useState } from "react";
 import cn from "classnames";
-import { FLAT_PREVIEW_LENGTH } from "./../../../data/flats";
-import LinkTag from "./../../LinkTag/LinkTag";
+import { FLAT_PREVIEW_LENGTH } from "../../../data/flats";
+import LinkTag from "../../LinkTag/LinkTag";
 import Tag from "../../Tag/Tag";
-import Button from "./../../Button/Button";
+import Button from "../../Button/Button";
 import OwnerContacts from "../../OwnerContacts/OwnerContacts";
 import { ReactComponent as UserIcon } from "../../../assets/icons/user.svg";
 import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
 import { ReactComponent as MetroIcon } from "../../../assets/icons/metro.svg";
 import { ReactComponent as PhoneIcon } from "../../../assets/icons/phone.svg";
-import { ReactComponent as HeartIcon } from "./../heart.svg";
 
-import styles from "./TileCard.module.scss";
+import styles from "./HomeFlatCard.module.scss";
 
-const TileCard = ({ flat }) => {
+const HomeFlatCard = ({ flat }) => {
   const [showContacts, setShowContacts] = useState(false);
   const {
     id,
@@ -26,6 +25,7 @@ const TileCard = ({ flat }) => {
     places,
     period,
     rooms,
+    sqM,
     status,
     contacts,
   } = flat;
@@ -52,6 +52,9 @@ const TileCard = ({ flat }) => {
             {places.value + " " + places.name}
           </Tag>
           <Tag tagType="infoTile">{rooms} комн</Tag>
+          <Tag tagType="infoTile">
+            {sqM} м<sup>2</sup>
+          </Tag>
         </div>
         <div className={styles.address}>
           <div className={styles.addressWrapper}>
@@ -71,9 +74,6 @@ const TileCard = ({ flat }) => {
         </div>
         <p className={styles.description}>{cutDesc}</p>
         <div className={styles.buttons}>
-          <Button btnStyle="roseRound">
-            <HeartIcon className={styles.heartIcon} width="15" height="14" />
-          </Button>
           <Button btnStyle="white" onClick={openContacts}>
             <PhoneIcon className={styles.phoneIcon} width="9" height="15" />
             Контакты
@@ -95,4 +95,4 @@ const TileCard = ({ flat }) => {
   );
 };
 
-export default TileCard;
+export default HomeFlatCard;

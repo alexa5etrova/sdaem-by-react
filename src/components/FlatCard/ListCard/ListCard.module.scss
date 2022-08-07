@@ -113,3 +113,11 @@
   color: $violet;
   margin-right: 13px;
 }
+.heartIcon {
+  margin-left: 10px;
+}
+.morebtns {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}

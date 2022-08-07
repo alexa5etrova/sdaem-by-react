@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import FlatCard from "../FlatCard/FlatCard";
+import HomeFlatCard from "../FlatCard/HomeFlatCard/HomeFlatCard";
 import { SwiperButton } from "./SwiperButton/SwiperButton";
 import CarouselFilter from "../forms/CarouselFilter/CarouselFilter";
 import styles from "./Carousel.module.scss";
@@ -29,7 +29,7 @@ const Carousel = ({ flats }) => {
         {updFlats.length > 0 ? (
           updFlats.map((item) => (
             <SwiperSlide key={item.id}>
-              <FlatCard flat={item} view="tile" />
+              <HomeFlatCard flat={item} page="home" />
             </SwiperSlide>
           ))
         ) : (

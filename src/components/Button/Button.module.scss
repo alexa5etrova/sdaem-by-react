@@ -150,3 +150,30 @@
   background-color: #f8f8f8;
   box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
 }
+.rose {
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 22px;
+  padding: 0px 15px;
+  background-color: rgba(235, 87, 87, 0.1);
+  color: rgba(235, 87, 87, 1);
+  font-weight: 600;
+}
+.rose:hover svg * {
+  fill: rgba(235, 87, 87, 0.4);
+}
+.roseRound {
+  height: 33px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(235, 87, 87, 0.1);
+  color: rgba(235, 87, 87, 1);
+  font-weight: 600;
+}
+.roseRound:hover svg * {
+  fill: rgba(235, 87, 87, 0.4);
+}
