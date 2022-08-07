@@ -5,9 +5,19 @@
   flex-direction: column;
   gap: 11px;
 }
+.selectWrapperFlats {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
 
 .label {
   color: #bdbdbd;
+}
+.violet {
+  color: $violet;
 }
 .select {
   width: 150px;
@@ -18,7 +28,9 @@
   border: none;
   appearance: none;
   padding-left: 8px;
+  position: relative;
 }
+
 .select:hover {
   outline: 2px solid rgba(102, 78, 249, 0.8);
   background-color: white;
@@ -29,6 +41,13 @@
   color: $violet;
   top: 36px;
   left: 121px;
+}
+.flatSelectArrow {
+  position: absolute;
+  color: $violet;
+  top: 13px;
+  left: 188px;
+  z-index: 2;
 }
 
 .option {

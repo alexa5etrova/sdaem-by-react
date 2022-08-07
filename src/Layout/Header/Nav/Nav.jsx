@@ -18,7 +18,7 @@ const Nav = (props) => {
   const closeMenu = () => setIsMenuShown(false);
 
   useEffect(() => {
-    let category = FLAT_CATEGORIES.filter((item) => url.pathname + url.search === item.path);
+    let category = FLAT_CATEGORIES.filter((item) => url.search.includes(item.path.slice(7)));
     category.length !== 0
       ? setShowenCategory(category[0].name)
       : setShowenCategory("Квартиры на сутки");

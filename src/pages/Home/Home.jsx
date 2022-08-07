@@ -42,7 +42,7 @@ const Home = (props) => {
               <h1 className={styles.h1}>
                 Sdaem.by - у нас живут <span>ваши объявления</span>
               </h1>
-              <Filter />
+              <Filter page="home" />
             </div>
           </Background>
           <div className={styles.catalogueWrapper}>

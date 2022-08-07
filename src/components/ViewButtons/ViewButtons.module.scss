@@ -1,0 +1,75 @@
+@import "./../../styles/_colors.scss";
+
+.buttonsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+.btns {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.iconGray {
+  color: $grey;
+  margin-right: 10px;
+}
+.iconViolet {
+  color: $violet;
+  margin-right: 10px;
+}
+
+.locationIcon {
+  color: $violet;
+  margin-right: 10px;
+}
+
+.selectWrapper {
+  position: relative;
+  margin-left: 20px;
+}
+.select {
+  width: fit-content;
+  min-width: 232px;
+  height: 40px;
+  background-color: white;
+  color: $black;
+  border-radius: 20px;
+  border: none;
+  appearance: none;
+  padding-left: 13px;
+  font-weight: 600;
+  box-shadow: 0px 10px 20px 0px rgba(0, 96, 206, 0.1);
+  padding-left: 38px;
+}
+
+.select:hover {
+  outline: 2px solid rgba(102, 78, 249, 0.8);
+  background-color: white;
+}
+
+.selectArrow {
+  position: absolute;
+  transform: rotate(90deg);
+  color: $violet;
+  top: 13px;
+  left: 210px;
+}
+.sortIcon {
+  position: absolute;
+  color: #bdbdbd;
+  top: 13px;
+  left: 15px;
+}
+
+.option {
+  margin: 10px 20px;
+  text-align: left;
+  background-color: white;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  color: $black;
+}

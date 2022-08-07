@@ -17,6 +17,12 @@ const LinkTag = ({ children, linkStyle, to, ...props }) => {
           {children}
         </Link>
       );
+    case "reccomend":
+      return (
+        <Link to={to} {...props} className={cn(styles.link, styles.reccomend)}>
+          {children}
+        </Link>
+      );
     case "roundArrow":
       return (
         <Link to={to} className={styles.round} {...props}>
@@ -68,6 +74,12 @@ const LinkTag = ({ children, linkStyle, to, ...props }) => {
     case "newsSeeAll":
       return (
         <Link to={to} className={cn(styles.link, styles.newsSeeAll)} {...props}>
+          {children}
+        </Link>
+      );
+    case "whiteToMap":
+      return (
+        <Link to={to} className={cn(styles.link, styles.whiteToMap)} {...props}>
           {children}
         </Link>
       );
