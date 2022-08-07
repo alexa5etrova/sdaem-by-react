@@ -93,7 +93,7 @@ const Flats = (props) => {
             ) : null}
             {status === "resolved" &&
               filteredFlats.slice(firstContentIndex, lastContentIndex).map(function (item) {
-                return <FlatCard key={item.id} flat={item} view={view} />;
+                return <FlatCard key={item.id} flat={item} view={view} page="flats" />;
               })}
           </div>
           <div className={styles.paginationContainer}>

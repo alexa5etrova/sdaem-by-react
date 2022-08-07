@@ -10,6 +10,7 @@ import { ReactComponent as UserIcon } from "../../../assets/icons/user.svg";
 import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
 import { ReactComponent as MetroIcon } from "../../../assets/icons/metro.svg";
 import { ReactComponent as PhoneIcon } from "../../../assets/icons/phone.svg";
+import { ReactComponent as HeartIcon } from "./heart.svg";
 
 import styles from "./ListCard.module.scss";
 
@@ -75,10 +76,17 @@ const ListCard = ({ flat }) => {
 
         <p className={styles.description}>{cutDesc}</p>
         <div className={styles.buttons}>
-          <Button btnStyle="white" onClick={openContacts}>
-            <PhoneIcon className={styles.phoneIcon} width="9" height="15" />
-            Контакты
-          </Button>
+          <div className={styles.morebtns}>
+            <Button btnStyle="white" onClick={openContacts}>
+              <PhoneIcon className={styles.phoneIcon} width="9" height="15" />
+              Контакты
+            </Button>
+            <Button btnStyle="rose" onClick={openContacts}>
+              В закладки
+              <HeartIcon className={styles.heartIcon} width="15" height="14" />
+            </Button>
+          </div>
+
           <LinkTag linkStyle="lightYellow" to={"/flats/" + id}>
             Подробнее
           </LinkTag>

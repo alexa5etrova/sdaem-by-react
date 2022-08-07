@@ -18,6 +18,8 @@ const Button = (props) => {
         [styles.btnSwitchOffChoise]: props.btnStyle === "switchOff",
         [styles.viewOn]: props.btnStyle === "viewOn",
         [styles.viewOff]: props.btnStyle === "viewOff",
+        [styles.rose]: props.btnStyle === "rose",
+        [styles.roseRound]: props.btnStyle === "roseRound",
       })}
       onClick={props.onClick}
     >

@@ -14,7 +14,7 @@ import { ReactComponent as ArrowIcon } from "./../../../assets/icons/chevron.svg
 
 import styles from "./Filter.module.scss";
 
-const Filter = ({ page, city }) => {
+const Filter = ({ page }) => {
   const [showOptions, setShowOptions] = useState(false);
   const navigate = useNavigate();
   const url = useLocation();
@@ -36,7 +36,7 @@ const Filter = ({ page, city }) => {
           metro: "",
         }}
         onSubmit={(values) => {
-          const { city, rooms, priceMin, priceMax, places, district, metro, checked } = values;
+          const { city, rooms, priceMin, priceMax, district, metro, checked } = values;
           let searchArr = [];
           if (city !== "") {
             searchArr.push(`city=${city}`);
@@ -71,13 +71,6 @@ const Filter = ({ page, city }) => {
         {(formik) => (
           <Form className={cn(styles.filterForm, { [styles.filterFormFlats]: page === "flats" })}>
             {page === "home" && (
-              <div
-                className={cn(styles.formSection, { [styles.formSectionFlat]: page === "flats" })}
-              >
-                <Select page={page} choise={CITIES} label="Город" name="city" id="city" />
-              </div>
-            )}
-            {page === "flats" && city === "" && (
               <div
                 className={cn(styles.formSection, { [styles.formSectionFlat]: page === "flats" })}
               >
