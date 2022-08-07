@@ -1,18 +1,18 @@
 import { Field } from "formik";
 import { ReactComponent as Arrow } from "./chevronDown.svg";
 
+import cn from "classnames";
 import styles from "./Select.module.scss";
 
-const Select = ({ label, name, id, choise }) => {
+const Select = ({ label, name, id, choise, page }) => {
   return (
-    <div className={styles.selectWrapper}>
+    <div className={cn(styles.selectWrapper, { [styles.selectWrapperFlats]: page === "flats" })}>
       {label !== "none" ? (
-        <label htmlFor={id} className={styles.label}>
+        <label htmlFor={id} className={cn(styles.label, { [styles.violet]: page === "flats" })}>
           {label}
         </label>
       ) : null}
-
-      <span className={styles.selectArrow}>
+      <span className={cn(styles.selectArrow, { [styles.flatSelectArrow]: page === "flats" })}>
         <Arrow width="18" />
       </span>
       <Field as="select" id={id} className={styles.select} name={name}>

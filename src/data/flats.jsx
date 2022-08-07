@@ -11,6 +11,7 @@ export const ROOMS = [
   { id: 2, name: "2 комн", value: "2" },
   { id: 3, name: "3 комн", value: "3" },
   { id: 4, name: "4 комн", value: "4" },
+  { id: 5, name: "5 комн", value: "5" },
 ];
 export const SLEEPING_PLACES = [
   { id: 1, name: "1", value: "1" },
@@ -18,6 +19,7 @@ export const SLEEPING_PLACES = [
   { id: 3, name: "2+1", value: "3" },
   { id: 4, name: "2+2", value: "4" },
 ];
+
 export const DISTRICT = [
   { id: 1, name: "Шабаны" },
   { id: 2, name: "Академгородок" },
@@ -66,3 +68,9 @@ export const EQUIPMENT = [
 export const FLAT_PREVIEW_LENGTH = 188;
 export const FLAT_PREVIEW_LIST_LENGTH = 265;
 export const FLATS_PER_PAGE = { tile: 6, list: 3 };
+
+export const SORT_VIEW = [
+  { id: "1", name: "По умолчанию" },
+  { id: "2", name: "По убыванию цены" },
+  { id: "3", name: "По возрастанию цены" },
+];

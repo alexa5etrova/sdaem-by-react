@@ -9,7 +9,7 @@ const Total = ({ total }) => {
         {total}
         <span>+</span>
       </div>
-      <LinkTag to="flats/minsk" linkStyle="gradientHome">
+      <LinkTag to="flats?city=minsk" linkStyle="gradientHome">
         Поcмотреть все <ArrowIcon width="9" height="11" className={styles.linkIcon} />
       </LinkTag>
       <p className={styles.text}>Предложений по Минску</p>

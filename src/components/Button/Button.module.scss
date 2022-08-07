@@ -97,3 +97,56 @@
 .btnFilter:hover {
   background-color: #fec100;
 }
+.btnDisable {
+  background-color: #f8f8f8;
+  color: $black;
+  border-radius: 22px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.btnDisable:hover {
+  background-color: #fdfafa;
+}
+.btnSwitchOffChoise {
+  background-color: rgba(102, 78, 249, 0.1);
+  border-radius: 17px;
+  padding: 6px 10px;
+  color: #664ef9;
+  font-weight: 400;
+  margin-top: -5px;
+}
+.btnSwitchOffChoise:hover {
+  background-color: white;
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+}
+.viewOn {
+  height: 37px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 18px;
+  padding: 0px 15px;
+  background-color: white;
+  color: $black;
+  font-weight: 600;
+  box-shadow: 0 5px 20px rgba(0, 96, 206, 0.1);
+}
+.viewOn:hover {
+  background-color: #f8f8f8;
+}
+.viewOff {
+  height: 37px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 18px;
+  padding: 0px 15px;
+  background-color: transparent;
+  color: $black;
+  font-weight: 500;
+}
+.viewOff:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+}
