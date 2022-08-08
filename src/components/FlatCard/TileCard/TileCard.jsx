@@ -1,10 +1,13 @@
 import { useState } from "react";
 import cn from "classnames";
+
 import { FLAT_PREVIEW_LENGTH } from "./../../../data/flats";
 import LinkTag from "./../../LinkTag/LinkTag";
 import Tag from "../../Tag/Tag";
 import Button from "./../../Button/Button";
 import OwnerContacts from "../../OwnerContacts/OwnerContacts";
+import CardSlider from "../CardSlider/CardSlider";
+
 import { ReactComponent as UserIcon } from "../../../assets/icons/user.svg";
 import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
 import { ReactComponent as MetroIcon } from "../../../assets/icons/metro.svg";
@@ -39,7 +42,11 @@ const TileCard = ({ flat }) => {
     <div className={styles.card}>
       <Tag tagType={status} />
       <div className={styles.flatImg}>
-        <img src={photoes[0].src} alt={photoes[0].alt} />
+        {photoes.length === 1 ? (
+          <img src={photoes[0].src} alt={photoes[0].alt} />
+        ) : (
+          <CardSlider photoes={photoes} />
+        )}
       </div>
       <div className={styles.flatContainer}>
         <div className={styles.infoRow}>

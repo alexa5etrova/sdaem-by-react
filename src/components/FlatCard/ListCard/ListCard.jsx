@@ -1,16 +1,18 @@
 import { useState } from "react";
 import cn from "classnames";
+
 import { FLAT_PREVIEW_LIST_LENGTH } from "./../../../data/flats";
 import LinkTag from "./../../LinkTag/LinkTag";
 import Tag from "../../Tag/Tag";
 import Htag from "../../Htag/Htag";
 import Button from "./../../Button/Button";
 import OwnerContacts from "../../OwnerContacts/OwnerContacts";
+import CardSlider from "./../CardSlider/CardSlider";
 import { ReactComponent as UserIcon } from "../../../assets/icons/user.svg";
 import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
 import { ReactComponent as MetroIcon } from "../../../assets/icons/metro.svg";
 import { ReactComponent as PhoneIcon } from "../../../assets/icons/phone.svg";
-import { ReactComponent as HeartIcon } from "./heart.svg";
+import { ReactComponent as HeartIcon } from "./../heart.svg";
 
 import styles from "./ListCard.module.scss";
 
@@ -39,9 +41,13 @@ const ListCard = ({ flat }) => {
 
   return (
     <div className={styles.card}>
+      <Tag tagType={status} />
       <div className={styles.flatImg}>
-        <Tag tagType={status} />
-        <img src={photoes[0].src} alt={photoes[0].alt} />
+        {photoes.length === 1 ? (
+          <img src={photoes[0].src} alt={photoes[0].alt} />
+        ) : (
+          <CardSlider photoes={photoes} />
+        )}
       </div>
       <div className={styles.flatContainer}>
         <div className={styles.headerRow}>

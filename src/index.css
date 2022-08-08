@@ -35,3 +35,19 @@ button:hover {
 a:hover {
   cursor: pointer;
 }
+
+:root {
+  --swiper-pagination-color: white;
+  --swiper-navigation-color: white;
+  --swiper-navigation-size: 20px !important;
+}
+.swiper-button-next {
+  padding: 5px 7px 5px 9px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.swiper-button-prev {
+  padding: 5px 9px 5px 7px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}

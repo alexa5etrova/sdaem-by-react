@@ -28,7 +28,7 @@ const Flats = (props) => {
   const [lastContentIndex, setLastContentIndex] = useState();
   const [rooms, setRooms] = useState("");
   const [city, setCity] = useState("");
-  const [view, setView] = useState("list");
+  const [view, setView] = useState("tile");
   const [cityValue, setCityValue] = useState("");
 
   useEffect(() => {
