@@ -58,41 +58,40 @@ const FlatsFilter = ({ page }) => {
           checked.map((item) => searchArr.push(`equipment.${item}=true`));
         }
 
-        let search = `?${searchArr.join("&")}`;
-
+        let search = `&${searchArr.join("&")}`;
         navigate(url.search + search);
       }}
     >
       {(formik) => (
-        <Form className={styles.filterFormFlats}>
-          <div className={styles.formSectionFlat}>
-            <Select page={"flats"} choise={ROOMS} label="Комнаты" name="rooms" id="rooms" />
-          </div>
-          <div className={cn(styles.priceWrapperFlats, styles.formSectionFlat)}>
-            <label htmlFor="price" className={styles.violet}>
-              Цена за сутки (BYN)
-            </label>
-            <div id="price">
-              <Field type="number" className={styles.price} name="priceMin" placeholder="От" />
-              <span className={styles.text}>-</span>
-              <Field type="number" className={styles.price} name="priceMax" placeholder="До" />
+        <Form className={styles.filter}>
+          <div className={styles.filterFormFlats}>
+            <div className={styles.formSectionFlat}>
+              <Select page={"flats"} choise={ROOMS} label="Комнаты" name="rooms" id="rooms" />
             </div>
+            <div className={cn(styles.priceWrapperFlats, styles.formSectionFlat)}>
+              <label htmlFor="price" className={styles.violet}>
+                Цена за сутки (BYN)
+              </label>
+              <div id="price">
+                <Field type="number" className={styles.price} name="priceMin" placeholder="От" />
+                <span className={styles.text}>-</span>
+                <Field type="number" className={styles.price} name="priceMax" placeholder="До" />
+              </div>
+            </div>
+            <div className={styles.formSectionToMap}>
+              <p className={styles.toMap} onClick={toggleFilter}>
+                Больше опций
+                <SetupIcon width="18" height="18" className={styles.icon} />
+              </p>
+            </div>
+            <Button type="button" onClick={() => navigate("/flats")} btnStyle="disable">
+              Очистить
+            </Button>
+            <Button type="submit" btnStyle="violet">
+              Показать объекты
+              <ArrowIcon width="7" height="11" className={styles.toFlatsIconWhite} />
+            </Button>
           </div>
-          <div className={styles.formSectionToMap}>
-            <p className={styles.toMap} onClick={toggleFilter}>
-              Больше опций
-              <SetupIcon width="18" height="18" className={styles.icon} />
-            </p>
-          </div>
-
-          <Button type="button" onClick={() => navigate("/flats")} btnStyle="disable">
-            Очистить
-          </Button>
-
-          <Button type="submit" btnStyle="violet">
-            Показать объекты
-            <ArrowIcon width="7" height="11" className={styles.toFlatsIconWhite} />
-          </Button>
 
           {showOptions && (
             <div className={styles.moreOptionsFlats}>
