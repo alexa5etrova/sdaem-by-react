@@ -1,12 +1,8 @@
 export const CATEGORIES = [
-  { name: "Квартиры", id: 1, path: "/flats" },
-  { name: "Коттеджи и усадьбы", id: 2, path: "/cottages" },
-  { name: "Бани и сауны", id: 3, path: "/saunas" },
-  {
-    name: "Авто напрокат",
-    id: 4,
-    path: "/cars",
-  },
+  { name: "Квартиры", id: 1, path: "/flats", value: "flats" },
+  { name: "Коттеджи и усадьбы", id: 2, path: "/cottages", value: "cottages" },
+  { name: "Бани и сауны", id: 3, path: "/saunas", value: "saunas" },
+  { name: "Авто напрокат", id: 4, path: "/cars", value: "cars" },
 ];
 
 export const SITEMAP = [
