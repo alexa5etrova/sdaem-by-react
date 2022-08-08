@@ -1,5 +1,5 @@
 import { Form, Formik, Field } from "formik";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import cn from "classnames";
 
@@ -23,7 +23,6 @@ import styles from "./HomeFilter.module.scss";
 const HomeFilter = ({ page }) => {
   const [showOptions, setShowOptions] = useState(false);
   const navigate = useNavigate();
-  const url = useLocation();
 
   const toggleFilter = () => {
     setShowOptions((prev) => !prev);

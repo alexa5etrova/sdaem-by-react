@@ -7,7 +7,6 @@
   align-items: center;
   position: relative;
 }
-
 .formSectionFlat {
   position: relative;
 }
@@ -88,31 +87,14 @@
   color: white;
   margin-left: 11px;
 }
-.moreOptions {
-  position: absolute;
-  top: 68px;
-  left: -20px;
-  width: 1010px;
-  background-color: white;
-  border-radius: 10px;
-  padding: 15px 33px 30px 20px;
-  display: flex;
-  flex-direction: column;
-  border: rgba(78, 100, 249, 0.1);
-  box-shadow: 0 20px 40px 0 rgba(135, 124, 202, 0.15);
-}
+
 .moreOptionsFlats {
-  position: absolute;
-  top: 68px;
-  left: 0px;
-  width: 1440px;
   background-color: white;
   border-radius: 0px;
   padding: 15px 33px 30px 20px;
   display: flex;
   flex-direction: column;
   border: rgba(78, 100, 249, 0.1);
-  box-shadow: 0 20px 40px 0 rgba(135, 124, 202, 0.15);
   z-index: 5;
 }
 .moreSelect {
