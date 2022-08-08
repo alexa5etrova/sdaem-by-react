@@ -226,8 +226,11 @@
       "city": "grodno",
       "address": "Гродно, б-р Мулявина, д. 10",
       "metro": "Грушевка",
-      "title": "4-комн. апартаменты на Грушевке ",
-      "photoes": [{ "src": "./images/flats/flat1.jpg", "alt": "4-х комнатная квартира в Минске" }],
+      "title": "4-комн. апартаменты в Гродно ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" },
+        { "id": 2, "src": "./images/flats/flat4.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
       "district": "Шабаны",
       "places": { "value": "4", "name": "(2+2)" },
       "rooms": "4",
@@ -317,7 +320,10 @@
       "address": "Минск, б-р Мулявина, д. 10",
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
-      "photoes": [{ "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }],
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" },
+        { "id": 2, "src": "./images/flats/flat4.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
       "district": "Шабаны",
       "places": { "value": "4", "name": "(2+2)" },
       "rooms": "4",
@@ -347,7 +353,9 @@
       "address": "Минск, б-р Мулявина, д. 10",
       "metro": "Грушевка",
       "title": "1-комн. апартаменты на Грушевке ",
-      "photoes": [{ "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }],
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
       "district": "Шабаны",
       "places": { "value": "4", "name": "(2+2)" },
       "rooms": "1",
