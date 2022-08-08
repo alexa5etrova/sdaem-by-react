@@ -1,148 +1,29 @@
-@import "./../../../styles/_colors.scss";
-
-.filterForm {
-  display: flex;
-  flex-direction: row;
-  gap: 42px;
-  align-items: center;
+.wrapperFlats {
   position: relative;
-}
-.filterFormFlats {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  position: relative;
-}
-.formSection {
-  position: relative;
-}
-.formSection::after {
-  content: "";
-  position: absolute;
-  top: 1px;
-  right: -22px;
-  height: 68px;
-  width: 1px;
-  background-color: rgba(102, 78, 249, 0.1);
-}
-.formSectionFlat {
-  position: relative;
-}
-.formSectionFlat::after {
-  content: "";
-  position: absolute;
-  top: -14px;
-  right: -22px;
-  height: 68px;
-  width: 1px;
-  background-color: rgba(102, 78, 249, 0.1);
-}
-.formSectionToMap {
-  position: relative;
-}
-.formSectionToMap::after {
-  content: "";
-  position: absolute;
-  top: -22px;
-  right: -22px;
-  height: 68px;
-  width: 1px;
-  background-color: rgba(102, 78, 249, 0.1);
-}
-
-.priceWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
-}
-.priceWrapperFlats {
-  display: flex;
-  flex-direction: row;
-  gap: 11px;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-.label {
-  color: #bdbdbd;
-}
-.violet {
-  color: $violet;
-}
-.price {
-  width: 63px;
-  height: 37px;
-  background-color: #f8f8f8;
-  color: #686868;
-  border-radius: 20px;
-  border: none;
-  appearance: textfield;
-  padding-left: 11px;
-}
-.price:hover {
-  outline: 2px solid rgba(102, 78, 249, 0.8);
+  width: 100%;
+  box-shadow: 0 20px 40px 0 rgba(39, 95, 158, 0.08);
   background-color: white;
 }
-.text {
-  color: #4e64f9;
-  margin: 0 5px;
+.filterFlats {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 22px 0px;
+  z-index: 10000;
 }
-.toMap {
-  text-decoration: none;
-  color: $black;
+.wrapperHome {
+  height: 100%;
+  position: relative;
 }
-.toMap:hover {
-  color: #664ef9;
-}
-
-.icon {
-  color: #664ef9;
-  margin-left: 5px;
-}
-.toFlatsIcon {
-  color: black;
-  margin-left: 11px;
-}
-.toFlatsIconWhite {
-  color: white;
-  margin-left: 11px;
-}
-.moreOptions {
+.filterHome {
   position: absolute;
-  top: 68px;
-  left: -20px;
   width: 1010px;
+  height: 64px;
   background-color: white;
   border-radius: 10px;
-  padding: 15px 33px 30px 20px;
-  display: flex;
-  flex-direction: column;
-  border: rgba(78, 100, 249, 0.1);
-  box-shadow: 0 20px 40px 0 rgba(135, 124, 202, 0.15);
-}
-.moreOptionsFlats {
-  position: absolute;
-  top: 68px;
-  left: 0px;
-  width: 1440px;
-  background-color: white;
-  border-radius: 0px;
-  padding: 15px 33px 30px 20px;
-  display: flex;
-  flex-direction: column;
-  border: rgba(78, 100, 249, 0.1);
-  box-shadow: 0 20px 40px 0 rgba(135, 124, 202, 0.15);
-  z-index: 5;
-}
-.moreSelect {
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-  margin: 32px 0;
-}
-.moreEquipment {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 13px 5px;
+  left: 50%;
+  top: 61%;
+  margin-left: -528px;
+  margin-top: -50px;
+  padding: 15px 33px 20px 20px;
+  z-index: 10000;
 }
