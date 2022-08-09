@@ -12,7 +12,7 @@ const FlatsLinksHome = () => {
           <Htag tag="h2white">Квартиры на сутки</Htag>
           <div className={styles.links}>
             {CITIES.map((city) => (
-              <LinkTag key={city.id} linkStyle="violet" to={`/flats/${city.value}`}>
+              <LinkTag key={city.id} linkStyle="violet" to={`/flats?city=${city.value}`}>
                 {city.name}
               </LinkTag>
             ))}
