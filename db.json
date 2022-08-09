@@ -441,10 +441,7 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        {
-          "src": "./images/flats/flat2.jpg",
-          "alt": "4-х комнатная квартира в Минске"
-        }
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
       ],
       "district": "Шабаны",
       "places": {
@@ -460,6 +457,601 @@
         "microwave": true,
         "dishes": true,
         "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 7,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 8,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 9,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 10,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 11,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 12,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 13,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 14,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 15,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 16,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 17,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 18,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 19,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 20,
+      "price": 38,
+      "city": "minsk",
+      "address": "Минск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "4-комн. апартаменты на Грушевке ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 21,
+      "price": 38,
+      "city": "mogilev",
+      "address": "Могилев, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "3-комн. апартаменты на Могилеве ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "3",
+        "name": "(2+1)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 22,
+      "price": 38,
+      "city": "gomel",
+      "address": "Гомель, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "3-комн. апартаменты в Гомеле",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "4",
+        "name": "(2+1)"
+      },
+      "rooms": "3",
+      "period": "day",
+      "sqM": "179",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": false,
+        "oven": true,
+        "coffeeMashine": true
+      },
+      "contacts": {
+        "photo": "./images/users/user.jpg",
+        "name": "Dmitriy",
+        "phone": "+375 (29) 291-14-44",
+        "email": "vladimir6234@tut.by"
+      },
+      "description": "Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,"
+    },
+    {
+      "id": 23,
+      "price": 38,
+      "city": "vitebsk",
+      "address": "Витебск, б-р Мулявина, д. 10",
+      "metro": "Грушевка",
+      "title": "2-комн. апартаменты на Витебске ",
+      "photoes": [
+        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+      ],
+      "district": "Шабаны",
+      "places": {
+        "value": "2",
+        "name": "(2)"
+      },
+      "rooms": "2",
+      "period": "day",
+      "sqM": "50",
+      "status": "gold",
+      "equipment": {
+        "gasStove": true,
+        "microwave": true,
+        "dishes": true,
+        "dishwasher": true,
         "oven": true,
         "coffeeMashine": true
       },

@@ -53,8 +53,12 @@ export const userSignIn = createAsyncThunk(
       }
       const data = await responce.json();
       localStorage.removeItem("sdaemBy");
-      localStorage.setItem("sdaemBy", data.accessToken);
-      localStorage.setItem("sdaemById", data.user.id.accessToken);
+      let date = new Date();
+      date.setHours(date.getHours + 1);
+      localStorage.setItem(
+        "sdaemBy",
+        JSON.stringify({ user: data.user, token: data.accessToken, expire: date })
+      );
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
