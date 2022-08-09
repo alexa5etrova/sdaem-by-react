@@ -1,10 +1,12 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import cn from "classnames";
 import { useState } from "react";
 
 import { userSignIn } from "../../../redux/authSlice";
+import Loader from "./../../Loader/Loader";
 import FormWrapper from "../FormWrapper/FormWrapper";
 import Input from "../Input/Input";
 import Htag from "../../Htag/Htag";
@@ -12,13 +14,14 @@ import Button from "../../Button/Button";
 import Switch from "./../Switch/Switch";
 import Dialog from "./../Dialog/Dialog";
 import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
-import { AUTH_SENT_FAILED } from "../../../data/auth";
+import { AUTH_OK, AUTH_SENT_FAILED } from "../../../data/auth";
 
 import styles from "./SignIn.module.scss";
 
 const SignIn = (props) => {
   const { status, error } = useSelector((state) => state.auth);
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
   const formik = useFormik({
@@ -45,6 +48,10 @@ const SignIn = (props) => {
 
   return (
     <div className={styles.auth}>
+      {status === "resolved" && (
+        <Dialog isOpen={showModal} header={AUTH_OK.header} text="" onClose={navigate("/")} />
+      )}
+
       {status === "rejected" && (
         <Dialog
           isOpen={showModal}
@@ -53,6 +60,7 @@ const SignIn = (props) => {
           onClose={setShowModal}
         />
       )}
+      {status === "loading" && <Loader />}
       <FormWrapper wrStyle="auth">
         <div className={styles.authWrapper}>
           <Htag tag="h2">Авторизация</Htag>

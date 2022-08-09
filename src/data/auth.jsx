@@ -2,6 +2,10 @@ export const AUTH_SENT_FAILED = {
   header: "К сожалению, произошла ошибка",
   text: "",
 };
+export const AUTH_OK = {
+  header: "Добро пожаловать!",
+  text: "",
+};
 export const SIGNUP_FAILED = {
   header: "К сожалению, произошла ошибка",
   text: "",

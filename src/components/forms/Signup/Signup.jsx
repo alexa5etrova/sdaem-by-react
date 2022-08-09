@@ -144,6 +144,14 @@ const SignUp = (props) => {
                 </span>
               </p>
             ) : null}
+            {formik.touched.password && formik.errors.password !== undefined ? (
+              <p className={styles.error}>
+                {formik.errors.password}
+                <span>
+                  <AttentionIcon className={styles.errorIcon} />
+                </span>
+              </p>
+            ) : null}
             {formik.touched.pswdRepeat && formik.errors.pswdRepeat !== undefined ? (
               <p className={styles.error}>
                 {formik.errors.pswdRepeat}

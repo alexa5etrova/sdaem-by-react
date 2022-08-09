@@ -12,7 +12,7 @@ const Auth = (props) => {
   const [showenDialog, setShowenDialog] = useState("login");
 
   return ReactDOM.createPortal(
-    <div class={styles.background}>
+    <div className={styles.background}>
       <Background>
         {showenDialog === "login" && <SignIn toSignUp={setShowenDialog} />}
         {showenDialog === "signUp" && <SignUp toLogin={setShowenDialog} />}

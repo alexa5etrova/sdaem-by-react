@@ -21,8 +21,9 @@ export const userSignUp = createAsyncThunk(
         let error = await responce.json();
         throw new Error(error);
       }
-
       const data = await responce.json();
+      localStorage.removeItem("sdaemBy");
+      localStorage.setItem("sdaemBy", data.accessToken);
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -50,8 +51,10 @@ export const userSignIn = createAsyncThunk(
         let error = await responce.json();
         throw new Error(error);
       }
-
       const data = await responce.json();
+      localStorage.removeItem("sdaemBy");
+      localStorage.setItem("sdaemBy", data.accessToken);
+      localStorage.setItem("sdaemById", data.user.id.accessToken);
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -73,26 +76,34 @@ const authSlice = createSlice({
     [userSignUp.pending]: (state) => {
       state.status = "loading";
       state.error = null;
+      state.isAuth = false;
     },
     [userSignUp.fulfilled]: (state, action) => {
       state.status = "resolved";
-      state.accessToken = action.payload;
+      state.accessToken = action.payload.accessToken;
+      state.user = action.payload.user;
+      state.isAuth = true;
     },
     [userSignUp.rejected]: (state, action) => {
       state.status = "rejected";
       state.error = action.payload;
+      state.isAuth = false;
     },
     [userSignIn.pending]: (state) => {
       state.status = "loading";
       state.error = null;
+      state.isAuth = false;
     },
     [userSignIn.fulfilled]: (state, action) => {
       state.status = "resolved";
-      state.accessToken = action.payload;
+      state.accessToken = action.payload.accessToken;
+      state.user = action.payload.user;
+      state.isAuth = true;
     },
     [userSignIn.rejected]: (state, action) => {
       state.status = "rejected";
       state.error = action.payload;
+      state.isAuth = false;
     },
   },
 });

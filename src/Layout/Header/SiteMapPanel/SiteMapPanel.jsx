@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
 import cn from "classnames";
+import { useSelector } from "react-redux";
 
 import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
 import { ReactComponent as HeartIcon } from "../../../assets/icons/heart.svg";
+import { ReactComponent as ArrowIcon } from "../../../assets/icons/chevron.svg";
 import { SITEMAP } from "./../../../data/nav";
 
 import styles from "./SiteMapPanel.module.scss";
 
 const SiteMapPanel = () => {
+  const { user, isAuth } = useSelector((state) => state.auth);
+
   return (
     <div className={styles.siteMapPanel}>
       <div className={styles.siteMapPanelContainer}>
@@ -40,7 +44,13 @@ const SiteMapPanel = () => {
             </Link>
           </li>
           <li className={cn(styles.navHeaderItem, styles.authLink)}>
-            <Link to="/auth">Вход и регистрация</Link>
+            {!isAuth && <Link to="/auth">Вход и регистрация</Link>}
+            {isAuth && (
+              <Link to="/settings">
+                {user.login}
+                <ArrowIcon className={styles.arrow} width="10" height="12" />
+              </Link>
+            )}
           </li>
         </ul>
       </div>
