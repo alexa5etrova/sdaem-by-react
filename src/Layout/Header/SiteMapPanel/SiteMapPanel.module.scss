@@ -58,3 +58,9 @@
   font-weight: 500;
   color: $violet;
 }
+
+.arrow {
+  color: $violet;
+  transform: rotate(90deg);
+  margin-left: 10px;
+}

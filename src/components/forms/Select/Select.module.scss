@@ -41,12 +41,13 @@
   color: $violet;
   top: 36px;
   left: 121px;
+  z-index: 2;
 }
 .flatSelectArrow {
   position: absolute;
   color: $violet;
-  top: 13px;
-  left: 188px;
+  top: 11px;
+  left: 200px;
   z-index: 2;
 }
 
