@@ -12,10 +12,9 @@ const NotFound = () => {
           <div className={styles.textContainer}>
             <Htag tag="notFound">Ошибка 404</Htag>
             <p className={styles.textNotFound}>
-              Возможно, у вас опечатка в адресе страницы, или её просто не
-              существует
+              Возможно, у вас опечатка в адресе страницы, или её просто не существует
             </p>
-            <Link to="/news" className={styles.linkNotFound}>
+            <Link to="/" className={styles.linkNotFound}>
               <span className={styles.homeIcon}>
                 <HomeIcon />
               </span>
