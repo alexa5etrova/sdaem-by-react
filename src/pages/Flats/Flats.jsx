@@ -19,6 +19,7 @@ import styles from "./Flats.module.scss";
 import Reccomend from "../../components/Reccomend/Reccomend";
 import { CITIES } from "./../../data/flats";
 import ViewButtons from "../../components/ViewButtons/ViewButtons";
+import SocialsShared from "../../components/SocialsShared/SocialsShared";
 
 const Flats = (props) => {
   const request = useLocation();
@@ -103,6 +104,7 @@ const Flats = (props) => {
               sendLastIndex={getLastIndex}
               contentPerPage={FLATS_PER_PAGE[view]}
             />
+            <SocialsShared page="flats" />
           </div>
         </div>
         <ToMap

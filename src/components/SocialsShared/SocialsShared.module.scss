@@ -5,7 +5,56 @@
   flex-direction: row;
   gap: 20px;
   align-items: center;
+  .shareText {
+    margin-right: -8px;
+  }
 }
-.shareText {
-  margin-right: -8px;
+.socialTagsFlats {
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+  align-items: center;
+  .shareText {
+    margin-right: -2px;
+  }
+}
+
+.iconHolder {
+  background-color: rgba(102, 78, 249, 0.1);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .icon {
+    color: $violet;
+  }
+}
+
+.iconHolderFlats {
+  background-color: #f4f5fa;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .icon {
+    color: $black;
+  }
+}
+.iconHolder:hover {
+  background-color: #f4f5fa;
+  .icon {
+    color: $black;
+  }
+}
+.iconHolderFlats:hover {
+  background-color: rgba(102, 78, 249, 0.1);
+  .icon {
+    color: $violet;
+  }
 }
