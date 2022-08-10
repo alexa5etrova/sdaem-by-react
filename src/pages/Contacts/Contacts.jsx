@@ -7,7 +7,7 @@ import { COMPANY } from "./../../data/contacts";
 
 import styles from "./Contacts.module.scss";
 
-const Contacts = (props) => {
+const Contacts = (): JSX.Element => {
   return (
     <div className={styles.contacts}>
       <Background>
