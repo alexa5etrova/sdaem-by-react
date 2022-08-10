@@ -1,9 +1,8 @@
-import React from "react";
 import cn from "classnames";
-import { FC } from "react";
+import { SearchContainerProps } from "./SearchContainer.props";
 import styles from "./SearchContainer.module.scss";
 
-const SearchContainer = ({ children, stl }): JSX.Element => {
+const SearchContainer = ({ children, stl }: SearchContainerProps): JSX.Element => {
   return (
     <div
       className={cn(styles.container, {

@@ -1,22 +1,31 @@
 import React from "react";
 import { useState } from "react";
 import cn from "classnames";
-import { ReactComponent as UserIcon } from "./../../../assets/icons/user.svg";
-import { ReactComponent as LockIcon } from "./../../../assets/icons/lock.svg";
-import { ReactComponent as EmailIcon } from "./../../../assets/icons/envelope.svg";
-import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
+import UserIcon from "./../../../assets/icons/user.svg";
+import LockIcon from "./../../../assets/icons/lock.svg";
+import EmailIcon from "./../../../assets/icons/envelope.svg";
+import AttentionIcon from "./../../../assets/icons/attention.svg";
 import styles from "./Input.module.scss";
+import { InputProps } from "./Input.props";
 
-const Input = (props) => {
-  const [iconOnFocus, setIconOnFocus] = useState(false);
+const Input = ({
+  name,
+  id,
+  value,
+  inputStyle,
+  error,
+  errorStyle,
+  ...props
+}: InputProps): JSX.Element => {
+  const [iconOnFocus, setIconOnFocus] = useState<boolean>(false);
 
-  let icon;
+  let icon: JSX.Element;
   let iconStyles = cn(styles.inputIcon, {
     [styles.iconOnFocus]: iconOnFocus === true,
     [styles.iconWithoutFocus]: iconOnFocus === false,
   });
 
-  switch (props.name) {
+  switch (name) {
     case "name" || "login":
       icon = <UserIcon className={iconStyles} />;
       break;
@@ -40,26 +49,24 @@ const Input = (props) => {
     <div className={styles.inputWrapper}>
       {icon}
       <input
-        id={props.id}
-        name={props.name}
-        type={props.type}
-        placeholder={props.placeholder}
-        value={props.value}
-        onChange={props.onChange}
+        {...props}
+        id={id}
+        name={name}
+        value={value}
         onMouseOver={() => setIconOnFocus(true)}
         onMouseOut={() => setIconOnFocus(false)}
         onFocus={() => setIconOnFocus(true)}
         onBlur={() => setIconOnFocus(false)}
         className={cn(styles.input, {
-          [styles.search]: props.inputStyle === "search",
-          [styles.formInput]: props.inputStyle === "formInput",
-          [styles.error]: props.error === true,
+          [styles.search]: inputStyle === "search",
+          [styles.formInput]: inputStyle === "formInput",
+          [styles.error]: error === true,
         })}
       />
-      {props.error && (
+      {error && (
         <div
           className={cn(styles.errorIcon, {
-            [styles.errorAuth]: props.errorStyle === "auth",
+            [styles.errorAuth]: errorStyle === "auth",
           })}
         >
           <AttentionIcon />

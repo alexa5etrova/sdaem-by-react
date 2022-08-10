@@ -1,9 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { HOME_URL } from "../data/admin";
+import { AuthStateModel, UserModel } from "../interfaces/auth.interface";
 
 export const userSignUp = createAsyncThunk(
   "users/userSignUp",
-  async function (user, { rejectWithValue }) {
+  async function (user: UserModel, { rejectWithValue }) {
     try {
       const responce = await fetch(`${HOME_URL}/users`, {
         method: "post",
@@ -33,7 +34,7 @@ export const userSignUp = createAsyncThunk(
 
 export const userSignIn = createAsyncThunk(
   "users/userSignIn",
-  async function (user, { rejectWithValue }) {
+  async function (user: UserModel, { rejectWithValue }) {
     try {
       const responce = await fetch(`${HOME_URL}/login`, {
         method: "post",
@@ -53,7 +54,7 @@ export const userSignIn = createAsyncThunk(
       }
       const data = await responce.json();
       localStorage.removeItem("sdaemBy");
-      let date = new Date();
+      let date: Date = new Date();
       date.setHours(date.getHours + 1);
       localStorage.setItem(
         "sdaemBy",
@@ -69,12 +70,12 @@ export const userSignIn = createAsyncThunk(
 const authSlice = createSlice({
   name: "users",
   initialState: {
-    user: [],
+    user: {},
     status: null,
     error: null,
     isAuth: false,
     accessToken: "",
-  },
+  } as AuthStateModel,
   reducers: {},
   extraReducers: {
     [userSignUp.pending]: (state) => {

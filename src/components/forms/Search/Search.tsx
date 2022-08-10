@@ -1,20 +1,22 @@
-import styles from "./Search.module.scss";
+import { ChangeEvent, FormEvent, useState } from "react";
+
 import Input from "../Input/Input";
 import Button from "../../Button/Button";
-import { ReactComponent as SearchIcon } from "./../../../assets/icons/search.svg";
-import { useState } from "react";
+import SearchIcon from "./../../../assets/icons/search.svg";
 import SearchContainer from "../SearchContainer/SearchContainer";
+import { SearchProps } from "./Search.props";
+import styles from "./Search.module.scss";
 
-const Search = ({ searchHandler }) => {
-  const [searchInput, setSearchInput] = useState("");
+const Search = ({ searchHandler }: SearchProps): JSX.Element => {
+  const [searchInput, setSearchInput] = useState<string>("");
 
-  const changeHandler = (e) => {
+  const changeHandler = (e: ChangeEvent<HTMLInputElement>): void => {
     setSearchInput(e.target.value);
   };
 
-  const onSearch = (e) => {
+  const onSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let toFind = searchInput.trim().toLowerCase();
+    let toFind: string = searchInput.trim().toLowerCase();
     searchHandler(toFind);
     setSearchInput("");
   };
@@ -27,6 +29,7 @@ const Search = ({ searchHandler }) => {
           inputStyle="search"
           value={searchInput}
           onChange={changeHandler}
+          name="searchNews"
         ></Input>
         <div className={styles.btnContainer}>
           <Button type="submit" className={styles.button} btnStyle="search">

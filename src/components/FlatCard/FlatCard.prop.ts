@@ -5,5 +5,5 @@ export interface FlatCardProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   flat: FlatModel;
   page: "home" | "flats";
-  view: "tile" | "list";
+  view?: "tile" | "list";
 }

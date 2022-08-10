@@ -1,6 +1,6 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 
-export interface HomeFilterProps
+export interface SearchProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    
-  }
+  searchHandler: (x: string) => void;
+}

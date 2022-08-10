@@ -1,7 +1,11 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
+import { DetailedHTMLProps, InputHTMLAttributes } from "react";
 
-export interface FormWrapperProps
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  wrStyle: "auth" | "signup";
-  children: ReactNode;
+export interface InputProps
+  extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+  name: "name" | "login" | "email" | "password" | "pswdRepeat" | string;
+  id?: string;
+  value: string;
+  inputStyle: "search" | "formInput";
+  error?: boolean;
+  errorStyle?: "auth" | string;
 }

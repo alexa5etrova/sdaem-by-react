@@ -1,10 +1,11 @@
 import { Field } from "formik";
-import { ReactComponent as Arrow } from "./chevronDown.svg";
+import Arrow from "./chevronDown.svg";
 
 import cn from "classnames";
 import styles from "./Select.module.scss";
+import { SelectProps } from "./Select.props";
 
-const Select = ({ label, name, id, choise, page }) => {
+const Select = ({ label, name, id, choise, page }: SelectProps): JSX.Element => {
   return (
     <div className={cn(styles.selectWrapper, { [styles.selectWrapperFlats]: page === "flats" })}>
       {label !== "none" ? (
@@ -16,7 +17,7 @@ const Select = ({ label, name, id, choise, page }) => {
         <Arrow width="18" />
       </span>
       <Field as="select" id={id} className={styles.select} name={name}>
-        <option className={styles.option} defaultValue>
+        <option className={styles.option} defaultValue="Выберите">
           Выберите
         </option>
         {choise.map((item) => (

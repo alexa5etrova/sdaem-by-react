@@ -1,5 +1,3 @@
-import { EquipmentModel } from "./flat.interface";
-
 export interface FilterValues {
   city: string;
   rooms: string;
@@ -9,6 +7,12 @@ export interface FilterValues {
   district: string;
   metro: string;
   checked?: string[];
+}
+
+export interface SelectModel {
+  id: number;
+  name: string;
+  value: string;
 }
 
 export interface EquipmentSelectModel {

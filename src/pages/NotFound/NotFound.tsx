@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ReactComponent as HomeIcon } from "./../../assets/icons/home.svg";
+import HomeIcon from "./../../assets/icons/home.svg";
 import Background from "../../components/Background/Background";
 import photo404 from "./../../assets/images/404.png";
 import Htag from "../../components/Htag/Htag";

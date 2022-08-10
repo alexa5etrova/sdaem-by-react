@@ -5,22 +5,25 @@ import { useNavigate } from "react-router-dom";
 import cn from "classnames";
 import { useState } from "react";
 
+import { RootState } from "../../../redux/store";
+import { AUTH_OK, AUTH_SENT_FAILED } from "../../../data/auth";
 import { userSignIn } from "../../../redux/authSlice";
-import Loader from "./../../Loader/Loader";
+import Loader from "../../Loader/Loader";
 import FormWrapper from "../FormWrapper/FormWrapper";
 import Input from "../Input/Input";
 import Htag from "../../Htag/Htag";
 import Button from "../../Button/Button";
-import Switch from "./../Switch/Switch";
-import Dialog from "./../Dialog/Dialog";
-import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
-import { AUTH_OK, AUTH_SENT_FAILED } from "../../../data/auth";
+import Switch from "../Switch/Switch";
+import Dialog from "../Dialog/Dialog";
+import AttentionIcon from "./../../../assets/icons/attention.svg";
 
 import styles from "./SignIn.module.scss";
+import { SignInProps } from "./SignIn.props";
+import { UserModel } from "../../../interfaces/auth.interface";
 
-const SignIn = (props) => {
-  const { status, error } = useSelector((state) => state.auth);
-  const [showModal, setShowModal] = useState(false);
+const SignIn = ({ ...props }: SignInProps): JSX.Element => {
+  const { status, error } = useSelector((state: RootState) => state.auth);
+  const [showModal, setShowModal] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
@@ -33,7 +36,7 @@ const SignIn = (props) => {
       password: Yup.string().required("Введите пароль"),
     }),
 
-    onSubmit: (values) => {
+    onSubmit: (values: UserModel) => {
       dispatch(
         userSignIn({
           email: values.login,

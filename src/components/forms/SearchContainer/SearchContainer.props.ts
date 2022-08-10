@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
-import { FlatModel } from "../../interfaces/flat.interface";
 
-export interface CarouselProps
+export interface SearchContainerProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  flats: FlatModel[];
+  children: ReactNode;
+  stl: "search" | "carousel";
 }
