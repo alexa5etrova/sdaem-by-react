@@ -1,6 +1,6 @@
 import React from "react";
 import { useSwiper } from "swiper/react";
-import { ReactComponent as ChevronIcon } from "./chevron.svg";
+import ChevronIcon from "./chevron.svg";
 import { SwiperButtonProps } from "./SwiperButton.props";
 import styles from "./SwiperButton.module.scss";
 

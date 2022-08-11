@@ -67,14 +67,7 @@ const FlatsFilter = (props: FlatsFilterProps): JSX.Element => {
         <Form className={styles.filter}>
           <div className={styles.filterFormFlats}>
             <div className={styles.formSectionFlat}>
-              <Select
-                page={"flats"}
-                labelStl="violet"
-                choise={ROOMS}
-                label="Комнаты"
-                name="rooms"
-                id="rooms"
-              />
+              <Select page={"flats"} choise={ROOMS} label="Комнаты" name="rooms" id="rooms" />
             </div>
             <div className={cn(styles.priceWrapperFlats, styles.formSectionFlat)}>
               <label htmlFor="price" className={styles.violet}>
@@ -104,21 +97,9 @@ const FlatsFilter = (props: FlatsFilterProps): JSX.Element => {
           {showOptions && (
             <div className={styles.moreOptionsFlats}>
               <div className={styles.moreSelect}>
-                <Select
-                  labelStl="violet"
-                  choise={SLEEPING_PLACES}
-                  label="Спальные места"
-                  name="places"
-                  id="places"
-                />
-                <Select
-                  labelStl="violet"
-                  choise={DISTRICT}
-                  label="Район"
-                  name="district"
-                  id="district"
-                />
-                <Select labelStl="violet" choise={METRO} label="Метро" name="metro" id="metro" />
+                <Select choise={SLEEPING_PLACES} label="Спальные места" name="places" id="places" />
+                <Select choise={DISTRICT} label="Район" name="district" id="district" />
+                <Select choise={METRO} label="Метро" name="metro" id="metro" />
               </div>
               <div role="group" aria-labelledby="checkbox-group" className={styles.moreEquipment}>
                 {EQUIPMENT.map((item) => (

@@ -5,5 +5,6 @@ export interface DialogProps
   isOpen: boolean;
   header: string;
   text: string | null;
+  form?: "signIn";
   onClose: (x: boolean) => void;
 }

@@ -6,6 +6,7 @@ import {
   RoomsSelectModel,
   SleepingPlacesSelectModel,
 } from "../interfaces/filter.interface";
+import { FlatsPerPageModel, SortViewModel } from "../interfaces/flat.interface";
 
 export const CITIES: CitiesSelectModel[] = [
   { id: 1, name: "Минск", value: "minsk" },
@@ -30,21 +31,21 @@ export const SLEEPING_PLACES: SleepingPlacesSelectModel[] = [
 ];
 
 export const DISTRICT: DistrictSelectModel[] = [
-  { id: 1, name: "Шабаны" },
-  { id: 2, name: "Академгородок" },
-  { id: 3, name: "Ангарская" },
-  { id: 4, name: "Аэродромная" },
-  { id: 5, name: "Восток" },
-  { id: 6, name: "Веснянка" },
+  { id: 1, name: "Шабаны", value: "Шабаны" },
+  { id: 2, name: "Академгородок", value: "Академгородок" },
+  { id: 3, name: "Ангарская", value: "Ангарская" },
+  { id: 4, name: "Аэродромная", value: "Аэродромная" },
+  { id: 5, name: "Восток", value: "Восток" },
+  { id: 6, name: "Веснянка", value: "Веснянка" },
 ];
 export const METRO: MetroSelectModel[] = [
-  { id: 1, name: "Автозаводская" },
-  { id: 2, name: "Академия наук" },
-  { id: 3, name: "Борисовский тракт" },
-  { id: 4, name: "Восток" },
-  { id: 5, name: "Грушевка" },
-  { id: 6, name: "Каменная горка" },
-  { id: 7, name: "Институт культуры" },
+  { id: 1, name: "Автозаводская", value: "Автозаводская" },
+  { id: 2, name: "Академия наук", value: "Академия наук" },
+  { id: 3, name: "Борисовский тракт", value: "Борисовский тракт" },
+  { id: 4, name: "Восток", value: "Восток" },
+  { id: 5, name: "Грушевка", value: "Грушевка" },
+  { id: 6, name: "Каменная горка", value: "Каменная горка" },
+  { id: 7, name: "Институт культуры", value: "Институт культуры" },
 ];
 export const EQUIPMENT: EquipmentSelectModel[] = [
   { id: 1, title: "Газовая плита", value: "gasStove" },
@@ -74,11 +75,12 @@ export const EQUIPMENT: EquipmentSelectModel[] = [
   { id: 25, title: "Микроволновая печь", value: "microwave" },
 ];
 
-export const FLAT_PREVIEW_LENGTH = 188;
-export const FLAT_PREVIEW_LIST_LENGTH = 265;
-export const FLATS_PER_PAGE = { tile: 6, list: 3 };
+export const FLAT_PREVIEW_LENGTH: number = 188;
+export const FLAT_PREVIEW_LIST_LENGTH: number = 265;
 
-export const SORT_VIEW = [
+export const FLATS_PER_PAGE: FlatsPerPageModel = { tile: 6, list: 3 };
+
+export const SORT_VIEW: SortViewModel[] = [
   { id: "1", name: "По умолчанию" },
   { id: "2", name: "По убыванию цены" },
   { id: "3", name: "По возрастанию цены" },

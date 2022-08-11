@@ -1,7 +1,6 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import cn from "classnames";
 import { useState } from "react";
 
@@ -21,10 +20,9 @@ import styles from "./SignIn.module.scss";
 import { SignInProps } from "./SignIn.props";
 import { UserModel } from "../../../interfaces/auth.interface";
 
-const SignIn = ({ ...props }: SignInProps): JSX.Element => {
+const SignIn = ({ toSignUp, ...props }: SignInProps): JSX.Element => {
   const { status, error } = useSelector((state: RootState) => state.auth);
   const [showModal, setShowModal] = useState<boolean>(false);
-  const navigate = useNavigate();
 
   const dispatch = useDispatch();
   const formik = useFormik({
@@ -52,7 +50,7 @@ const SignIn = ({ ...props }: SignInProps): JSX.Element => {
   return (
     <div className={styles.auth}>
       {status === "resolved" && (
-        <Dialog isOpen={showModal} header={AUTH_OK.header} text="" onClose={navigate("/")} />
+        <Dialog isOpen={showModal} header={AUTH_OK.header} text="" onClose={setShowModal} />
       )}
 
       {status === "rejected" && (
@@ -78,7 +76,7 @@ const SignIn = ({ ...props }: SignInProps): JSX.Element => {
               onChange={formik.handleChange}
               inputStyle="formInput"
               onBlur={formik.handleBlur}
-              error={formik.errors.login && formik.touched.login}
+              error={formik.errors.login !== "" && formik.touched.login}
               errorStyle="auth"
             />
             <Input
@@ -90,11 +88,15 @@ const SignIn = ({ ...props }: SignInProps): JSX.Element => {
               onChange={formik.handleChange}
               inputStyle="formInput"
               onBlur={formik.handleBlur}
-              error={formik.errors.password && formik.touched.password}
+              error={formik.errors.password !== "" && formik.touched.password}
               errorStyle="auth"
             />
             <div className={styles.textWrapper}>
-              <Switch onChange={formik.handleChange} name="rememberMe" value={formik.values.email}>
+              <Switch
+                onChange={formik.handleChange}
+                name="rememberMe"
+                checked={formik.values.rememberMe}
+              >
                 Запомнить меня
               </Switch>
               <p className={styles.toSignUp}>Забыли пароль?</p>
@@ -124,7 +126,7 @@ const SignIn = ({ ...props }: SignInProps): JSX.Element => {
               <span
                 className={styles.toSignUp}
                 onClick={() => {
-                  props.toSignUp("signUp");
+                  toSignUp("signUp");
                 }}
               >
                 Создайте аккаунт

@@ -41,3 +41,12 @@ export interface FlatModel {
   contacts: ContactsModel;
   description: string;
 }
+
+export interface FlatsPerPageModel {
+  tile: number;
+  list: number;
+}
+export interface SortViewModel {
+  id: string;
+  name: string;
+}

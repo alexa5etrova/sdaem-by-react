@@ -84,7 +84,7 @@ const Feedback = ({ ...props }: FeedbackProps): JSX.Element => {
             onChange={formik.handleChange}
             inputStyle="formInput"
             onBlur={formik.handleBlur}
-            error={formik.errors.name && formik.touched.name}
+            error={formik.errors.name !== "" && formik.touched.name}
           />
         </div>
         <div className={cn(styles.email, styles.inputWrapper)}>
@@ -100,7 +100,7 @@ const Feedback = ({ ...props }: FeedbackProps): JSX.Element => {
             onChange={formik.handleChange}
             inputStyle="formInput"
             onBlur={formik.handleBlur}
-            error={formik.errors.email && formik.touched.email}
+            error={formik.errors.email !== "" && formik.touched.email}
           />
         </div>
         <div className={cn(styles.inputWrapper, styles.message)}>

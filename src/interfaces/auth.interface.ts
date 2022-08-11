@@ -1,5 +1,5 @@
 export interface UserModel {
-  login: string;
+  login?: string;
   email: string;
   password?: string;
   id: string;
@@ -12,4 +12,14 @@ export interface AuthStateModel {
   error: string | null;
   isAuth: boolean;
   accessToken: string;
+}
+
+export interface AuthResponceModel {
+  header: string;
+  text: string;
+}
+export interface UserAgreeementModel {
+  header: string;
+  p1: string;
+  p2: string;
 }

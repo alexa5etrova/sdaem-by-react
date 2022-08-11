@@ -7,5 +7,5 @@ export interface SelectProps
   name: string;
   id: string;
   choise: SelectModel[];
-  page: "flats" | "home";
+  page?: "flats" | "home";
 }

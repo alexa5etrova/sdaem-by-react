@@ -24,10 +24,12 @@ export interface EquipmentSelectModel {
 export interface DistrictSelectModel {
   id: number;
   name: string;
+  value: string;
 }
 export interface MetroSelectModel {
   id: number;
   name: string;
+  value: string;
 }
 export interface SleepingPlacesSelectModel {
   id: number;
