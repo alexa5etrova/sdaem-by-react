@@ -17,7 +17,7 @@ function App(): JSX.Element {
     <>
       <Routes>
         <Route element={<Layout />}>
-          <Route index path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/:newsId" element={<NewsItem />} />

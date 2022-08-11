@@ -1,10 +1,11 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useDispatch, useSelector } from "react-redux";
 import cn from "classnames";
 import { useState } from "react";
 
-import { RootState } from "../../../redux/store";
+import { useAppDispatch, useAppSelector } from "../../../hook/redux";
+import { SignInProps } from "./SignIn.props";
+import { UserModel } from "../../../interfaces/auth.interface";
 import { AUTH_OK, AUTH_SENT_FAILED } from "../../../data/auth";
 import { userSignIn } from "../../../redux/authSlice";
 import Loader from "../../Loader/Loader";
@@ -17,16 +18,14 @@ import Dialog from "../Dialog/Dialog";
 import AttentionIcon from "./../../../assets/icons/attention.svg";
 
 import styles from "./SignIn.module.scss";
-import { SignInProps } from "./SignIn.props";
-import { UserModel } from "../../../interfaces/auth.interface";
 
 const SignIn = ({ toSignUp, ...props }: SignInProps): JSX.Element => {
-  const { status, error } = useSelector((state: RootState) => state.auth);
+  const { status, error } = useAppSelector((state) => state.auth);
   const [showModal, setShowModal] = useState<boolean>(false);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const formik = useFormik({
-    initialValues: { login: "", password: "", rememberMe: false },
+    initialValues: { email: "", password: "", rememberMe: false },
     validationSchema: Yup.object({
       login: Yup.string()
         .email("Введите корректный email адрес")
@@ -37,7 +36,7 @@ const SignIn = ({ toSignUp, ...props }: SignInProps): JSX.Element => {
     onSubmit: (values: UserModel) => {
       dispatch(
         userSignIn({
-          email: values.login,
+          email: values.email,
           password: values.password,
           rememberMe: values.rememberMe,
         })
@@ -69,14 +68,14 @@ const SignIn = ({ toSignUp, ...props }: SignInProps): JSX.Element => {
           <form onSubmit={formik.handleSubmit} className={styles.form}>
             <Input
               type="email"
-              name="login"
+              name="email"
               id="login"
               value={formik.values.email}
               placeholder="Логин"
               onChange={formik.handleChange}
               inputStyle="formInput"
               onBlur={formik.handleBlur}
-              error={formik.errors.login !== "" && formik.touched.login}
+              error={formik.errors.email !== "" && formik.touched.email}
               errorStyle="auth"
             />
             <Input

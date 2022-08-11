@@ -1,6 +1,7 @@
 import {
   CategoriesModel,
   CottagesCategoriesModel,
+  CrumbsModel,
   FlatCategoriesModel,
   PopularCategoriesModel,
   SiteMapModel,
@@ -61,6 +62,4 @@ export const POPULAR: PopularCategoriesModel[] = [
   },
 ];
 
-export const CRUMBS = {
-  news: [{ title: "Новости", id: 1, url: "/news" }],
-};
+export const CRUMBS: CrumbsModel[] = [{ title: "Новости", id: 1, url: "/news" }];

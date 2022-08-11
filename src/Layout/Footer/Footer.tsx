@@ -74,7 +74,7 @@ const Footer = (props: FooterProps): JSX.Element => {
         <div className={styles.footerIcons}>
           <div className={styles.socials}>
             <p>Мы в соцсетях</p>
-            <SocialMediaLogo />
+            {/* <SocialMediaLogo /> */}
           </div>
           <div className={styles.payments}>
             <PaymentsLogo />

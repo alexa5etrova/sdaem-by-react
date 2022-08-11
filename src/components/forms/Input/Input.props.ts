@@ -4,7 +4,7 @@ export interface InputProps
   extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   name: "name" | "login" | "email" | "password" | "pswdRepeat" | string;
   id?: string;
-  value: string;
+  value: string | undefined;
   inputStyle: "search" | "formInput";
   error?: boolean;
   errorStyle?: "auth" | string;

@@ -32,3 +32,9 @@ export interface PopularCategoriesModel {
   id: number;
   path: string;
 }
+
+export interface CrumbsModel {
+  title: string;
+  id: number;
+  url: string;
+}

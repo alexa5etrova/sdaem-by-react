@@ -1,30 +1,31 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
 
+import { useAppDispatch, useAppSelector } from "./../../hook/redux";
+import { fetchNews } from "../../redux/newsSlice";
+import { NewsProps } from "./News.props";
+import { CRUMBS } from "../../data/nav";
+import { NEWS_PER_PAGE } from "../../data/news";
 import Htag from "../../components/Htag/Htag";
 import NewsCard from "../../components/NewsCard/NewsCard";
 import Pagination from "../../components/Pagination/Pagination";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Search from "../../components/forms/Search/Search";
 import Loader from "../../components/Loader/Loader";
-import { fetchNews } from "../../redux/newsSlice";
-import { CRUMBS } from "../../data/nav";
-import { NEWS_PER_PAGE } from "../../data/news";
 
 import styles from "./News.module.scss";
 
-const News = (): JSX.Element => {
-  const dispatch = useDispatch();
+const News = (props: NewsProps): JSX.Element => {
+  const dispatch = useAppDispatch();
+  const { news, status, error } = useAppSelector((state) => state.news);
 
   useEffect(() => {
     dispatch(fetchNews("/news"));
   }, [dispatch]);
 
-  const { news, status, error } = useSelector((state) => state.news);
-  const [firstContentIndex, setFirstContentIndex] = useState();
-  const [lastContentIndex, setLastContentIndex] = useState();
-  const [search, setSearch] = useState("");
+  const [firstContentIndex, setFirstContentIndex] = useState<number>();
+  const [lastContentIndex, setLastContentIndex] = useState<number>();
+  const [search, setSearch] = useState<string>("");
 
   //функции для постраничного вывода, передаем их в props компонента Pagination
   const getFirstIndex = (i) => {
@@ -53,7 +54,7 @@ const News = (): JSX.Element => {
     return (
       <div className={styles.pageContainer}>
         <nav className={styles.crumbsContainer}>
-          <Breadcrumbs crumbs={CRUMBS.news} />
+          <Breadcrumbs crumbs={CRUMBS} />
         </nav>
         <Search searchHandler={setSearch}></Search>
         <Htag tag="h1">Новости</Htag>
@@ -86,6 +87,7 @@ const News = (): JSX.Element => {
       </div>
     );
   }
+  return <></>;
 };
 
 export default News;

@@ -1,6 +1,6 @@
 import Htag from "../../Htag/Htag";
 import LinkTag from "../../LinkTag/LinkTag";
-import { PhotoLinkProps } from "../PhotoLink.props";
+import { PhotoLinkProps } from "./../PhotoLink.props";
 
 import styles from "./SaunasLinksHome.module.scss";
 

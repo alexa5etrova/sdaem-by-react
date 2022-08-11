@@ -1,8 +1,6 @@
-import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchNews } from "../../redux/newsSlice";
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
+import { useAppDispatch, useAppSelector } from "../../hook/redux";
 import { HomeNewsNavProps } from "./HomeNewsNav.props";
 import Htag from "../Htag/Htag";
 import Loader from "../Loader/Loader";
@@ -13,13 +11,13 @@ import ArrowIcon from "./../../assets/icons/chevron.svg";
 import styles from "./HomeNewsNav.module.scss";
 
 const HomeNewsNav = (props: HomeNewsNavProps): JSX.Element => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(fetchNews("/news"));
   }, [dispatch]);
 
-  const { news, status, error } = useSelector((state: RootState) => state.news);
+  const { news, status, error } = useAppSelector((state) => state.news);
   if (status === "loading") {
     return <Loader />;
   }

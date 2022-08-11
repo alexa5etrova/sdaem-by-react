@@ -1,18 +1,15 @@
 import { Link } from "react-router-dom";
 import cn from "classnames";
-import { useSelector } from "react-redux";
-
+import { useAppSelector } from "../../../hook/redux";
+import { SITEMAP } from "../../../data/nav";
 import LocationIcon from "../../../assets/icons/location.svg";
 import HeartIcon from "../../../assets/icons/heart.svg";
 import ArrowIcon from "../../../assets/icons/chevron.svg";
-import { SITEMAP } from "../../../data/nav";
 
 import styles from "./SiteMapPanel.module.scss";
-import { RootState } from "../../../redux/store";
-import { SiteMapProps } from "./SiteMap.props";
 
-const SiteMapPanel = (props: SiteMapProps): JSX.Element => {
-  const { user, isAuth } = useSelector((state: RootState) => state.auth);
+const SiteMapPanel = (props): JSX.Element => {
+  const { user, isAuth } = useAppSelector((state) => state.auth);
 
   return (
     <div className={styles.siteMapPanel}>

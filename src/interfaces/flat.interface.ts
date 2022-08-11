@@ -41,7 +41,11 @@ export interface FlatModel {
   contacts: ContactsModel;
   description: string;
 }
-
+export interface FlatsStateModel {
+  flats: FlatModel[];
+  status: "loading" | "resolved" | "rejected" | null;
+  error: string | null;
+}
 export interface FlatsPerPageModel {
   tile: number;
   list: number;

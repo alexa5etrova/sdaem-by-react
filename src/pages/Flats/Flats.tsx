@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import cn from "classnames";
 
+import { FlatsProps } from "./Flats.props";
+import { useAppDispatch, useAppSelector } from "../../hook/redux";
 import { fetchFlats } from "../../redux/flatsSlice";
+import { DISTRICT, FLATS_PER_PAGE } from "../../data/flats";
+import { FLAT_CATEGORIES } from "../../data/nav";
+
 import FlatCard from "../../components/FlatCard/FlatCard";
 import Htag from "../../components/Htag/Htag";
 import ToMap from "../../components/ToMap/ToMap";
@@ -11,26 +15,22 @@ import Pagination from "../../components/Pagination/Pagination";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Loader from "../../components/Loader/Loader";
 import Filter from "../../components/forms/Filter/Filter";
-
-import { DISTRICT, FLATS_PER_PAGE } from "../../data/flats";
-import { FLAT_CATEGORIES } from "../../data/nav";
-
-import styles from "./Flats.module.scss";
 import Reccomend from "../../components/Reccomend/Reccomend";
-import { CITIES } from "../../data/flats";
 import ViewButtons from "../../components/ViewButtons/ViewButtons";
 import SocialsShared from "../../components/SocialsShared/SocialsShared";
 
-const Flats = (): JSX.Element => {
+import styles from "./Flats.module.scss";
+
+const Flats = (props: FlatsProps): JSX.Element => {
   const request = useLocation();
-  const dispatch = useDispatch();
-  const { flats, status, error } = useSelector((state) => state.flats);
-  const [firstContentIndex, setFirstContentIndex] = useState();
-  const [lastContentIndex, setLastContentIndex] = useState();
-  const [rooms, setRooms] = useState("");
-  const [city, setCity] = useState("");
-  const [view, setView] = useState("tile");
-  const [cityValue, setCityValue] = useState("");
+  const dispatch = useAppDispatch();
+  const { flats, status, error } = useAppSelector((state) => state.flats);
+
+  const [firstContentIndex, setFirstContentIndex] = useState<number>();
+  const [lastContentIndex, setLastContentIndex] = useState<number>();
+  const [rooms, setRooms] = useState<string>("");
+  const [city, setCity] = useState<string>("");
+  const [view, setView] = useState<"tile" | "list">("tile");
 
   useEffect(() => {
     dispatch(fetchFlats(`/flats${request.search}`));
@@ -42,16 +42,13 @@ const Flats = (): JSX.Element => {
 
     let category = FLAT_CATEGORIES.filter((item) => request.search.includes(item.path.slice(7)));
     category.length !== 0 ? setCity(category[0].name.slice(9)) : setCity("");
-
-    let cityV = CITIES.filter((item) => request.search.includes(item.value));
-    cityV.length !== 0 ? setCityValue(cityV[0].value) : setCity("");
   }, [request]);
 
   //функции для постраничного вывода, передаем их в props компонента Pagination
-  const getFirstIndex = (i) => {
+  const getFirstIndex = (i: number) => {
     setFirstContentIndex(i);
   };
-  const getLastIndex = (i) => {
+  const getLastIndex = (i: number) => {
     setLastContentIndex(i);
   };
 
@@ -77,13 +74,10 @@ const Flats = (): JSX.Element => {
             <Htag tag="h1">
               Аренда {rooms} квартир на сутки {city}
             </Htag>
-            <Reccomend
-              city={cityValue}
-              districts={request.search.includes("minsk") ? DISTRICT : []}
-            />
+            <Reccomend districts={request.search.includes("minsk") ? DISTRICT : []} />
           </div>
         </div>
-        <Filter page="flats" city={cityValue} />
+        <Filter page="flats" />
         <div className={styles.pageContainer}>
           <ViewButtons view={view} setView={setView} />
           <p className={styles.total}>Найдено {filteredFlats.length} результата</p>
@@ -104,7 +98,12 @@ const Flats = (): JSX.Element => {
               sendLastIndex={getLastIndex}
               contentPerPage={FLATS_PER_PAGE[view]}
             />
-            <SocialsShared page="flats" />
+            <SocialsShared
+              page="flats"
+              title={`Аренда ${rooms} квартир на сутки ${city}`}
+              photo={""}
+              sharedLink={request.pathname + request.search}
+            />
           </div>
         </div>
         <ToMap
@@ -115,6 +114,7 @@ const Flats = (): JSX.Element => {
       </>
     );
   }
+  return <></>;
 };
 
 export default Flats;

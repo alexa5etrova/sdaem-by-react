@@ -4,7 +4,7 @@ export interface NewsModel {
   photo: string;
   date: string;
   short: string;
-  body: string;
+  body: string[];
 }
 
 export interface NewsStateModel {

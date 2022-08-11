@@ -1,9 +1,9 @@
-import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
 import cn from "classnames";
 
+import { useAppDispatch, useAppSelector } from "../../hook/redux";
 import { fetchFlats } from "../../redux/flatsSlice";
+import { HomeProps } from "./Home.props";
 import Filter from "../../components/forms/Filter/Filter";
 import Background from "../../components/Background/Background";
 import PhotoLink from "../../components/PhotoLink/PhotoLink";
@@ -18,14 +18,14 @@ import HomeNewsNav from "../../components/HomeNewsNav/HomeNewsNav";
 
 import styles from "./Home.module.scss";
 
-const Home = (): JSX.Element => {
-  const dispatch = useDispatch();
+const Home = (props: HomeProps): JSX.Element => {
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(fetchFlats("/flats?city=minsk"));
   }, [dispatch]);
 
-  const { flats, status, error } = useSelector((state) => state.flats);
+  const { flats, status, error } = useAppSelector((state) => state.flats);
 
   if (status === "loading") {
     return <Loader />;
@@ -71,6 +71,7 @@ const Home = (): JSX.Element => {
         </div>
       </>
     );
+  return <></>;
 };
 
 export default Home;

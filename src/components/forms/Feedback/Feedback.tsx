@@ -1,26 +1,25 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import cn from "classnames";
-import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { RootState } from "../../../redux/store";
 
+import { useAppDispatch, useAppSelector } from "../../../hook/redux";
 import { sendMessage } from "../../../redux/messageSlice";
+import { MESSAGE_SENT, MESSAGE_SENT_FAILED } from "../../../data/contacts";
+import { FeedbackProps } from "./Feedback.props";
+import { MessagesModel } from "./../../../interfaces/messages.interface";
 import Loader from "../../Loader/Loader";
 import Button from "../../Button/Button";
 import Input from "../Input/Input";
 import FormWrapper from "../FormWrapper/FormWrapper";
 import Dialog from "../Dialog/Dialog";
 import AttentionIcon from "./../../../assets/icons/attention.svg";
-import { MESSAGE_SENT, MESSAGE_SENT_FAILED } from "../../../data/contacts";
-import { FeedbackProps } from "./Feedback.props";
-import { MessagesModel } from "./../../../interfaces/messages.interface";
 
 import styles from "./Feedback.module.scss";
 
 const Feedback = ({ ...props }: FeedbackProps): JSX.Element => {
-  const dispatch = useDispatch();
-  const { status, error } = useSelector((state: RootState) => state.messages);
+  const dispatch = useAppDispatch();
+  const { status, error } = useAppSelector((state) => state.messages);
   const [showModal, setShowModal] = useState<boolean>(false);
 
   const formik = useFormik({

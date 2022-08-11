@@ -1,4 +1,4 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 
-export interface PhotoLinkProps
+export interface NewsProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
