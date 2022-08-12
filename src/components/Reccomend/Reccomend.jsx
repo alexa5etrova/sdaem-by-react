@@ -33,7 +33,8 @@ const Reccomend = ({ city, districts }) => {
   };
 
   const roomSizeCloseHandler = () => {
-    let newUrl = url.pathname + url.search.replace(`&rooms=${choosenRoomSize.value}`, "");
+    console.log(choosenRoomSize.value);
+    let newUrl = url.pathname + url.search.replace(`rooms=${choosenRoomSize.value}`, "");
     navigate(newUrl);
   };
 
