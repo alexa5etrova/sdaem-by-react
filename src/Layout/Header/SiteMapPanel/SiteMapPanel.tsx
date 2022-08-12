@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import cn from "classnames";
 import { useAppSelector } from "../../../hook/redux";
 import { SITEMAP } from "../../../data/nav";
-import LocationIcon from "../../../assets/icons/location.svg";
-import HeartIcon from "../../../assets/icons/heart.svg";
-import ArrowIcon from "../../../assets/icons/chevron.svg";
 
 import styles from "./SiteMapPanel.module.scss";
+import LocationIcon from "../../../assets/icons/LocationIcon";
+import HeartIcon from "../../../assets/icons/Heart";
+import ChevronIcon from "./../../../assets/icons/Chevron";
+import { SiteMapProps } from "./SiteMap.props";
 
-const SiteMapPanel = (props): JSX.Element => {
+const SiteMapPanel = (props: SiteMapProps): JSX.Element => {
   const { user, isAuth } = useAppSelector((state) => state.auth);
 
   return (
@@ -47,7 +48,7 @@ const SiteMapPanel = (props): JSX.Element => {
             {isAuth && (
               <Link to="/settings">
                 {user.login}
-                <ArrowIcon className={styles.arrow} width="10" height="12" />
+                <ChevronIcon className={styles.arrow} width="10" height="12" />
               </Link>
             )}
           </li>

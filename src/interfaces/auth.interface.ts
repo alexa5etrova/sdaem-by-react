@@ -4,6 +4,8 @@ export interface UserModel {
   password?: string;
   id?: string;
   rememberMe?: boolean;
+  pswdRepeat?: string;
+  reCaptcha?: boolean;
 }
 
 export interface AuthStateModel {

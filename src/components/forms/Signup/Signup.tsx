@@ -9,17 +9,20 @@ import FormWrapper from "../FormWrapper/FormWrapper";
 import Input from "../Input/Input";
 import Htag from "../../Htag/Htag";
 import Button from "../../Button/Button";
-import Dialog from "./../Dialog/Dialog";
-import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
-import { SIGNUP_FAILED, USER_AGREEMENT } from "./../../../data/auth";
+import Dialog from "../Dialog/Dialog";
+import AttentionIcon from "./../../../assets/icons/attention.svg";
+import { SIGNUP_FAILED, USER_AGREEMENT } from "../../../data/auth";
 
 import styles from "./Signup.module.scss";
+import { useAppDispatch, useAppSelector } from "../../../hook/redux";
+import { UserModel } from "./../../../interfaces/auth.interface";
+import { SignUpProps } from "./Signup.props";
 
-const SignUp = (props) => {
-  const { status, error } = useSelector((state) => state.auth);
-  const [showModal, setShowModal] = useState(false);
+const SignUp = ({ toLogin }: SignUpProps): JSX.Element => {
+  const dispatch = useAppDispatch();
+  const { status, error } = useAppSelector((state) => state.auth);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
-  const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
       login: "",
@@ -44,7 +47,7 @@ const SignUp = (props) => {
         .oneOf([Yup.ref("password")], "Пароль не совпадает!"),
     }),
 
-    onSubmit: (values) => {
+    onSubmit: (values: UserModel) => {
       dispatch(
         userSignUp({
           login: values.login,
@@ -56,18 +59,23 @@ const SignUp = (props) => {
       formik.resetForm();
     },
   });
+  if (status === "rejected") {
+    return (
+      <Dialog
+        isOpen={showModal}
+        header={SIGNUP_FAILED.header}
+        text={error}
+        onClose={setShowModal}
+      />
+    );
+  }
+
+  if (status === "resolved") {
+    toLogin("confirmed");
+  }
 
   return (
     <div className={styles.auth}>
-      {status === "rejected" && (
-        <Dialog
-          isOpen={showModal}
-          header={SIGNUP_FAILED.header}
-          text={error}
-          onClose={setShowModal}
-        />
-      )}
-      {status === "resolved" && props.toLogin("confirmed")}
       <FormWrapper wrStyle="signup">
         <div className={styles.authWrapper}>
           <Htag tag="h2">Регистрация</Htag>
@@ -81,7 +89,7 @@ const SignUp = (props) => {
               onChange={formik.handleChange}
               inputStyle="formInput"
               onBlur={formik.handleBlur}
-              error={formik.errors.login && formik.touched.login}
+              error={formik.errors.login !== "" && formik.touched.login}
               errorStyle="auth"
             />
             <Input
@@ -93,7 +101,7 @@ const SignUp = (props) => {
               onChange={formik.handleChange}
               inputStyle="formInput"
               onBlur={formik.handleBlur}
-              error={formik.errors.email && formik.touched.email}
+              error={formik.errors.email !== "" && formik.touched.email}
               errorStyle="auth"
             />
             <Input
@@ -105,7 +113,7 @@ const SignUp = (props) => {
               onChange={formik.handleChange}
               inputStyle="formInput"
               onBlur={formik.handleBlur}
-              error={formik.errors.password && formik.touched.password}
+              error={formik.errors.password !== "" && formik.touched.password}
               errorStyle="auth"
             />
             <Input
@@ -117,13 +125,12 @@ const SignUp = (props) => {
               onChange={formik.handleChange}
               inputStyle="formInput"
               onBlur={formik.handleBlur}
-              error={formik.errors.pswdRepeat && formik.touched.pswdRepeat}
+              error={formik.errors.pswdRepeat !== "" && formik.touched.pswdRepeat}
               errorStyle="auth"
             />
             <ReCAPTCHA
               className={styles.captcha}
               sitekey="6LedCwchAAAAAFFkiA2fozWA_jy4Lt8tQn1NL07g"
-              onChange={formik.onChange}
               value={formik.values.reCaptcha}
             />
 
@@ -177,7 +184,7 @@ const SignUp = (props) => {
             <span
               className={styles.toLogin}
               onClick={() => {
-                props.toLogin("login");
+                toLogin("login");
               }}
             >
               Войдите

@@ -1,10 +1,10 @@
-import InstaIcon from "../../assets/icons/instagram.svg";
-import VkIcon from "../../assets/icons/vk.svg";
-import FacebookIcon from "../../assets/icons/facebook.svg";
+import FacebookIcon from "../../assets/icons/FacebookIcon";
 import { SocialMediaLogoProps } from "./SocialMediaLogo.props";
 import { COMPANY } from "../../data/contacts";
 
 import styles from "./SocialMediaLogo.module.scss";
+import InstagramIcon from "../../assets/icons/InstagramIcon";
+import VkIcon from "../../assets/icons/VkIcon";
 
 const SocialMediaLogo = (props: SocialMediaLogoProps): JSX.Element => {
   return (
@@ -12,7 +12,7 @@ const SocialMediaLogo = (props: SocialMediaLogoProps): JSX.Element => {
       <ul className={styles.socialMediaList}>
         <li className={styles.socialMediaListItem}>
           <a href={COMPANY.instagram} target="_blank" rel="noreferrer">
-            <InstaIcon />
+            <InstagramIcon />
           </a>
         </li>
         <li className={styles.socialMediaListItem}>
