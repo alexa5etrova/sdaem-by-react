@@ -3,8 +3,8 @@ import cn from "classnames";
 import { CarouselFilterProps } from "./CarouselFilter.props";
 import { DISTRICT, METRO } from "../../../data/flats";
 import SearchContainer from "../SearchContainer/SearchContainer";
-import Arrow from "./chevronDown.svg";
-import MetroIcon from "./../../../assets/icons/metro.svg";
+import ChevronIcon from "./../../../assets/icons/ChevronIcon";
+import MetroIcon from "../../../assets/icons/MetroIcon";
 import styles from "./CarouselFilter.module.scss";
 
 const CarouselFilter = ({ setDistrict, setMetro }: CarouselFilterProps): JSX.Element => {
@@ -38,7 +38,7 @@ const CarouselFilter = ({ setDistrict, setMetro }: CarouselFilterProps): JSX.Ele
       <div className={styles.selectContainer}>
         <div className={styles.selectWrapper}>
           <span className={styles.selectArrow}>
-            <Arrow width="18" />
+            <ChevronIcon width="18" />
           </span>
           <MetroIcon width="20" height="13" className={styles.metroIcon} />
           <select
@@ -60,7 +60,7 @@ const CarouselFilter = ({ setDistrict, setMetro }: CarouselFilterProps): JSX.Ele
 
         <div className={styles.selectWrapper}>
           <span className={styles.selectArrow}>
-            <Arrow width="18" />
+            <ChevronIcon width="18" />
           </span>
 
           <select

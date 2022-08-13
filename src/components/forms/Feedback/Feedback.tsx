@@ -13,9 +13,9 @@ import Button from "../../Button/Button";
 import Input from "../Input/Input";
 import FormWrapper from "../FormWrapper/FormWrapper";
 import Dialog from "../Dialog/Dialog";
-import AttentionIcon from "./../../../assets/icons/attention.svg";
 
 import styles from "./Feedback.module.scss";
+import AttentionIcon from "../../../assets/icons/AttentionIcon";
 
 const Feedback = ({ ...props }: FeedbackProps): JSX.Element => {
   const dispatch = useAppDispatch();

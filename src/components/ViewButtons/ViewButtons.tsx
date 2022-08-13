@@ -4,11 +4,11 @@ import cn from "classnames";
 
 import Button from "../Button/Button";
 import LinkTag from "../LinkTag/LinkTag";
-import ListIcon from "./list.svg";
-import TileIcon from "./tile.svg";
-import SortIcon from "./sort.svg";
-import LocationIcon from "./../../assets/icons/location.svg";
-import Arrow from "./../../assets/icons/chevron.svg";
+import ChevronIcon from "./../../assets/icons/ChevronIcon";
+import SortIcon from "../../assets/icons/SortICon";
+import ListIcon from "../../assets/icons/ListIcon";
+import TileIcon from "../../assets/icons/TileIcon";
+import LocationIcon from "../../assets/icons/LocationIcon";
 import { ViewButtonsProps } from "./ViewButtons.props";
 import styles from "./ViewButtons.module.scss";
 
@@ -65,7 +65,7 @@ const ViewButtons = ({ view, setView }: ViewButtonsProps): JSX.Element => {
     <div className={styles.buttonsWrapper}>
       <div className={styles.selectWrapper}>
         <span className={styles.selectArrow}>
-          <Arrow width="13" height="13" />
+          <ChevronIcon width="13" height="13" />
         </span>
         <SortIcon width="15" height="15" className={styles.sortIcon} />
         <select

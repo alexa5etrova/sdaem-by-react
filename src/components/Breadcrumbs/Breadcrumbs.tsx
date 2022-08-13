@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Home from "../../pages/Home/Home";
 import styles from "./Breadcrumbs.module.scss";
-import Home from "../../assets/icons/home.svg";
+
 import { BreadcrumbsProps } from "./Breadcrumbs.props";
 
 const Breadcrumbs = ({ crumbs }: BreadcrumbsProps): JSX.Element => {

@@ -15,7 +15,7 @@ import Htag from "../../Htag/Htag";
 import Button from "../../Button/Button";
 import Switch from "../Switch/Switch";
 import Dialog from "../Dialog/Dialog";
-import AttentionIcon from "./../../../assets/icons/attention.svg";
+import AttentionIcon from "../../../assets/icons/AttentionIcon";
 
 import styles from "./SignIn.module.scss";
 
@@ -42,6 +42,7 @@ const SignIn = ({ toSignUp, ...props }: SignInProps): JSX.Element => {
         })
       );
       setShowModal(true);
+
       formik.resetForm();
     },
   });
@@ -78,6 +79,7 @@ const SignIn = ({ toSignUp, ...props }: SignInProps): JSX.Element => {
               error={formik.errors.email !== "" && formik.touched.email}
               errorStyle="auth"
             />
+
             <Input
               type="password"
               name="password"
@@ -101,7 +103,7 @@ const SignIn = ({ toSignUp, ...props }: SignInProps): JSX.Element => {
               <p className={styles.toSignUp}>Забыли пароль?</p>
             </div>
 
-            {formik.touched.login && formik.errors.login !== undefined ? (
+            {formik.touched.login && formik.errors.login !== "" ? (
               <p className={styles.error}>
                 {formik.errors.login}
                 <span>
@@ -109,7 +111,7 @@ const SignIn = ({ toSignUp, ...props }: SignInProps): JSX.Element => {
                 </span>
               </p>
             ) : null}
-            {formik.touched.password && formik.errors.password !== undefined ? (
+            {formik.touched.password && formik.errors.password !== "" ? (
               <p className={styles.error}>
                 {formik.errors.password}
                 <span>

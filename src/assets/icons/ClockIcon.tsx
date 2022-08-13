@@ -5,9 +5,10 @@ interface ClockIconProps extends DetailedHTMLProps<SVGAttributes<SVGAElement>, S
   width?: string;
 }
 
-const ClockIcon = ({ height = "15", width = "15" }: ClockIconProps): JSX.Element => {
+const ClockIcon = ({ height = "15", width = "15", className }: ClockIconProps): JSX.Element => {
   return (
     <svg
+      className={className}
       width={width}
       height={height}
       viewBox="0 0 15 15"
@@ -20,4 +21,4 @@ const ClockIcon = ({ height = "15", width = "15" }: ClockIconProps): JSX.Element
   );
 };
 
-export default FacebookIcon;
+export default ClockIcon;

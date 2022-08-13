@@ -1,6 +1,5 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -10,9 +9,9 @@ import Input from "../Input/Input";
 import Htag from "../../Htag/Htag";
 import Button from "../../Button/Button";
 import Dialog from "../Dialog/Dialog";
-import AttentionIcon from "./../../../assets/icons/attention.svg";
-import { SIGNUP_FAILED, USER_AGREEMENT } from "../../../data/auth";
 
+import { SIGNUP_FAILED, USER_AGREEMENT } from "../../../data/auth";
+import AttentionIcon from "../../../assets/icons/AttentionIcon";
 import styles from "./Signup.module.scss";
 import { useAppDispatch, useAppSelector } from "../../../hook/redux";
 import { UserModel } from "./../../../interfaces/auth.interface";

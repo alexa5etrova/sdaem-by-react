@@ -1,14 +1,13 @@
 import cn from "classnames";
 import { ContactDetailsProps } from "./ContactDetails.props";
 import { COMPANY } from "../../../data/contacts";
-import LocationIcon from "./../../../assets/icons/location.svg";
-import PhoneIcon from "./../../../assets/icons/phone.svg";
-import EmailIcon from "./../../../assets/icons/envelope.svg";
-import ClockIcon from "./../../../assets/icons/clock.svg";
-import TelegramIcon from "./../../../assets/icons/telegram.svg";
-import ViberIcon from "./../../../assets/icons/viber.svg";
-import WhatsappIcon from "./../../../assets/icons/whatsapp.svg";
-
+import LocationIcon from "../../../assets/icons/LocationIcon";
+import PhoneIcon from "../../../assets/icons/PhoneIcon";
+import ViberIcon from "../../../assets/icons/ViberIcon";
+import TelegramIcon from "../../../assets/icons/TelegramIcon";
+import WhatsappIcon from "../../../assets/icons/WhatsappIcon";
+import EnvelopeIcon from "../../../assets/icons/EnvelopeIcon";
+import ClockIcon from "../../../assets/icons/ClockIcon";
 import styles from "./ContactDetails.module.scss";
 
 const ContactDetails = (props: ContactDetailsProps): JSX.Element => {
@@ -56,7 +55,7 @@ const ContactDetails = (props: ContactDetailsProps): JSX.Element => {
       </div>
       <div className={styles.contactRow}>
         <div className={styles.contactIcon}>
-          <EmailIcon />
+          <EnvelopeIcon />
         </div>
         <div className={styles.contactEmail}>
           <a href={email}>{COMPANY.email}</a>

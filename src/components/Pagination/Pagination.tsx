@@ -19,7 +19,7 @@ const Pagination = ({
   useEffect(() => {
     sendFirstIndex(firstContentIndex);
     sendLastIndex(lastContentIndex);
-  }, [firstContentIndex, lastContentIndex]);
+  }, [firstContentIndex, lastContentIndex, sendFirstIndex, sendLastIndex]);
 
   const arr = Array(totalPages);
   const updArr: number[] = [];

@@ -227,6 +227,12 @@
       "password": "$2a$10$ml5xIMbeuvPV69GBgJzSQ..WzPU5f6Dz.rE1S/cApo6S4YPRfVxwq",
       "login": "zzzzz",
       "id": 4
+    },
+    {
+      "email": "ffff@ooo.tu",
+      "password": "$2a$10$AxQIU01HGn5VaarydW1nD.iBxrJhzsEAglJgSPBNDF.B6DkgVbwFm",
+      "login": "+7 (911) 227-8958",
+      "id": 5
     }
   ],
   "flats": [
@@ -441,7 +447,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -476,7 +486,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -511,7 +525,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -546,7 +564,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -581,7 +603,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -616,7 +642,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -651,7 +681,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -686,7 +720,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -721,7 +759,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -756,7 +798,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -791,7 +837,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -826,7 +876,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -861,7 +915,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -896,7 +954,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -931,7 +993,11 @@
       "metro": "Грушевка",
       "title": "4-комн. апартаменты на Грушевке ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -966,7 +1032,11 @@
       "metro": "Грушевка",
       "title": "3-комн. апартаменты на Могилеве ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -1001,7 +1071,11 @@
       "metro": "Грушевка",
       "title": "3-комн. апартаменты в Гомеле",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {
@@ -1036,7 +1110,11 @@
       "metro": "Грушевка",
       "title": "2-комн. апартаменты на Витебске ",
       "photoes": [
-        { "id": 1, "src": "./images/flats/flat2.jpg", "alt": "4-х комнатная квартира в Минске" }
+        {
+          "id": 1,
+          "src": "./images/flats/flat2.jpg",
+          "alt": "4-х комнатная квартира в Минске"
+        }
       ],
       "district": "Шабаны",
       "places": {

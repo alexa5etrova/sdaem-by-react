@@ -5,11 +5,12 @@ interface HeartIconProps extends DetailedHTMLProps<SVGAttributes<SVGAElement>, S
   width?: string;
 }
 
-const HeartIcon = ({ height = "12", width = "12" }: HeartIconProps): JSX.Element => {
+const HeartIcon = ({ height = "12", width = "12", className }: HeartIconProps): JSX.Element => {
   return (
     <svg
       width={width}
       height={height}
+      className={className}
       version="1.1"
       id="Capa_1"
       fill="currentColor"

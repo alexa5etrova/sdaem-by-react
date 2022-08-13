@@ -1,9 +1,10 @@
 import cn from "classnames";
 import { OwnerContactsProps } from "./OwnerContacts.props";
-import ViberIcon from "../../assets/icons/viber.svg";
-import WhatsAppIcon from "../../assets/icons/whatsapp.svg";
-import EmailIcon from "../../assets/icons/envelope.svg";
+
 import styles from "./OwnerContacts.module.scss";
+import ViberIcon from "../../assets/icons/ViberIcon";
+import WhatsappIcon from "../../assets/icons/WhatsappIcon";
+import EnvelopeIcon from "../../assets/icons/EnvelopeIcon";
 
 const OwnerContacts = ({ photo, name, phone, email }: OwnerContactsProps): JSX.Element => {
   let viber = "viber://chat?number=%2B" + phone.replace(/[^0-9]/g, "");
@@ -42,7 +43,7 @@ const OwnerContacts = ({ photo, name, phone, email }: OwnerContactsProps): JSX.E
           target="_blank"
           rel="noreferrer noopener"
         >
-          <WhatsAppIcon width="15" height="16" />
+          <WhatsappIcon width="15" height="16" />
         </a>
         <a
           href={`emailto:${email}`}
@@ -50,7 +51,7 @@ const OwnerContacts = ({ photo, name, phone, email }: OwnerContactsProps): JSX.E
           target="_blank"
           rel="noreferrer noopener"
         >
-          <EmailIcon width="18" height="14" />
+          <EnvelopeIcon width="18" height="14" />
         </a>
       </div>
     </div>

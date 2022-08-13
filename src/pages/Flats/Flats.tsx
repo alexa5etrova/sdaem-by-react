@@ -53,68 +53,62 @@ const Flats = (props: FlatsProps): JSX.Element => {
   };
 
   // реализация поиска - значения для  переменной search приходят из компонента Search
-  if (status === "loading") {
-    return <Loader />;
-  }
-  if (status === "rejected") {
-    return <p>{error}</p>;
-  }
-  if (status === "resolved") {
-    const filteredFlats = flats.filter(function (item) {
-      return item;
-    });
 
-    return (
-      <>
-        <div className={styles.headerBg}>
+  return (
+    <>
+      {status === "loading" && <Loader />}
+      {status === "rejected" && <p>{error}</p>}
+      {status === "resolved" && (
+        <div>
+          <div className={styles.headerBg}>
+            <div className={styles.pageContainer}>
+              <nav className={styles.crumbsContainer}>
+                <Breadcrumbs crumbs={[{ id: 1, title: `Квартиры ${city}`, url: "/flats" }]} />
+              </nav>
+              <Htag tag="h1">
+                Аренда {rooms} квартир на сутки {city}
+              </Htag>
+              <Reccomend districts={request.search.includes("minsk") ? DISTRICT : []} />
+            </div>
+          </div>
+          <Filter page="flats" />
           <div className={styles.pageContainer}>
-            <nav className={styles.crumbsContainer}>
-              <Breadcrumbs crumbs={[{ id: 1, title: `Квартиры ${city}`, url: "/flats" }]} />
-            </nav>
-            <Htag tag="h1">
-              Аренда {rooms} квартир на сутки {city}
-            </Htag>
-            <Reccomend districts={request.search.includes("minsk") ? DISTRICT : []} />
-          </div>
-        </div>
-        <Filter page="flats" />
-        <div className={styles.pageContainer}>
-          <ViewButtons view={view} setView={setView} />
-          <p className={styles.total}>Найдено {filteredFlats.length} результата</p>
+            <ViewButtons view={view} setView={setView} />
+            <p className={styles.total}>Найдено {flats.length} результата</p>
 
-          <div className={cn({ [styles.list]: view === "list", [styles.tile]: view === "tile" })}>
-            {status === "resolved" && filteredFlats.length === 0 ? (
-              <p>Нет объявлений соответсвующих поиску</p>
-            ) : null}
-            {status === "resolved" &&
-              filteredFlats.slice(firstContentIndex, lastContentIndex).map(function (item) {
-                return <FlatCard key={item.id} flat={item} view={view} page="flats" />;
-              })}
+            <div className={cn({ [styles.list]: view === "list", [styles.tile]: view === "tile" })}>
+              {status === "resolved" && flats.length === 0 ? (
+                <p>Нет объявлений соответсвующих поиску</p>
+              ) : null}
+              {status === "resolved" &&
+                flats.slice(firstContentIndex, lastContentIndex).map(function (item) {
+                  return <FlatCard key={item.id} flat={item} view={view} page="flats" />;
+                })}
+            </div>
+            <div className={styles.paginationContainer}>
+              <Pagination
+                data={flats}
+                sendFirstIndex={getFirstIndex}
+                sendLastIndex={getLastIndex}
+                contentPerPage={FLATS_PER_PAGE[view]}
+              />
+              <SocialsShared
+                page="flats"
+                title={`Аренда ${rooms} квартир на сутки ${city}`}
+                photo={""}
+                sharedLink={request.pathname + request.search}
+              />
+            </div>
           </div>
-          <div className={styles.paginationContainer}>
-            <Pagination
-              data={filteredFlats}
-              sendFirstIndex={getFirstIndex}
-              sendLastIndex={getLastIndex}
-              contentPerPage={FLATS_PER_PAGE[view]}
-            />
-            <SocialsShared
-              page="flats"
-              title={`Аренда ${rooms} квартир на сутки ${city}`}
-              photo={""}
-              sharedLink={request.pathname + request.search}
-            />
-          </div>
+          <ToMap
+            page="flats"
+            header="Показать найденные квартиры на карте"
+            body="Ищите новостройки рядом с работой, парком или родственниками"
+          />
         </div>
-        <ToMap
-          page="flats"
-          header="Показать найденные квартиры на карте"
-          body="Ищите новостройки рядом с работой, парком или родственниками"
-        />
-      </>
-    );
-  }
-  return <></>;
+      )}
+    </>
+  );
 };
 
 export default Flats;

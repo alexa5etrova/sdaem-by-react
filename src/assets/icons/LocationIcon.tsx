@@ -5,11 +5,16 @@ interface LocationIconProps extends DetailedHTMLProps<SVGAttributes<SVGAElement>
   width?: string;
 }
 
-const LocationIcon = ({ height = "20", width = "20" }: LocationIconProps): JSX.Element => {
+const LocationIcon = ({
+  height = "20",
+  width = "20",
+  className,
+}: LocationIconProps): JSX.Element => {
   return (
     <svg
       width={width}
       height={height}
+      className={className}
       viewBox="0 0 9 10"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"

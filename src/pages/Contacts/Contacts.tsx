@@ -4,9 +4,9 @@ import Feedback from "../../components/forms/Feedback/Feedback";
 import ContactDetails from "./ContactsDetails/ContactDetails";
 import Warning from "./Warning/Warning";
 import { COMPANY } from "../../data/contacts";
+import { ContactsProps } from "./Contacts.props";
 
 import styles from "./Contacts.module.scss";
-import { ContactsProps } from "./Contacts.props";
 
 const Contacts = (props: ContactsProps): JSX.Element => {
   return (

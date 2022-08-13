@@ -1,7 +1,8 @@
+import ChevronIcon from "../../assets/icons/ChevronIcon";
 import LinkTag from "../LinkTag/LinkTag";
-import ArrowIcon from "./../../assets/icons/chevron.svg";
-import styles from "./Total.module.scss";
 import { TotalProps } from "./Total.props";
+
+import styles from "./Total.module.scss";
 
 const Total = ({ total }: TotalProps): JSX.Element => {
   return (
@@ -11,7 +12,7 @@ const Total = ({ total }: TotalProps): JSX.Element => {
         <span>+</span>
       </div>
       <LinkTag to="flats?city=minsk" linkStyle="gradientHome">
-        Поcмотреть все <ArrowIcon width="9" height="11" className={styles.linkIcon} />
+        Поcмотреть все <ChevronIcon width="20" height="20" className={styles.linkIcon} />
       </LinkTag>
       <p className={styles.text}>Предложений по Минску</p>
     </div>

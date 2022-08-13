@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ROOMS } from "../../data/flats";
 import LinkTag from "../LinkTag/LinkTag";
 import Button from "../Button/Button";
-import CrossIcon from "./cross.svg";
+import CrossIcon from "./../../assets/icons/CrossIcon";
 import { DistrictSelectModel, RoomsSelectModel } from "../../interfaces/filter.interface";
 import { ReccommendProps } from "./Reccomend.props";
 

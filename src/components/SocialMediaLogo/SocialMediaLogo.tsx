@@ -1,10 +1,9 @@
-import FacebookIcon from "../../assets/icons/FacebookIcon";
 import { SocialMediaLogoProps } from "./SocialMediaLogo.props";
 import { COMPANY } from "../../data/contacts";
-
-import styles from "./SocialMediaLogo.module.scss";
 import InstagramIcon from "../../assets/icons/InstagramIcon";
 import VkIcon from "../../assets/icons/VkIcon";
+import FacebookIcon from "../../assets/icons/FacebookIcon";
+import styles from "./SocialMediaLogo.module.scss";
 
 const SocialMediaLogo = (props: SocialMediaLogoProps): JSX.Element => {
   return (

@@ -1,13 +1,18 @@
 import { DetailedHTMLProps, SVGAttributes } from "react";
 
 interface AttentionIconProps extends DetailedHTMLProps<SVGAttributes<SVGAElement>, SVGAElement> {
-  height: string;
-  width: string;
+  height?: string;
+  width?: string;
 }
 
-const AttentionIcon = ({ height = "20", width = "20" }: AttentionIconProps): JSX.Element => {
+const AttentionIcon = ({
+  height = "20",
+  width = "20",
+  className,
+}: AttentionIconProps): JSX.Element => {
   return (
     <svg
+      className={className}
       width={width}
       height={height}
       viewBox="0 0 20 20"
@@ -16,7 +21,7 @@ const AttentionIcon = ({ height = "20", width = "20" }: AttentionIconProps): JSX
     >
       <path
         d="M10 0C4.5 0 0 4.5 0 10C0 15.5 4.5 20 10 20C15.5 20 20 15.5 20 10C20 4.5 15.5 0 10 0ZM10 2C11.1 2 11.9 2.9 11.8 4L11 12H9L8.2 4C8.1 2.9 8.9 2 10 2ZM10 18C8.9 18 8 17.1 8 16C8 14.9 8.9 14 10 14C11.1 14 12 14.9 12 16C12 17.1 11.1 18 10 18Z"
-        fill-opacity="0.5"
+        fillOpacity="0.5"
       />
     </svg>
   );

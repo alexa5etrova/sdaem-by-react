@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import cn from "classnames";
-import UserIcon from "./../../../assets/icons/user.svg";
-import LockIcon from "./../../../assets/icons/lock.svg";
-import EmailIcon from "./../../../assets/icons/envelope.svg";
-import AttentionIcon from "./../../../assets/icons/attention.svg";
-import styles from "./Input.module.scss";
 import { InputProps } from "./Input.props";
+import cn from "classnames";
+import UserIcon from "../../../assets/icons/UserIcon";
+import LockIcon from "../../../assets/icons/LockIcon";
+import EnvelopeIcon from "../../../assets/icons/EnvelopeIcon";
+import AttentionIcon from "../../../assets/icons/AttentionIcon";
+import styles from "./Input.module.scss";
 
 const Input = ({
   name,
@@ -33,7 +33,7 @@ const Input = ({
       icon = <UserIcon className={iconStyles} />;
       break;
     case "email":
-      icon = <EmailIcon className={iconStyles} />;
+      icon = <EnvelopeIcon className={iconStyles} />;
       break;
     case "password":
       icon = <LockIcon className={iconStyles} />;

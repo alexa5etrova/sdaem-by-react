@@ -7,11 +7,11 @@ import Tag from "../../Tag/Tag";
 import Button from "../../Button/Button";
 import OwnerContacts from "../../OwnerContacts/OwnerContacts";
 import CardSlider from "../CardSlider/CardSlider";
-import UserIcon from "../../../assets/icons/user.svg";
-import LocationIcon from "../../../assets/icons/location.svg";
-import MetroIcon from "../../../assets/icons/metro.svg";
-import PhoneIcon from "../../../assets/icons/phone.svg";
-import HeartIcon from "./../heart.svg";
+import UserIcon from "../../../assets/icons/UserIcon";
+import LocationIcon from "../../../assets/icons/LocationIcon";
+import MetroIcon from "../../../assets/icons/MetroIcon";
+import HeartIcon from "../../../assets/icons/Heart";
+import PhoneIcon from "../../../assets/icons/PhoneIcon";
 import { TileFlatProps } from "./TileCard.props";
 import { FLAT_PREVIEW_LENGTH } from "../../../data/flats";
 

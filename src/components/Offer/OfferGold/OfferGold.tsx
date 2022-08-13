@@ -1,8 +1,10 @@
 import LinkTag from "../../LinkTag/LinkTag";
-import ArrowIcon from "./../../../assets/icons/chevron.svg";
-import styles from "./OfferGold.module.scss";
+import ChevronIcon from "./../../../assets/icons/ChevronIcon";
+
 import { OFFERS } from "../../../data/home";
 import { OfferGoldProps } from "./OfferGold.props";
+
+import styles from "./OfferGold.module.scss";
 
 const OfferGold = (props: OfferGoldProps): JSX.Element => {
   let offer = OFFERS.offerGold;
@@ -13,7 +15,7 @@ const OfferGold = (props: OfferGoldProps): JSX.Element => {
         <p key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: item }}></p>
       ))}
       <LinkTag to={offer.linkTo} linkStyle="gradientHome">
-        {offer.linkText} <ArrowIcon width="9" height="11" className={styles.arrow} />
+        {offer.linkText} <ChevronIcon width="20" height="20" className={styles.arrow} />
       </LinkTag>
     </div>
   );

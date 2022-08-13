@@ -5,11 +5,12 @@ interface VkIconProps extends DetailedHTMLProps<SVGAttributes<SVGAElement>, SVGA
   width?: string;
 }
 
-const VkIcon = ({ height = "31", width = "31" }: VkIconProps): JSX.Element => {
+const VkIcon = ({ height = "31", width = "31", className }: VkIconProps): JSX.Element => {
   return (
     <svg
       width={width}
       height={height}
+      className={className}
       viewBox="0 0 31 31"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"

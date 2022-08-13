@@ -6,8 +6,9 @@ import { SITEMAP } from "../../../data/nav";
 import styles from "./SiteMapPanel.module.scss";
 import LocationIcon from "../../../assets/icons/LocationIcon";
 import HeartIcon from "../../../assets/icons/Heart";
-import ChevronIcon from "./../../../assets/icons/Chevron";
+
 import { SiteMapProps } from "./SiteMap.props";
+import ChevronIcon from "../../../assets/icons/ChevronIcon";
 
 const SiteMapPanel = (props: SiteMapProps): JSX.Element => {
   const { user, isAuth } = useAppSelector((state) => state.auth);
@@ -21,7 +22,7 @@ const SiteMapPanel = (props: SiteMapProps): JSX.Element => {
               if (item.name === "Объявления на карте") {
                 return (
                   <li className={styles.navHeaderItem} key={item.id}>
-                    <Link to={item.path}>
+                    <Link to={item.path} className={styles.locationLink}>
                       <LocationIcon width="9" className={styles.locationIcon} />
                       {item.name}
                     </Link>

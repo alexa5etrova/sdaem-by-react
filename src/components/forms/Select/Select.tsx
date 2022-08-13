@@ -1,9 +1,8 @@
 import { Field } from "formik";
-import Arrow from "./chevronDown.svg";
-
 import cn from "classnames";
-import styles from "./Select.module.scss";
+import ChevronIcon from "./../../../assets/icons/ChevronIcon";
 import { SelectProps } from "./Select.props";
+import styles from "./Select.module.scss";
 
 const Select = ({ label, name, id, choise, page }: SelectProps): JSX.Element => {
   return (
@@ -14,7 +13,7 @@ const Select = ({ label, name, id, choise, page }: SelectProps): JSX.Element => 
         </label>
       ) : null}
       <span className={cn(styles.selectArrow, { [styles.flatSelectArrow]: page === "flats" })}>
-        <Arrow width="18" />
+        <ChevronIcon width="18" />
       </span>
       <Field as="select" id={id} className={styles.select} name={name}>
         <option className={styles.option} defaultValue="Выберите">

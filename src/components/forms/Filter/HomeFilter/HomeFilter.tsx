@@ -3,13 +3,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import cn from "classnames";
 
+import SetupIcon from "../../../../assets/icons/SetupIcon";
+import LocationIcon from "../../../../assets/icons/LocationIcon";
+import ChevronIcon from "../../../../assets/icons/ChevronIcon";
 import Button from "../../../Button/Button";
 import Select from "../../Select/Select";
 import Checkbox from "../../Checkbox/Checkbox";
 import { CITIES, ROOMS, SLEEPING_PLACES, DISTRICT, METRO, EQUIPMENT } from "../../../../data/flats";
-import LocationIcon from "./../../../../assets/icons/location.svg";
-import SetupIcon from "./../../../../assets/icons/setup.svg";
-import ArrowIcon from "./../../../../assets/icons/chevron.svg";
 import { HomeFilterProps } from "./HomeFilter.props";
 import { FilterValues } from "../../../../interfaces/filter.interface";
 
@@ -96,7 +96,7 @@ const HomeFilter = ({ ...props }: HomeFilterProps): JSX.Element => {
 
           <Button type="submit" btnStyle="filter">
             Показать
-            <ArrowIcon width="7" height="11" className={styles.toFlatsIcon} />
+            <ChevronIcon width="7" height="11" className={styles.toFlatsIcon} />
           </Button>
 
           {showOptions && (

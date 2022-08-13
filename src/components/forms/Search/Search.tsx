@@ -2,10 +2,11 @@ import { ChangeEvent, FormEvent, useState } from "react";
 
 import Input from "../Input/Input";
 import Button from "../../Button/Button";
-import SearchIcon from "./../../../assets/icons/search.svg";
+
 import SearchContainer from "../SearchContainer/SearchContainer";
 import { SearchProps } from "./Search.props";
 import styles from "./Search.module.scss";
+import SearchIcon from "../../../assets/icons/Search";
 
 const Search = ({ searchHandler }: SearchProps): JSX.Element => {
   const [searchInput, setSearchInput] = useState<string>("");

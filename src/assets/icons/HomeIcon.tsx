@@ -5,9 +5,10 @@ interface HomeIconProps extends DetailedHTMLProps<SVGAttributes<SVGAElement>, SV
   width?: string;
 }
 
-const HomeIcon = ({ height = "12", width = "12" }: HomeIconProps): JSX.Element => {
+const HomeIcon = ({ height = "12", width = "12", className }: HomeIconProps): JSX.Element => {
   return (
     <svg
+      className={className}
       width={width}
       height={height}
       viewBox="0 0 12 12"

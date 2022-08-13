@@ -2,7 +2,7 @@ import cn from "classnames";
 import Background from "../Background/Background";
 import Htag from "../Htag/Htag";
 import LinkTag from "../LinkTag/LinkTag";
-import LocationIcon from "./../../assets/icons/location.svg";
+import LocationIcon from "../../assets/icons/LocationIcon";
 import { ToMapProps } from "./ToMap.props";
 import styles from "./ToMap.module.scss";
 

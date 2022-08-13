@@ -6,14 +6,13 @@ import {
   WhatsappShareButton,
 } from "react-share";
 import cn from "classnames";
-import VkIcon from "./../../assets/icons/vk.svg";
-import FacebookIcon from "./../../assets/icons/facebookShare.svg";
-import ViberIcon from "./../../assets/icons/viber.svg";
-import TelegramIcon from "./../../assets/icons/telegram.svg";
-import WhatsappIcon from "./../../assets/icons/whatsapp.svg";
-
-import styles from "./SocialsShared.module.scss";
 import { SocialsSharedProps } from "./SocialsShared.props";
+import VkIcon from "../../assets/icons/VkIcon";
+import FacebookSharedIcon from "../../assets/icons/FacebookSharedIcon";
+import ViberIcon from "../../assets/icons/ViberIcon";
+import TelegramIcon from "../../assets/icons/TelegramIcon";
+import WhatsappIcon from "../../assets/icons/WhatsappIcon";
+import styles from "./SocialsShared.module.scss";
 
 const SocialsShared = ({ title, photo, sharedLink, page }: SocialsSharedProps): JSX.Element => {
   return (
@@ -26,7 +25,7 @@ const SocialsShared = ({ title, photo, sharedLink, page }: SocialsSharedProps): 
       </VKShareButton>
       <FacebookShareButton url={sharedLink} quote={title}>
         <div className={cn(styles.iconHolder, { [styles.iconHolderFlats]: page === "flats" })}>
-          <FacebookIcon className={styles.icon} />
+          <FacebookSharedIcon className={styles.icon} />
         </div>
       </FacebookShareButton>
       <ViberShareButton url={sharedLink} title={title}>

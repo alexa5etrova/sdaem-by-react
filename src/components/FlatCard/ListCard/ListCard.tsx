@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import cn from "classnames";
 
+import { ListFlatProps } from "./ListCard.props";
 import { FLAT_PREVIEW_LIST_LENGTH } from "../../../data/flats";
 import LinkTag from "../../LinkTag/LinkTag";
 import Tag from "../../Tag/Tag";
@@ -9,14 +10,13 @@ import Htag from "../../Htag/Htag";
 import Button from "../../Button/Button";
 import OwnerContacts from "../../OwnerContacts/OwnerContacts";
 import CardSlider from "../CardSlider/CardSlider";
-import UserIcon from "../../../assets/icons/user.svg";
-import LocationIcon from "../../../assets/icons/location.svg";
-import MetroIcon from "../../../assets/icons/metro.svg";
-import PhoneIcon from "../../../assets/icons/phone.svg";
-import HeartIcon from "./../heart.svg";
+import LocationIcon from "../../../assets/icons/LocationIcon";
+import UserIcon from "./../../../assets/icons/UserIcon";
+import MetroIcon from "../../../assets/icons/MetroIcon";
+import PhoneIcon from "../../../assets/icons/PhoneIcon";
+import HeartIcon from "./../../../assets/icons/Heart";
 
 import styles from "./ListCard.module.scss";
-import { ListFlatProps } from "./ListCard.props";
 
 const ListCard = ({ flat }: ListFlatProps): JSX.Element => {
   const [showContacts, setShowContacts] = useState<boolean>(false);

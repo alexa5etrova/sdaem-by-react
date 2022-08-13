@@ -3,12 +3,12 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import cn from "classnames";
 
+import SetupIcon from "../../../../assets/icons/SetupIcon";
+import ChevronIcon from "../../../../assets/icons/ChevronIcon";
 import Button from "../../../Button/Button";
 import Select from "../../Select/Select";
 import Checkbox from "../../Checkbox/Checkbox";
 import { ROOMS, SLEEPING_PLACES, DISTRICT, METRO, EQUIPMENT } from "../../../../data/flats";
-import SetupIcon from "./../../../../assets/icons/setup.svg";
-import ArrowIcon from "./../../../../assets/icons/chevron.svg";
 import { FlatsFilterProps } from "./FlatsFilter.props";
 import { FilterValues } from "../../../../interfaces/filter.interface";
 
@@ -90,7 +90,7 @@ const FlatsFilter = (props: FlatsFilterProps): JSX.Element => {
             </Button>
             <Button type="submit" btnStyle="violet">
               Показать объекты
-              <ArrowIcon width="7" height="11" className={styles.toFlatsIconWhite} />
+              <ChevronIcon width="7" height="11" className={styles.toFlatsIconWhite} />
             </Button>
           </div>
 

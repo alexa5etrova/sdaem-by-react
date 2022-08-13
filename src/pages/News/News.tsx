@@ -21,17 +21,17 @@ const News = (props: NewsProps): JSX.Element => {
 
   useEffect(() => {
     dispatch(fetchNews("/news"));
-  }, [dispatch]);
+  }, []);
 
   const [firstContentIndex, setFirstContentIndex] = useState<number>();
   const [lastContentIndex, setLastContentIndex] = useState<number>();
   const [search, setSearch] = useState<string>("");
 
   //функции для постраничного вывода, передаем их в props компонента Pagination
-  const getFirstIndex = (i) => {
+  const getFirstIndex = (i: number) => {
     setFirstContentIndex(i);
   };
-  const getLastIndex = (i) => {
+  const getLastIndex = (i: number) => {
     setLastContentIndex(i);
   };
 
