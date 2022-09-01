@@ -1,0 +1,28 @@
+@import "./../../styles/_colors.scss";
+
+.dropdownList {
+  position: absolute;
+  top: 35px;
+  list-style: none;
+  text-align: start;
+  padding: 0;
+  background-color: white;
+  z-index: 10;
+  box-shadow: 0 0 40px 0 rgba(135, 124, 202, 0.3);
+}
+.dropdownListItem {
+  padding: 10px 15px;
+}
+.dropdownListItem:hover {
+  background-color: $lightgrey;
+}
+.dropdownLinks {
+  font-weight: 500;
+  color: #1e2123;
+  font-weight: 700;
+  text-decoration: none;
+  padding-bottom: 18px;
+}
+.dropdownListItem a:hover {
+  border: none;
+}

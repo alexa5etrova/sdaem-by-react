@@ -1,0 +1,130 @@
+@import "./../../styles/_colors.scss";
+
+.card {
+  width: 406px;
+  height: 522px;
+  border-radius: 10px;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 220px 200px auto;
+  box-shadow: 0 20px 40px rgba(135, 124, 202, 0.15);
+  z-index: 1;
+  position: relative;
+}
+
+.flatImg {
+  width: 100%;
+  max-width: 406px;
+  max-height: 260px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e0e0e0;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.flatImg img {
+  max-height: 260px;
+  max-width: 100%;
+  object-fit: contain;
+}
+.flatContainer {
+  width: 100%;
+  height: 100%;
+  padding: 26px 20px 20px 20px;
+}
+.infoRow {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.priceContainer {
+  margin-right: 21px;
+  position: relative;
+}
+
+.price {
+  color: $violet;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.icon {
+  color: #686868;
+  margin-right: 6px;
+  align-self: center;
+}
+
+.period {
+  color: #bdbdbd;
+  line-height: 17px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+.address {
+  margin: 34px 0 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.addressWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.addressText {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: black;
+}
+.locationIcon {
+  color: #bdbdbd;
+}
+.marker {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: #bdbdbd;
+  border-radius: 50%;
+}
+.districts {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.street {
+  margin-left: 12px;
+}
+.metro {
+  margin-left: 6px;
+}
+.district {
+  margin-left: 7px;
+}
+.description {
+  width: 368px;
+  color: #8291a3;
+  font-size: 12px;
+  line-height: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(102, 78, 249, 0.1);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px 43px 0 4px;
+  position: relative;
+}
+
+.phoneIcon {
+  color: $violet;
+  margin-right: 13px;
+}

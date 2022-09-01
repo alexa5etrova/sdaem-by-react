@@ -1,0 +1,16 @@
+.formWrapper {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px 0 rgba(39, 95, 158, 0.2);
+  padding: 40px;
+}
+
+.wrAuth {
+  padding: 25px 50px;
+}
+.wrSignup {
+  padding: 33px 50px 55px 45px;
+  display: grid;
+  grid-template-columns: 306px 1fr;
+  gap: 50px;
+}

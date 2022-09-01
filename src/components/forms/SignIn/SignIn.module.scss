@@ -1,0 +1,59 @@
+@import "./../../../styles/_colors.scss";
+
+.auth {
+  width: 406px;
+  margin: 0 auto;
+  padding-top: 13%;
+}
+
+.authWrapper {
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.text {
+  line-height: 17px;
+  color: $darkGrey;
+  margin-bottom: 33px;
+}
+
+.inputWrapper {
+  width: 100px;
+}
+
+.error {
+  background-color: #eb5757;
+  color: white;
+  border-radius: 33px;
+  padding: 12px 21px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.errorIcon {
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 15px;
+  margin-top: 3px;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.toSignUp {
+  margin-left: 5px;
+  color: $violet;
+}
+.signUpholder {
+  margin-top: 41px;
+  margin-bottom: 29px;
+}

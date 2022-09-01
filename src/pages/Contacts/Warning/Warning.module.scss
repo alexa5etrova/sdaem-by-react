@@ -1,0 +1,19 @@
+.warning {
+  background-color: rgba(80, 57, 189, 0.5);
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  margin-top: 40px;
+  align-items: center;
+}
+.warningColor svg {
+  color: rgba(80, 57, 189, 1);
+}
+.warningText {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}

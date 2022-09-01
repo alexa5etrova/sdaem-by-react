@@ -1,0 +1,110 @@
+@import "./../../../../styles/_colors.scss";
+
+.filterFormFlats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.formSectionFlat {
+  position: relative;
+}
+.formSectionFlat::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  right: -22px;
+  height: 68px;
+  width: 1px;
+  background-color: rgba(102, 78, 249, 0.1);
+}
+.formSectionToMap {
+  position: relative;
+}
+.formSectionToMap::after {
+  content: "";
+  position: absolute;
+  top: -22px;
+  right: -22px;
+  height: 68px;
+  width: 1px;
+  background-color: rgba(102, 78, 249, 0.1);
+}
+
+.priceWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.priceWrapperFlats {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.violet {
+  color: $violet;
+}
+.price {
+  width: 63px;
+  height: 37px;
+  background-color: #f8f8f8;
+  color: #686868;
+  border-radius: 20px;
+  border: none;
+  appearance: textfield;
+  padding-left: 11px;
+}
+.price:hover {
+  outline: 2px solid rgba(102, 78, 249, 0.8);
+  background-color: white;
+}
+.text {
+  color: #4e64f9;
+  margin: 0 5px;
+}
+.toMap {
+  text-decoration: none;
+  color: $black;
+}
+.toMap:hover {
+  color: #664ef9;
+}
+
+.icon {
+  color: #664ef9;
+  margin-left: 5px;
+}
+.toFlatsIcon {
+  color: black;
+  margin-left: 11px;
+}
+.toFlatsIconWhite {
+  color: white;
+  margin-left: 11px;
+}
+
+.moreOptionsFlats {
+  background-color: white;
+  border-radius: 0px;
+  padding: 15px 33px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  border: rgba(78, 100, 249, 0.1);
+  z-index: 5;
+}
+.moreSelect {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  margin: 32px 0;
+}
+.moreEquipment {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 13px 5px;
+}

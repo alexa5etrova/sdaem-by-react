@@ -1,0 +1,29 @@
+.article {
+  width: 841px;
+  margin-top: -27px;
+}
+
+.photo {
+  float: left;
+  margin-right: 23px;
+  position: relative;
+}
+.photo::before {
+  content: "";
+  background-image: url("./../../assets/images/dotsYellow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 180px;
+  right: -26px;
+  width: 82px;
+  height: 71px;
+}
+
+.text {
+  margin-bottom: 20px;
+  line-height: 21px;
+}
+.text:nth-child(3) {
+  margin-top: 30px;
+}

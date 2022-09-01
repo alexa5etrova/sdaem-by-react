@@ -1,0 +1,62 @@
+@import "./../../../styles/_colors.scss";
+
+.headerNav {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  background-color: white;
+}
+.headerNavContainer {
+  height: 60px;
+  max-width: 1280px;
+  padding: 0 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerNavList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+}
+.headerNavListItem {
+  height: 100%;
+}
+.headerNavListItem a {
+  color: #1e2123;
+  font-weight: 700;
+  text-decoration: none;
+  padding-bottom: 18px;
+}
+.headerNavListItem a:hover {
+  border-bottom: 3px solid $yellow;
+  color: $black;
+}
+
+.locationIcon {
+  fill: $yellow;
+  margin-left: 15px;
+}
+
+.flats {
+  height: 100%;
+}
+.flats {
+  height: 100%;
+}
+
+.flatsLinks {
+  color: #1e2123;
+  font-weight: 700;
+  text-decoration: none;
+  padding-bottom: 18px;
+}
+
+.flatsLinks:hover {
+  border-bottom: 3px solid $yellow;
+  color: $black;
+}

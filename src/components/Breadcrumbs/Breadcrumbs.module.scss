@@ -1,0 +1,31 @@
+@import "./../../styles/_colors.scss";
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.breadcrumbs li {
+  text-decoration: none;
+  color: #4e64f9;
+}
+
+.breadcrumbs li a {
+  text-decoration: none;
+}
+
+.breadcrumbs li::before {
+  content: "•";
+  padding: 0 5px;
+  color: #664ef9;
+}
+
+.breadcrumbs li:first-child::before {
+  content: "";
+  padding: 0;
+}
+
+.breadcrumbs li:last-child a {
+  color: #686868;
+  pointer-events: none;
+}

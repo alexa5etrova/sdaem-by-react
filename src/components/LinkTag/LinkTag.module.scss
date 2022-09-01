@@ -1,0 +1,193 @@
+@import "./../../styles/_colors.scss";
+
+.link {
+  text-decoration: none;
+}
+.link:hover {
+  cursor: pointer;
+}
+.violet {
+  padding: 8px 14px;
+  border-radius: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  background-color: $violet;
+}
+.violet:hover {
+  color: white;
+  background-color: #5c35f9;
+}
+.lightViolet {
+  background-color: rgba(102, 78, 249, 0.1);
+  border-radius: 17px;
+  padding: 10px 15px;
+  color: #664ef9;
+  font-weight: 700;
+  text-align: center;
+}
+.lightViolet:hover {
+  background-color: white;
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+}
+// круглая кнопка ссо трелкой
+.round {
+  display: block;
+  width: 37px;
+  height: 39px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  color: white;
+}
+.round:hover {
+  border: 2px solid $lightgrey;
+}
+
+.icon {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+}
+// черная ссылка из боковой наигации
+.black {
+  font-size: 18px;
+  font-weight: 700;
+  color: $black;
+  line-height: 22px;
+  transition: 0.2s ease-in-out;
+}
+.black:hover {
+  margin-left: 15px;
+}
+// желтая ссылка из боковой наигации
+.yellow {
+  font-size: 14px;
+  font-weight: 400;
+  color: #feb700;
+  line-height: 8px;
+  transition: 0.2s ease-in-out;
+  line-height: 17px;
+}
+.yellow:hover {
+  margin-left: 8px;
+}
+// желтая ссылка-кнопка из карточки квартиры
+.lightYellow {
+  background-color: rgba(255, 213, 79, 0.1);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fec100;
+  line-height: 17px;
+  transition: 0.2s ease-in-out;
+  border-radius: 17px;
+  padding: 10px 15px;
+  width: fit-content;
+  height: fit-content;
+}
+.lightYellow:hover {
+  background-color: rgba(255, 213, 79, 0.2);
+}
+
+//ссылка-кнопка на главной градиентная расцветка
+.gradientHome {
+  box-shadow: 0px 15px 40px 0px rgba(0, 96, 206, 0.15);
+  background: linear-gradient(#9d94ff, #6b50e9);
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  line-height: 17px;
+  transition: 0.2s ease-in-out;
+  border-radius: 17px;
+  padding: 10px 20px 10px 18px;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 25px;
+}
+.gradientHome:hover {
+  background: linear-gradient(#867cfc, #6929f3);
+}
+//ссылка-кнопка на главной белая
+.white {
+  background: white;
+  font-size: 14px;
+  font-weight: 600;
+  color: $black;
+  transition: 0.2s ease-in-out;
+  border-radius: 19px;
+  padding: 10px 18px;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 25px;
+}
+.white:hover {
+  color: #fec100;
+}
+//ссылка-кнопка на главной белая
+.yellowBtn {
+  background-color: $yellow;
+  font-size: 14px;
+  font-weight: 700;
+  color: #242424;
+  transition: 0.2s ease-in-out;
+  border-radius: 17px;
+  padding: 10px 27px 10px 18px;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.yellowBtn:hover {
+  background-color: #fec100;
+}
+//ссылка из списка новостей на главной
+.newsList {
+  font-weight: 600;
+  line-height: 17px;
+  color: $black;
+}
+.newsList:hover {
+  color: $violet;
+}
+//ссылка из списка новостей на главной
+.newsSeeAll {
+  font-weight: 600;
+  line-height: 17px;
+  color: $violet;
+}
+.newsSeeAll:hover {
+  color: $black;
+}
+
+.reccomend {
+  background-color: rgba(102, 78, 249, 0.1);
+  border-radius: 17px;
+  padding: 6px 10px;
+  color: #664ef9;
+  font-weight: 400;
+  text-align: center;
+}
+.reccomend:hover {
+  background-color: white;
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+}
+
+//ссылка-кнопка на flats - toMap
+.whiteToMap {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 17px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: $black;
+  transition: 0.2s ease-in-out;
+  border-radius: 19px;
+  padding: 10px 18px;
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+  width: fit-content;
+}
+.whiteToMap:hover {
+  color: $violet;
+  background-color: #f8f8f8;
+}

@@ -1,0 +1,17 @@
+@import "./../../../styles/_colors.scss";
+
+.dialog {
+  background-color: #fffefe;
+  box-shadow: 0 20px 40px 0 rgba(39, 95, 158, 0.2);
+  border-radius: 10px;
+  padding: 30px 50px 57px 50px;
+  margin: 20% auto;
+  width: 305px;
+  text-align: center;
+}
+
+.text {
+  line-height: 17px;
+  color: $darkGrey;
+  margin-bottom: 33px;
+}

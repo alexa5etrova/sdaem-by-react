@@ -1,0 +1,27 @@
+.container {
+  background-image: url("./../../../assets/images/Home1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 516px;
+  height: 271px;
+  border-radius: 14px;
+}
+.mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(12%, 13%, 14%, 0.4);
+  border-radius: 14px;
+}
+.wrapper {
+  padding: 26px 37px;
+}
+.header {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 14px 16px;
+}

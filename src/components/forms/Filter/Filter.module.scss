@@ -1,0 +1,30 @@
+.wrapperFlats {
+  position: relative;
+  width: 100%;
+  box-shadow: 0 20px 40px 0 rgba(39, 95, 158, 0.08);
+  background-color: white;
+}
+.filterFlats {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 22px 0px;
+  z-index: 10000;
+}
+.wrapperHome {
+  height: 100%;
+  position: relative;
+}
+.filterHome {
+  position: absolute;
+  width: 1010px;
+  height: 64px;
+  background-color: white;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  left: 50%;
+  top: 61%;
+  margin-left: -528px;
+  margin-top: -50px;
+  padding: 15px 33px 20px 20px;
+  z-index: 10000;
+}

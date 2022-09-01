@@ -1,0 +1,91 @@
+@import "./../../../styles/_colors.scss";
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "name email"
+    "message message"
+    "error error"
+    "button button";
+  align-items: center;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.name {
+  grid-area: name;
+  width: 180px;
+}
+.email {
+  grid-area: email;
+  width: 180px;
+  margin-left: 18px;
+}
+.message {
+  grid-area: message;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 41px;
+}
+.errorWrapper {
+  grid-area: error;
+  text-align: center;
+}
+
+.button {
+  grid-area: button;
+  text-align: center;
+}
+.error {
+  background-color: #eb5757;
+  color: white;
+  border-radius: 33px;
+  padding: 12px 21px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.errorIcon {
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 15px;
+  margin-top: 3px;
+}
+.label {
+  font-weight: 500;
+  color: $darkGrey;
+}
+.textarea {
+  border: none;
+  border-radius: 30px;
+  padding: 16px 21px 16px 21px;
+  max-width: 548px;
+  text-align: left;
+  background-color: $lightgrey;
+  height: 170px;
+  resize: none;
+}
+
+.textarea:focus {
+  outline: 2px solid rgba(102, 78, 249, 0.8);
+}
+.textarea:hover {
+  outline: 2px solid rgba(102, 78, 249, 0.8);
+}
+
+.errorTextarea {
+  outline: 1px solid rgba(235, 87, 87, 1);
+}
+.errorTextAreaIcon {
+  color: rgba(235, 87, 87, 1);
+  top: 46px;
+  right: 21px;
+  position: absolute;
+}

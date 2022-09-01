@@ -1,0 +1,61 @@
+@import "./../../styles/_colors.scss";
+
+.notFound {
+  height: 600px;
+}
+
+.notFoundcontainer {
+  position: relative;
+  max-width: 1060px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 137px;
+}
+.notFoundcontainer:after {
+  content: url("./../../assets/images/dotsYellow.png");
+  position: absolute;
+  z-index: 2;
+  left: -114px;
+  top: 96px;
+}
+.notFoundcontainer::before {
+  content: url("./../../assets/images/dotsWhite.png");
+  position: absolute;
+  z-index: 2;
+  left: 997px;
+  top: 457px;
+}
+
+.textNotFound {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.2px;
+  color: white;
+  margin: -19px 0px 65px 10px;
+}
+
+.linkNotFound {
+  padding: 12px 24px;
+  background-color: $yellow;
+  border-radius: 30px;
+  color: $black;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+  z-index: 2;
+}
+.linkNotFound:hover {
+  background-color: #fec100;
+}
+.homeIcon {
+  margin-right: 6px;
+}
+.homeIcon svg * {
+  fill: $black;
+}
+
+.imageContainer {
+  padding: 20px 4px 0px 0px;
+}

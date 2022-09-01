@@ -1,0 +1,26 @@
+@import "./../../styles/_colors.scss";
+.offerWrapper {
+  position: relative;
+}
+.dots {
+  position: absolute;
+  top: 7%;
+  right: 9%;
+}
+.arrow {
+  color: $black;
+  position: absolute;
+  top: 13px;
+  right: 20px;
+}
+.arrowGap {
+  padding-right: 15px;
+}
+.offers {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  margin-top: -123px;
+  margin-bottom: 50px;
+}

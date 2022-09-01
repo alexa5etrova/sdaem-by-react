@@ -1,0 +1,31 @@
+@import "./../../styles/_colors.scss";
+
+.card {
+  width: 406px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 220px 200px auto;
+  box-shadow: (0 20px 40px rgb(135 124 202 / 15%));
+  z-index: 1;
+}
+.cardText {
+  color: $grey;
+  line-height: 17px;
+}
+.cardImg img {
+  object-fit: cover;
+  width: 406px;
+  height: 227px;
+  border-radius: 10px;
+}
+.cardTextContainer {
+  padding: 20px;
+}
+.cardBtnContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

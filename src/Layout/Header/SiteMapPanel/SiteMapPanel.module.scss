@@ -1,0 +1,66 @@
+@import "./../../../styles/_colors.scss";
+.siteMapPanel {
+  background-color: $lightgrey;
+}
+.siteMapPanelContainer {
+  max-width: 1280px;
+  padding: 0 10px;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navHeader {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 57px;
+  padding: 0;
+  margin: 0;
+}
+.accountLink {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.navHeaderItem a {
+  color: $grey;
+  text-decoration: none;
+  padding-bottom: 8px;
+}
+.navHeaderItem a:hover {
+  border-bottom: 3px solid $yellow;
+  color: $black;
+  * {
+    color: $black;
+  }
+}
+.locationIcon {
+  margin-right: 5px;
+}
+.locationIcon * {
+  color: $grey;
+}
+.heartIcon {
+  margin-left: 8px;
+}
+.heartIcon * {
+  color: $grey;
+}
+.authLink a {
+  font-weight: 500;
+  color: $violet;
+}
+
+.arrow {
+  color: $violet;
+  transform: rotate(90deg);
+  margin-left: 10px;
+}

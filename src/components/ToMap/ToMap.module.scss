@@ -1,0 +1,28 @@
+@import "./../../styles/_colors.scss";
+.homeBg {
+  height: 441px;
+}
+.flatsBg {
+  height: 311px;
+  margin-top: -54px;
+}
+
+.textToMapWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 55px;
+}
+.textMap {
+  width: 345px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+  margin-bottom: -2px;
+}
+.locationIcon {
+  color: #fec100;
+  margin-right: 10px;
+}

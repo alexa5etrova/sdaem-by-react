@@ -1,0 +1,179 @@
+@import "./../../styles/_colors.scss";
+
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  border: none;
+  transition: all 0.2s;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btnGradient {
+  border-radius: 19px;
+  padding: 10px 18px;
+  background: linear-gradient(to right, #9d94ff, #6b50e9);
+  color: white;
+  box-shadow: 0px 15px 40px rgba(0, 96, 206, 0.15);
+}
+.btnGradient:hover {
+  background: linear-gradient(to right, #867cfc, #6929f3);
+  color: white;
+}
+.btnWhite {
+  background-color: white;
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+  color: $violet;
+  border-radius: 18px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.btnWhite:hover {
+  background-color: #f5f3ff;
+}
+.btnLightViolet {
+  background-color: rgba(102, 78, 249, 0.1);
+  color: #664ef9;
+  border-radius: 17px;
+  padding: 10px 15px;
+}
+.btnLightViolet:hover {
+  background-color: white;
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+}
+
+.btnViolet {
+  background-color: #664ef9;
+  color: white;
+  border-radius: 22px;
+  padding: 9px 16px;
+}
+.btnViolet:hover {
+  background-color: #5c35f9;
+}
+.btnSearch {
+  background-color: #664ef9;
+  color: white;
+  border-radius: 19px;
+  padding: 9px 16px;
+}
+.btnSearch:hover {
+  background-color: #5c35f9;
+}
+
+.btnSend {
+  background-color: #664ef9;
+  color: white;
+  border-radius: 33px;
+  padding: 12px 56px;
+  font-size: 16px;
+}
+.btnSend:hover {
+  background-color: #5c35f9;
+}
+.btnYellow {
+  background-color: #ffd54f;
+  color: $black;
+  border-radius: 33px;
+  padding: 12px 24px;
+  font-size: 16px;
+}
+.btnYeelow:hover {
+  background-color: #fec100;
+}
+.btnFilter {
+  background-color: #ffd54f;
+  color: $black;
+  border-radius: 33px;
+  width: 123px;
+  height: 37px;
+  font-size: 14px;
+  align-self: center;
+}
+.btnFilter:hover {
+  background-color: #fec100;
+}
+.btnDisable {
+  background-color: #f8f8f8;
+  color: $black;
+  border-radius: 22px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.btnDisable:hover {
+  background-color: #fdfafa;
+}
+.btnSwitchOffChoise {
+  background-color: rgba(102, 78, 249, 0.1);
+  border-radius: 17px;
+  padding: 6px 10px;
+  color: #664ef9;
+  font-weight: 400;
+  margin-top: -5px;
+}
+.btnSwitchOffChoise:hover {
+  background-color: white;
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+}
+.viewOn {
+  height: 37px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 18px;
+  padding: 0px 15px;
+  background-color: white;
+  color: $black;
+  font-weight: 600;
+  box-shadow: 0 5px 20px rgba(0, 96, 206, 0.1);
+}
+.viewOn:hover {
+  background-color: #f8f8f8;
+}
+.viewOff {
+  height: 37px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 18px;
+  padding: 0px 15px;
+  background-color: transparent;
+  color: $black;
+  font-weight: 500;
+}
+.viewOff:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+}
+.rose {
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 22px;
+  padding: 0px 15px;
+  background-color: rgba(235, 87, 87, 0.1);
+  color: rgba(235, 87, 87, 1);
+  font-weight: 600;
+}
+.rose:hover svg * {
+  fill: rgba(235, 87, 87, 0.4);
+}
+.roseRound {
+  height: 33px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(235, 87, 87, 0.1);
+  color: rgba(235, 87, 87, 1);
+  font-weight: 600;
+}
+.roseRound:hover svg * {
+  fill: rgba(235, 87, 87, 0.4);
+}
