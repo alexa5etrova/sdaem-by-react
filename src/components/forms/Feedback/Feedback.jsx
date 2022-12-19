@@ -4,14 +4,14 @@ import cn from "classnames";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 
-import { sendMessage } from "../../../redux/messageSlice";
-import Loader from "../../Loader/Loader";
-import Button from "../../Button/Button";
-import Input from "./../Input/Input";
-import FormWrapper from "../FormWrapper/FormWrapper";
-import Dialog from "./../Dialog/Dialog";
-import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
-import { MESSAGE_SENT, MESSAGE_SENT_FAILED } from "../../../data/contacts";
+import { sendMessage } from "redux/messageSlice";
+import Loader from "components/Loader/Loader";
+import Button from "components/Button/Button";
+import Input from "components/forms/Input/Input";
+import FormWrapper from "components/forms/FormWrapper/FormWrapper";
+import Dialog from "components/forms/Dialog/Dialog";
+import { ReactComponent as AttentionIcon } from "assets/icons/attention.svg";
+import { MESSAGE_SENT, MESSAGE_SENT_FAILED } from "data/contacts";
 
 import styles from "./Feedback.module.scss";
 

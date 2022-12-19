@@ -5,16 +5,16 @@ import { useNavigate } from "react-router-dom";
 import cn from "classnames";
 import { useState } from "react";
 
-import { userSignIn } from "../../../redux/authSlice";
-import Loader from "./../../Loader/Loader";
-import FormWrapper from "../FormWrapper/FormWrapper";
-import Input from "../Input/Input";
-import Htag from "../../Htag/Htag";
-import Button from "../../Button/Button";
-import Switch from "./../Switch/Switch";
-import Dialog from "./../Dialog/Dialog";
-import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
-import { AUTH_OK, AUTH_SENT_FAILED } from "../../../data/auth";
+import { userSignIn } from "redux/authSlice";
+import Loader from "components/Loader/Loader";
+import FormWrapper from "components/forms/FormWrapper/FormWrapper";
+import Input from "components/forms/Input/Input";
+import Htag from "components/Htag/Htag";
+import Button from "components/Button/Button";
+import Switch from "components/forms/Switch/Switch";
+import Dialog from "components/forms/Dialog/Dialog";
+import { ReactComponent as AttentionIcon } from "assets/icons/attention.svg";
+import { AUTH_OK, AUTH_SENT_FAILED } from "data/auth";
 
 import styles from "./SignIn.module.scss";
 

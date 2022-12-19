@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import cn from "classnames";
 
-import PaymentsLogo from "../../components/PaymentsLogo/PaymentsLogo";
-import SocialMediaLogo from "../../components/SocialMediaLogo/SocialMediaLogo";
-import logo from "./../../assets/images/logo.png";
-import { CATEGORIES, FLAT_CATEGORIES, SITEMAP } from "./../../data/nav";
-import { COMPANY } from "./../../data/contacts";
+import PaymentsLogo from "components/PaymentsLogo/PaymentsLogo";
+import SocialMediaLogo from "components/SocialMediaLogo/SocialMediaLogo";
+import logo from "assets/images/logo.png";
+import { CATEGORIES, FLAT_CATEGORIES, SITEMAP } from "data/nav";
+import { COMPANY } from "data/contacts";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {

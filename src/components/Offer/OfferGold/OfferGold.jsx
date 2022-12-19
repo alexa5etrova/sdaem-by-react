@@ -1,7 +1,7 @@
-import LinkTag from "../../LinkTag/LinkTag";
-import { ReactComponent as ArrowIcon } from "./../../../assets/icons/chevron.svg";
+import LinkTag from "components/LinkTag/LinkTag";
+import { ReactComponent as ArrowIcon } from "assets/icons/chevron.svg";
 import styles from "./OfferGold.module.scss";
-import { OFFERS } from "./../../../data/home";
+import { OFFERS } from "data/home";
 
 const OfferGold = () => {
   let offer = OFFERS.offerGold;

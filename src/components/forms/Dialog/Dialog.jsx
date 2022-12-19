@@ -1,6 +1,6 @@
-import Modal from "./../../Modal/Modal";
-import Htag from "./../../Htag/Htag";
-import Button from "./../../Button/Button";
+import Modal from "components/Modal/Modal";
+import Htag from "components//Htag/Htag";
+import Button from "components/Button/Button";
 
 import styles from "./Dialog.module.scss";
 const Dialog = (props) => {

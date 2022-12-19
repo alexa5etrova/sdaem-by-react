@@ -1,6 +1,6 @@
 import cn from "classnames";
 import { useEffect } from "react";
-import usePagination from "./../../hook/usePagination";
+import usePagination from "hook/usePagination";
 
 import styles from "./Pagination.module.scss";
 

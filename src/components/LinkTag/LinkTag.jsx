@@ -1,6 +1,6 @@
 import cn from "classnames";
 import { Link } from "react-router-dom";
-import { ReactComponent as ChevronIcon } from "../../assets/icons/chevron.svg";
+import { ReactComponent as ChevronIcon } from "assets/icons/chevron.svg";
 import styles from "./LinkTag.module.scss";
 
 const LinkTag = ({ children, linkStyle, to, ...props }) => {

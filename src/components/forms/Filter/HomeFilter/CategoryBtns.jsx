@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { CATEGORIES } from "./../../../../data/nav";
+import { CATEGORIES } from "data/nav";
 
 import styles from "./CategoryBtns.module.scss";
 

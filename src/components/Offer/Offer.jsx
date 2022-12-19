@@ -1,11 +1,11 @@
-import LinkTag from "./../LinkTag/LinkTag";
-import ToMap from "../ToMap/ToMap";
+import LinkTag from "components/LinkTag/LinkTag";
+import ToMap from "components/ToMap/ToMap";
 import OfferRegular from "./OfferRegular/OfferRegular";
-import { ReactComponent as ArrowIcon } from "./../../assets/icons/chevron.svg";
-import dots from "./../../assets/images/dotsWhite.png";
-import photo1 from "./../../assets/images/offer1.png";
-import photo2 from "./../../assets/images/offer2.png";
-import { OFFERS } from "./../../data/home";
+import { ReactComponent as ArrowIcon } from "assets/icons/chevron.svg";
+import dots from "assets/images/dotsWhite.png";
+import photo1 from "assets/images/offer1.png";
+import photo2 from "assets/images/offer2.png";
+import { OFFERS } from "data/home";
 
 import styles from "./Offer.module.scss";
 import OfferGold from "./OfferGold/OfferGold";

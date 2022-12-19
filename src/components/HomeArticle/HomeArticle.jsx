@@ -1,5 +1,5 @@
-import { HOME_ARTICLE } from "../../data/home";
-import photo from "./../../assets/images/article.jpg";
+import { HOME_ARTICLE } from "data/home";
+import photo from "assets/images/article.jpg";
 import styles from "./HomeArticle.module.scss";
 
 const HomeArticle = () => {

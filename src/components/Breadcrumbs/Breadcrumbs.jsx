@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Breadcrumbs.module.scss";
-import { ReactComponent as Home } from "../../assets/icons/home.svg";
+import { ReactComponent as Home } from "assets/icons/home.svg";
 
 const Breadcrumbs = ({ crumbs }) => {
   return (

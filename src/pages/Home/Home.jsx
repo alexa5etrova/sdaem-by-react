@@ -3,18 +3,18 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import cn from "classnames";
 
-import { fetchFlats } from "./../../redux/flatsSlice";
-import Filter from "../../components/forms/Filter/Filter";
-import Background from "./../../components/Background/Background";
-import PhotoLink from "./../../components/PhotoLink/PhotoLink";
-import SidebarNav from "../../components/SidebarNav/SidebarNav";
-import Loader from "./../../components/Loader/Loader";
-import Carousel from "../../components/Carousel/Carousel";
-import Htag from "./../../components/Htag/Htag";
-import Total from "./../../components/Total/Total";
-import Offer from "./../../components/Offer/Offer";
-import HomeArticle from "../../components/HomeArticle/HomeArticle";
-import HomeNewsNav from "./../../components/HomeNewsNav/HomeNewsNav";
+import { fetchFlats } from "redux/flatsSlice";
+import Filter from "components/forms/Filter/Filter";
+import Background from "components/Background/Background";
+import PhotoLink from "components/PhotoLink/PhotoLink";
+import SidebarNav from "components/SidebarNav/SidebarNav";
+import Loader from "components/Loader/Loader";
+import Carousel from "components/Carousel/Carousel";
+import Htag from "components/Htag/Htag";
+import Total from "components/Total/Total";
+import Offer from "components/Offer/Offer";
+import HomeArticle from "components/HomeArticle/HomeArticle";
+import HomeNewsNav from "components/HomeNewsNav/HomeNewsNav";
 
 import styles from "./Home.module.scss";
 

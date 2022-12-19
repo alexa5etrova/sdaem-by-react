@@ -1,15 +1,11 @@
-@import "./../../../styles/_colors.scss";
+@import "styles/_colors.scss";
 
 .searchContainer {
   position: absolute;
   border-radius: 40px;
   padding-top: 55px;
   padding-left: 97px;
-  background: linear-gradient(
-    to right,
-    rgba(148, 175, 255, 0.1),
-    rgba(78, 100, 249, 0.1)
-  );
+  background: linear-gradient(to right, rgba(148, 175, 255, 0.1), rgba(78, 100, 249, 0.1));
   width: 850px;
   height: 41%;
   z-index: 1;

@@ -4,14 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import { userSignUp } from "../../../redux/authSlice";
-import FormWrapper from "../FormWrapper/FormWrapper";
-import Input from "../Input/Input";
-import Htag from "../../Htag/Htag";
-import Button from "../../Button/Button";
-import Dialog from "./../Dialog/Dialog";
-import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
-import { SIGNUP_FAILED, USER_AGREEMENT } from "./../../../data/auth";
+import { userSignUp } from "redux/authSlice";
+import FormWrapper from "components/forms/FormWrapper/FormWrapper";
+import Input from "components/forms/Input/Input";
+import Htag from "components/Htag/Htag";
+import Button from "components/Button/Button";
+import Dialog from "components/forms/Dialog/Dialog";
+import { ReactComponent as AttentionIcon } from "assets/icons/attention.svg";
+import { SIGNUP_FAILED, USER_AGREEMENT } from "data/auth";
 
 import styles from "./Signup.module.scss";
 

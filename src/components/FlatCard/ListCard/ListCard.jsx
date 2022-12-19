@@ -1,17 +1,17 @@
 import { useState } from "react";
 import cn from "classnames";
 
-import { FLAT_PREVIEW_LIST_LENGTH } from "./../../../data/flats";
-import LinkTag from "./../../LinkTag/LinkTag";
-import Tag from "../../Tag/Tag";
-import Htag from "../../Htag/Htag";
-import Button from "./../../Button/Button";
-import OwnerContacts from "../../OwnerContacts/OwnerContacts";
-import CardSlider from "./../CardSlider/CardSlider";
-import { ReactComponent as UserIcon } from "../../../assets/icons/user.svg";
-import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
-import { ReactComponent as MetroIcon } from "../../../assets/icons/metro.svg";
-import { ReactComponent as PhoneIcon } from "../../../assets/icons/phone.svg";
+import { FLAT_PREVIEW_LIST_LENGTH } from "data/flats";
+import LinkTag from "components/LinkTag/LinkTag";
+import Tag from "components/Tag/Tag";
+import Htag from "components/Htag/Htag";
+import Button from "components/Button/Button";
+import OwnerContacts from "components/OwnerContacts/OwnerContacts";
+import CardSlider from "components/FlatCard/CardSlider/CardSlider";
+import { ReactComponent as UserIcon } from "assets/icons/user.svg";
+import { ReactComponent as LocationIcon } from "assets/icons/location.svg";
+import { ReactComponent as MetroIcon } from "assets/icons/metro.svg";
+import { ReactComponent as PhoneIcon } from "assets/icons/phone.svg";
 import { ReactComponent as HeartIcon } from "./../heart.svg";
 
 import styles from "./ListCard.module.scss";

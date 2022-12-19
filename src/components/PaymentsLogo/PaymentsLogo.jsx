@@ -1,11 +1,11 @@
 import styles from "./PaymentsLogo.module.scss";
 
-import visa from "./../../assets/images/visa.png";
-import webpay from "./../../assets/images/webpay.png";
-import vByVisa from "./../../assets/images/verifiedByVisa.png";
-import MasterCard from "./../../assets/images/mastercard.png";
-import securecode from "./../../assets/images/securecode.png";
-import belcart from "./../../assets/images/belkart.png";
+import visa from "assets/images/visa.png";
+import webpay from "assets/images/webpay.png";
+import vByVisa from "assets/images/verifiedByVisa.png";
+import MasterCard from "assets/images/mastercard.png";
+import securecode from "assets/images/securecode.png";
+import belcart from "assets/images/belkart.png";
 
 const PaymentsLogo = () => {
   const PAYMENTS_METHOD = [

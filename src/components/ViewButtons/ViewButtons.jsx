@@ -2,13 +2,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import cn from "classnames";
 
-import Button from "./../Button/Button";
-import LinkTag from "./../LinkTag/LinkTag";
+import Button from "components/Button/Button";
+import LinkTag from "components/LinkTag/LinkTag";
 import { ReactComponent as ListIcon } from "./list.svg";
 import { ReactComponent as TileIcon } from "./tile.svg";
 import { ReactComponent as SortIcon } from "./sort.svg";
-import { ReactComponent as LocationIcon } from "./../../assets/icons/location.svg";
-import { ReactComponent as Arrow } from "./../../assets/icons/chevron.svg";
+import { ReactComponent as LocationIcon } from "assets/icons/location.svg";
+import { ReactComponent as Arrow } from "assets/icons/chevron.svg";
 
 import styles from "./ViewButtons.module.scss";
 

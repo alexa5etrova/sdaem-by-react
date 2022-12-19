@@ -3,23 +3,23 @@ import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import cn from "classnames";
 
-import { fetchFlats } from "./../../redux/flatsSlice";
-import FlatCard from "./../../components/FlatCard/FlatCard";
-import Htag from "../../components/Htag/Htag";
-import ToMap from "../../components/ToMap/ToMap";
-import Pagination from "../../components/Pagination/Pagination";
-import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
-import Loader from "../../components/Loader/Loader";
-import Filter from "./../../components/forms/Filter/Filter";
+import { fetchFlats } from "redux/flatsSlice";
+import FlatCard from "components/FlatCard/FlatCard";
+import Htag from "components/Htag/Htag";
+import ToMap from "components/ToMap/ToMap";
+import Pagination from "components/Pagination/Pagination";
+import Breadcrumbs from "components/Breadcrumbs/Breadcrumbs";
+import Loader from "components/Loader/Loader";
+import Filter from "components/forms/Filter/Filter";
+import Reccomend from "components/Reccomend/Reccomend";
+import ViewButtons from "components/ViewButtons/ViewButtons";
+import SocialsShared from "components/SocialsShared/SocialsShared";
 
-import { DISTRICT, FLATS_PER_PAGE } from "../../data/flats";
-import { FLAT_CATEGORIES } from "./../../data/nav";
+import { DISTRICT, FLATS_PER_PAGE } from "data/flats";
+import { FLAT_CATEGORIES } from "data/nav";
+import { CITIES } from "data/flats";
 
 import styles from "./Flats.module.scss";
-import Reccomend from "../../components/Reccomend/Reccomend";
-import { CITIES } from "./../../data/flats";
-import ViewButtons from "../../components/ViewButtons/ViewButtons";
-import SocialsShared from "../../components/SocialsShared/SocialsShared";
 
 const Flats = (props) => {
   const request = useLocation();

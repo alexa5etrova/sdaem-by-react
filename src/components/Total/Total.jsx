@@ -1,5 +1,5 @@
 import LinkTag from "../LinkTag/LinkTag";
-import { ReactComponent as ArrowIcon } from "./../../assets/icons/chevron.svg";
+import { ReactComponent as ArrowIcon } from "assets/icons/chevron.svg";
 import styles from "./Total.module.scss";
 
 const Total = ({ total }) => {

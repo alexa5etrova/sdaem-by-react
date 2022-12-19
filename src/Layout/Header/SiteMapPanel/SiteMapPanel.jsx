@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import cn from "classnames";
 import { useSelector } from "react-redux";
 
-import { ReactComponent as LocationIcon } from "../../../assets/icons/location.svg";
-import { ReactComponent as HeartIcon } from "../../../assets/icons/heart.svg";
-import { ReactComponent as ArrowIcon } from "../../../assets/icons/chevron.svg";
-import { SITEMAP } from "./../../../data/nav";
+import { ReactComponent as LocationIcon } from "assets/icons/location.svg";
+import { ReactComponent as HeartIcon } from "assets/icons/heart.svg";
+import { ReactComponent as ArrowIcon } from "assets/icons/chevron.svg";
+import { SITEMAP } from "data/nav";
 
 import styles from "./SiteMapPanel.module.scss";
 

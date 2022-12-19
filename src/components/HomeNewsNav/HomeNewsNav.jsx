@@ -1,13 +1,13 @@
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { fetchNews } from "./../../redux/newsSlice";
+import { fetchNews } from "redux/newsSlice";
 import { useSelector } from "react-redux";
 
-import Htag from "./../Htag/Htag";
-import Loader from "./../Loader/Loader";
-import LinkTag from "../LinkTag/LinkTag";
-import DateTag from "./../DateTag/DateTag";
-import { ReactComponent as ArrowIcon } from "./../../assets/icons/chevron.svg";
+import Htag from "components/Htag/Htag";
+import Loader from "components/Loader/Loader";
+import LinkTag from "components/LinkTag/LinkTag";
+import DateTag from "components/DateTag/DateTag";
+import { ReactComponent as ArrowIcon } from "assets/icons/chevron.svg";
 
 import styles from "./HomeNewsNav.module.scss";
 

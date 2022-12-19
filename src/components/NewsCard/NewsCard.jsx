@@ -1,11 +1,9 @@
-import Htag from "../Htag/Htag";
-import { Link } from "react-router-dom";
-
-import DateTag from "../DateTag/DateTag";
-import { NEWS_PREVIEW_LENGTH } from "../../data/news";
+import Htag from "components/Htag/Htag";
+import LinkTag from "components/LinkTag/LinkTag";
+import DateTag from "components/DateTag/DateTag";
+import { NEWS_PREVIEW_LENGTH } from "data/news";
 
 import styles from "./NewsCard.module.scss";
-import LinkTag from "../LinkTag/LinkTag";
 
 const NewsCard = ({ id, text, title, photo, date }) => {
   let cutText = text.substr(0, NEWS_PREVIEW_LENGTH) + "...";

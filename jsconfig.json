@@ -1,0 +1,8 @@
+//modification to absolute paths
+
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
+}

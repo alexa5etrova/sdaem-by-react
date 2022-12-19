@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Htag from "./../../Htag/Htag";
+import Htag from "components/Htag/Htag";
 
 import styles from "./Confirmed.module.scss";
 
@@ -9,8 +9,8 @@ const Confirmed = (props) => {
       <div className={styles.dialog}>
         <Htag tag="h2">Подтвердите регистрацию</Htag>
         <p className={styles.text}>
-          Письмо для подтверждения аккаунта отправлено почту. Перейдите по
-          ссылке, указанной в письме. Если письма нет, то проверьте спам.
+          Письмо для подтверждения аккаунта отправлено почту. Перейдите по ссылке, указанной в
+          письме. Если письма нет, то проверьте спам.
         </p>
         <div className={styles.linkYellow}>
           <Link to="/">Понятно</Link>

@@ -3,13 +3,13 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import cn from "classnames";
 
-import Button from "./../../../Button/Button";
-import Select from "./../../Select/Select";
-import Checkbox from "./../../Checkbox/Checkbox";
-import { ROOMS, SLEEPING_PLACES, DISTRICT, METRO, EQUIPMENT } from "./../../../../data/flats";
+import Button from "components/Button/Button";
+import Select from "components/forms/Select/Select";
+import Checkbox from "components/forms/Checkbox/Checkbox";
+import { ROOMS, SLEEPING_PLACES, DISTRICT, METRO, EQUIPMENT } from "data/flats";
 
-import { ReactComponent as SetupIcon } from "./../../../../assets/icons/setup.svg";
-import { ReactComponent as ArrowIcon } from "./../../../../assets/icons/chevron.svg";
+import { ReactComponent as SetupIcon } from "assets/icons/setup.svg";
+import { ReactComponent as ArrowIcon } from "assets/icons/chevron.svg";
 
 import styles from "./FlatsFilter.module.scss";
 

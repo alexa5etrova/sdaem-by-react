@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import cn from "classnames";
-import { ReactComponent as UserIcon } from "./../../../assets/icons/user.svg";
-import { ReactComponent as LockIcon } from "./../../../assets/icons/lock.svg";
-import { ReactComponent as EmailIcon } from "./../../../assets/icons/envelope.svg";
-import { ReactComponent as AttentionIcon } from "./../../../assets/icons/attention.svg";
+import { ReactComponent as UserIcon } from "assets/icons/user.svg";
+import { ReactComponent as LockIcon } from "assets/icons/lock.svg";
+import { ReactComponent as EmailIcon } from "assets/icons/envelope.svg";
+import { ReactComponent as AttentionIcon } from "assets/icons/attention.svg";
 import styles from "./Input.module.scss";
 
 const Input = (props) => {

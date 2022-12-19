@@ -1,8 +1,8 @@
 import { useState } from "react";
 import cn from "classnames";
-import { COTTAGES_CATEGORIES, FLAT_CATEGORIES, POPULAR } from "./../../data/nav";
-import LinkTag from "../LinkTag/LinkTag";
-import Htag from "./../Htag/Htag";
+import { COTTAGES_CATEGORIES, FLAT_CATEGORIES, POPULAR } from "data/nav";
+import LinkTag from "components/LinkTag/LinkTag";
+import Htag from "components/Htag/Htag";
 import styles from "./SidebarNav.module.scss";
 
 const SidebarNav = () => {

@@ -1,7 +1,7 @@
 import cn from "classnames";
-import { ReactComponent as ViberIcon } from "../../assets/icons/viber.svg";
-import { ReactComponent as WhatsAppIcon } from "../../assets/icons/whatsapp.svg";
-import { ReactComponent as EmailIcon } from "../../assets/icons/envelope.svg";
+import { ReactComponent as ViberIcon } from "assets/icons/viber.svg";
+import { ReactComponent as WhatsAppIcon } from "assets/icons/whatsapp.svg";
+import { ReactComponent as EmailIcon } from "assets/icons/envelope.svg";
 import styles from "./OwnerContacts.module.scss";
 
 const OwnerContacts = ({ photo, name, phone, email }) => {

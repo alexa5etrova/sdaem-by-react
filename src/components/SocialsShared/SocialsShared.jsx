@@ -6,11 +6,11 @@ import {
   WhatsappShareButton,
 } from "react-share";
 import cn from "classnames";
-import { ReactComponent as VkIcon } from "./../../assets/icons/vk.svg";
-import { ReactComponent as FacebookIcon } from "./../../assets/icons/facebookShare.svg";
-import { ReactComponent as ViberIcon } from "./../../assets/icons/viber.svg";
-import { ReactComponent as TelegramIcon } from "./../../assets/icons/telegram.svg";
-import { ReactComponent as WhatsappIcon } from "./../../assets/icons/whatsapp.svg";
+import { ReactComponent as VkIcon } from "assets/icons/vk.svg";
+import { ReactComponent as FacebookIcon } from "assets/icons/facebookShare.svg";
+import { ReactComponent as ViberIcon } from "assets/icons/viber.svg";
+import { ReactComponent as TelegramIcon } from "assets/icons/telegram.svg";
+import { ReactComponent as WhatsappIcon } from "assets/icons/whatsapp.svg";
 
 import styles from "./SocialsShared.module.scss";
 

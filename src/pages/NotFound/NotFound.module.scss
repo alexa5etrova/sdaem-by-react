@@ -1,4 +1,4 @@
-@import "./../../styles/_colors.scss";
+@import "styles/_colors.scss";
 
 .notFound {
   height: 600px;
@@ -12,19 +12,21 @@
   grid-template-columns: 1fr 1fr;
   padding-top: 137px;
 }
-.notFoundcontainer:after {
-  content: url("./../../assets/images/dotsYellow.png");
-  position: absolute;
-  z-index: 2;
-  left: -114px;
-  top: 96px;
-}
-.notFoundcontainer::before {
-  content: url("./../../assets/images/dotsWhite.png");
-  position: absolute;
-  z-index: 2;
-  left: 997px;
-  top: 457px;
+.notFoundcontainer {
+  :after {
+    content: url("./../../assets/images/dotsYellow.png");
+    position: absolute;
+    z-index: 2;
+    left: -114px;
+    top: 96px;
+  }
+  :before {
+    content: url("./../../assets/images/dotsWhite.png");
+    position: absolute;
+    z-index: 2;
+    left: 997px;
+    top: 457px;
+  }
 }
 
 .textNotFound {

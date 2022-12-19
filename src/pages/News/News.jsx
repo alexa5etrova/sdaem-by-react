@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import Htag from "../../components/Htag/Htag";
-import NewsCard from "./../../components/NewsCard/NewsCard";
-import Pagination from "../../components/Pagination/Pagination";
-import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
-import Search from "../../components/forms/Search/Search";
-import Loader from "../../components/Loader/Loader";
-import { fetchNews } from "./../../redux/newsSlice";
-import { CRUMBS } from "./../../data/nav";
-import { NEWS_PER_PAGE } from "../../data/news";
+import Htag from "components/Htag/Htag";
+import NewsCard from "components/NewsCard/NewsCard";
+import Pagination from "components/Pagination/Pagination";
+import Breadcrumbs from "components/Breadcrumbs/Breadcrumbs";
+import Search from "components/forms/Search/Search";
+import Loader from "components/Loader/Loader";
+import { fetchNews } from "redux/newsSlice";
+import { CRUMBS } from "data/nav";
+import { NEWS_PER_PAGE } from "data/news";
 
 import styles from "./News.module.scss";
 

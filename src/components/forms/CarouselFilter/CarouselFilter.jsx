@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import cn from "classnames";
-import { DISTRICT, METRO } from "../../../data/flats";
-import SearchContainer from "../SearchContainer/SearchContainer";
+import { DISTRICT, METRO } from "data/flats";
+import SearchContainer from "components/forms/SearchContainer/SearchContainer";
 import { ReactComponent as Arrow } from "./chevronDown.svg";
-import { ReactComponent as MetroIcon } from "./../../../assets/icons/metro.svg";
+import { ReactComponent as MetroIcon } from "assets/icons/metro.svg";
 import styles from "./CarouselFilter.module.scss";
 
 const CarouselFilter = ({ setDistrict, setMetro }) => {

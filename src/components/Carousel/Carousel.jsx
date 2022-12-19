@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import HomeFlatCard from "../FlatCard/HomeFlatCard/HomeFlatCard";
 import { SwiperButton } from "./SwiperButton/SwiperButton";
-import CarouselFilter from "../forms/CarouselFilter/CarouselFilter";
+import CarouselFilter from "components/forms/CarouselFilter/CarouselFilter";
 import styles from "./Carousel.module.scss";
 import { useState } from "react";
 

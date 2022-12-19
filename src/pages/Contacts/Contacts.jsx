@@ -1,9 +1,9 @@
-import Htag from "./../../components/Htag/Htag";
-import Background from "../../components/Background/Background";
-import Feedback from "../../components/forms/Feedback/Feedback";
+import Htag from "components/Htag/Htag";
+import Background from "components/Background/Background";
+import Feedback from "components/forms/Feedback/Feedback";
 import ContactDetails from "./ContactsDetails/ContactDetails";
 import Warning from "./Warning/Warning";
-import { COMPANY } from "./../../data/contacts";
+import { COMPANY } from "data/contacts";
 
 import styles from "./Contacts.module.scss";
 

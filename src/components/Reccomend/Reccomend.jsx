@@ -1,9 +1,9 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import { ROOMS } from "../../data/flats";
-import LinkTag from "../LinkTag/LinkTag";
-import Button from "./../Button/Button";
+import { ROOMS } from "data/flats";
+import LinkTag from "components/LinkTag/LinkTag";
+import Button from "components/Button/Button";
 import { ReactComponent as CrossIcon } from "./cross.svg";
 
 import styles from "./Reccomend.module.scss";

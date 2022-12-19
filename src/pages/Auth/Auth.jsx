@@ -1,10 +1,10 @@
 import ReactDOM from "react-dom";
 import { useState } from "react";
 
-import Background from "../../components/Background/Background";
-import SignIn from "../../components/forms/SignIn/SignIn";
-import SignUp from "./../../components/forms/Signup/Signup";
-import Confirmed from "./../../components/forms/Confirmed/Confirmed";
+import Background from "components/Background/Background";
+import SignIn from "components/forms/SignIn/SignIn";
+import SignUp from "components/forms/Signup/Signup";
+import Confirmed from "components/forms/Confirmed/Confirmed";
 
 import styles from "./Auth.module.scss";
 

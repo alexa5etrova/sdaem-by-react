@@ -2,15 +2,15 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 
-import { fetchNews } from "./../../redux/newsSlice";
-import Breadcrumbs from "./../../components/Breadcrumbs/Breadcrumbs";
-import Htag from "./../../components/Htag/Htag";
-import DateTag from "../../components/DateTag/DateTag";
-import NewsCard from "../../components/NewsCard/NewsCard";
-import Loader from "../../components/Loader/Loader";
-import SocialsShared from "../../components/SocialsShared/SocialsShared";
-import { CRUMBS } from "./../../data/nav";
-import { HOME_URL } from "./../../data/admin";
+import { fetchNews } from "redux/newsSlice";
+import Breadcrumbs from "components/Breadcrumbs/Breadcrumbs";
+import Htag from "components/Htag/Htag";
+import DateTag from "components/DateTag/DateTag";
+import NewsCard from "components/NewsCard/NewsCard";
+import Loader from "components/Loader/Loader";
+import SocialsShared from "components/SocialsShared/SocialsShared";
+import { CRUMBS } from "data/nav";
+import { HOME_URL } from "data/admin";
 
 import styles from "./NewsItem.module.scss";
 
