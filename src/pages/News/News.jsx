@@ -12,6 +12,7 @@ import { CRUMBS } from "data/nav";
 import { NEWS_PER_PAGE } from "data/news";
 
 import styles from "./News.module.scss";
+import { STATUSES } from "data/admin";
 
 const News = (props) => {
   const dispatch = useDispatch();
@@ -34,13 +35,13 @@ const News = (props) => {
   };
 
   // реализация поиска - значения для  переменной search приходят из компонента Search
-  if (status === "loading") {
+  if (status === STATUSES.loading) {
     return <Loader />;
   }
-  if (status === "rejected") {
+  if (status === STATUSES.rejected) {
     return <p>{error}</p>;
   }
-  if (status === "resolved") {
+  if (status === STATUSES.resolved) {
     const filteredNewsData = news.filter(function (item) {
       if (search === "") {
         return item;
@@ -57,21 +58,12 @@ const News = (props) => {
         <Search searchHandler={setSearch}></Search>
         <Htag tag="h1">Новости</Htag>
         <div className={styles.newsContainer}>
-          {status === "resolved" && filteredNewsData.length === 0 ? (
+          {status === STATUSES.resolved && filteredNewsData.length === 0 ? (
             <p className={styles.noResults}>Нет статей соответсвующих поиску</p>
           ) : null}
-          {status === "resolved" &&
+          {status === STATUSES.resolved &&
             filteredNewsData.slice(firstContentIndex, lastContentIndex).map(function (item) {
-              return (
-                <NewsCard
-                  key={item.id}
-                  id={item.id}
-                  title={item.title}
-                  date={item.date}
-                  text={item.short}
-                  photo={item.photo}
-                />
-              );
+              return <NewsCard key={item.id} {...item} />;
             })}
         </div>
         <div className={styles.paginationContainer}>

@@ -5,8 +5,8 @@ import { NEWS_PREVIEW_LENGTH } from "data/news";
 
 import styles from "./NewsCard.module.scss";
 
-const NewsCard = ({ id, text, title, photo, date }) => {
-  let cutText = text.substr(0, NEWS_PREVIEW_LENGTH) + "...";
+const NewsCard = ({ id, short, title, photo, date }) => {
+  let cutText = short.substr(0, NEWS_PREVIEW_LENGTH) + "...";
 
   return (
     <div className={styles.card}>

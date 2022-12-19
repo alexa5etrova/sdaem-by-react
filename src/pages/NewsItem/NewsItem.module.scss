@@ -22,6 +22,7 @@
 
 .photo {
   width: 844px;
+  max-width: 844px;
   margin: -44px auto 0 auto;
 }
 .photo img {
@@ -31,6 +32,7 @@
 }
 .newsText {
   max-width: 844px;
+  width: 844px;
   margin: 0 auto;
   padding-top: 37px;
   padding-bottom: 42px;
@@ -52,7 +54,6 @@
 }
 .extraNewsContainer {
   display: flex;
-  flex-direction: row;
   gap: 30px;
   margin-top: 43px;
 }

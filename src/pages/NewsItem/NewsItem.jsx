@@ -11,29 +11,28 @@ import Loader from "components/Loader/Loader";
 import SocialsShared from "components/SocialsShared/SocialsShared";
 import { CRUMBS } from "data/nav";
 import { HOME_URL } from "data/admin";
+import { STATUSES } from "data/admin";
 
 import styles from "./NewsItem.module.scss";
 
 const NewsItem = (props) => {
+  const { newsId } = useParams();
   const dispatch = useDispatch();
-
   useEffect(() => {
-    dispatch(fetchNews("/news"));
+    dispatch(fetchNews(`/news?_start=${newsId}&_end=${newsId + 3}`));
   }, [dispatch]);
 
-  const { newsId } = useParams();
   const { news, status } = useSelector((state) => state.news);
 
-  if (status === "resolved") {
-    let showenNews = news.find((item) => item.id === Number(newsId));
+  if (status === STATUSES.resolved && news.length > 0) {
+    let showenNews = news[0];
 
-    let crumbs = [
+    const crumbs = [
       ...CRUMBS.news,
       { title: showenNews.title, url: `/news/${showenNews.id}`, id: 202 },
     ];
 
-    let index = news.findIndex((item) => item.id === Number(newsId));
-    let readMore = [...news].splice(index + 1, 3);
+    let readMore = [...news].splice(1, 3);
 
     return (
       <>
@@ -55,7 +54,7 @@ const NewsItem = (props) => {
             </div>
           </div>
           <div className={styles.photo}>
-            <img src={`./../${showenNews.photo}`} alt={showenNews.title} />
+            <img src={showenNews.photo} alt={showenNews.title} />
           </div>
           <div className={styles.newsText}>
             {showenNews.body.map((text, index) => (
@@ -69,22 +68,22 @@ const NewsItem = (props) => {
             <Htag tag="h2">Читайте также</Htag>
             <div className={styles.extraNewsContainer}>
               {readMore.map((item) => (
-                <NewsCard
-                  key={item.id}
-                  id={item.id}
-                  title={item.title}
-                  date={item.date}
-                  text={item.short}
-                  photo={`./../${item.photo}`}
-                />
+                <NewsCard key={item.id} {...item} />
               ))}
             </div>
           </div>
         </div>
       </>
     );
+  } else if (status === STATUSES.loading) {
+    return (
+      <>
+        <Loader />
+      </>
+    );
+  } else {
+    return <div>такой новости не существует</div>;
   }
-  return <Loader />;
 };
 
 export default NewsItem;
