@@ -6,7 +6,6 @@ import { fetchNews } from "redux/newsSlice";
 import Breadcrumbs from "components/Breadcrumbs/Breadcrumbs";
 import Htag from "components/Htag/Htag";
 import DateTag from "components/DateTag/DateTag";
-import NewsCard from "components/NewsCard/NewsCard";
 import Loader from "components/Loader/Loader";
 import SocialsShared from "components/SocialsShared/SocialsShared";
 import { CRUMBS } from "data/nav";
@@ -14,25 +13,24 @@ import { HOME_URL } from "data/admin";
 import { STATUSES } from "data/admin";
 
 import styles from "./NewsItem.module.scss";
+import ReadMore from "./ReadMore/ReadMore";
 
 const NewsItem = (props) => {
   const { newsId } = useParams();
   const dispatch = useDispatch();
+
   useEffect(() => {
-    dispatch(fetchNews(`/news?_start=${newsId}&_end=${newsId + 3}`));
-  }, [dispatch]);
+    dispatch(fetchNews(`/news?_start=${newsId}&_limit=4`));
+  }, [dispatch, newsId]);
 
   const { news, status } = useSelector((state) => state.news);
 
   if (status === STATUSES.resolved && news.length > 0) {
     let showenNews = news[0];
-
     const crumbs = [
       ...CRUMBS.news,
       { title: showenNews.title, url: `/news/${showenNews.id}`, id: 202 },
     ];
-
-    let readMore = [...news].splice(1, 3);
 
     return (
       <>
@@ -62,17 +60,7 @@ const NewsItem = (props) => {
             ))}
           </div>
         </div>
-
-        <div className={styles.readMore}>
-          <div className={styles.readMoreContainer}>
-            <Htag tag="h2">Читайте также</Htag>
-            <div className={styles.extraNewsContainer}>
-              {readMore.map((item) => (
-                <NewsCard key={item.id} {...item} />
-              ))}
-            </div>
-          </div>
-        </div>
+        <ReadMore news={news} />
       </>
     );
   } else if (status === STATUSES.loading) {
