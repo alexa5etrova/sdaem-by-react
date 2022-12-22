@@ -1,20 +1,22 @@
 import { useState } from "react";
+import HeartIcon from "assets/icons/Heart";
+
+import LocationIcon from "assets/icons/LocationIcon";
+import MetroIcon from "assets/icons/MetroIcon";
+import PhoneIcon from "assets/icons/PhoneIcon";
+import UserIcon from "assets/icons/UserIcon";
 import cn from "classnames";
+import Button from "components/Button/Button";
+
+import CardSlider from "components/FlatCard/CardSlider/CardSlider";
+import LinkTag from "components/LinkTag/LinkTag";
+import OwnerContacts from "components/OwnerContacts/OwnerContacts";
+import Tag from "components/Tag/Tag";
 
 import { FLAT_PREVIEW_LENGTH } from "data/flats";
-import LinkTag from "components/LinkTag/LinkTag";
-import Tag from "components/Tag/Tag";
-import Button from "components/Button/Button";
-import OwnerContacts from "components/OwnerContacts/OwnerContacts";
-import CardSlider from "components/FlatCard/CardSlider/CardSlider";
-
-import { ReactComponent as UserIcon } from "assets/icons/user.svg";
-import { ReactComponent as LocationIcon } from "assets/icons/location.svg";
-import { ReactComponent as MetroIcon } from "assets/icons/metro.svg";
-import { ReactComponent as PhoneIcon } from "assets/icons/phone.svg";
-import { ReactComponent as HeartIcon } from "./../heart.svg";
 
 import styles from "./TileCard.module.scss";
+
 
 const TileCard = ({ flat }) => {
   const [showContacts, setShowContacts] = useState(false);

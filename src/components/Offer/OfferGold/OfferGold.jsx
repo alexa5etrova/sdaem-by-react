@@ -1,7 +1,10 @@
+import ChevronIcon from "assets/icons/ChevronIcon";
+
 import LinkTag from "components/LinkTag/LinkTag";
-import { ReactComponent as ArrowIcon } from "assets/icons/chevron.svg";
-import styles from "./OfferGold.module.scss";
 import { OFFERS } from "data/home";
+
+import styles from "./OfferGold.module.scss";
+
 
 const OfferGold = () => {
   let offer = OFFERS.offerGold;
@@ -12,7 +15,7 @@ const OfferGold = () => {
         <p key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: item }}></p>
       ))}
       <LinkTag to={offer.linkTo} linkStyle="gradientHome">
-        {offer.linkText} <ArrowIcon width="9" height="11" className={styles.arrow} />
+        {offer.linkText} <ChevronIcon width="9" height="11" className={styles.arrow} />
       </LinkTag>
     </div>
   );

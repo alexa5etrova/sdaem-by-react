@@ -1,7 +1,6 @@
-import { ReactComponent as ArrowIcon } from "assets/icons/chevron.svg";
-import { ReactComponent as HeartIcon } from "assets/icons/heart.svg";
-import { ReactComponent as LocationIcon } from "assets/icons/location.svg";
-
+import ChevronIcon from "assets/icons/ChevronIcon";
+import HeartIcon from "assets/icons/Heart";
+import LocationIcon from "assets/icons/LocationIcon";
 import cn from "classnames";
 import { SITEMAP } from "data/nav";
 import { useSelector } from "react-redux";
@@ -50,7 +49,7 @@ const SiteMapPanel = () => {
             {isAuth && (
               <Link to="/settings">
                 {user.login}
-                <ArrowIcon className={styles.arrow} width="10" height="12" />
+                <ChevronIcon className={styles.arrow} width="10" height="12" />
               </Link>
             )}
           </li>

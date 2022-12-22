@@ -1,13 +1,16 @@
+import HomeIcon from "assets/icons/HomeIcon";
 import { Link } from "react-router-dom";
+
+
 import styles from "./Breadcrumbs.module.scss";
-import { ReactComponent as Home } from "assets/icons/home.svg";
+
 
 const Breadcrumbs = ({ crumbs }) => {
   return (
     <ul className={styles.breadcrumbs}>
       <li>
         <Link to="/">
-          <Home />
+          <HomeIcon />
         </Link>
       </li>
       {crumbs.map((crumb) => (

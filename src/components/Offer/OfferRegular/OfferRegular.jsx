@@ -1,5 +1,7 @@
 import Htag from "components/Htag/Htag";
+
 import styles from "./OfferRegular.module.scss";
+
 
 const OfferRegular = ({ photo, title, text, children }) => {
   return (

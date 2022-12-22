@@ -1,15 +1,17 @@
-import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { fetchNews } from "redux/newsSlice";
+import ChevronIcon from "assets/icons/ChevronIcon";
+import DateTag from "components/DateTag/DateTag";
+import Htag from "components/Htag/Htag";
+
+import LinkTag from "components/LinkTag/LinkTag";
+import Loader from "components/Loader/Loader";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
-import Htag from "components/Htag/Htag";
-import Loader from "components/Loader/Loader";
-import LinkTag from "components/LinkTag/LinkTag";
-import DateTag from "components/DateTag/DateTag";
-import { ReactComponent as ArrowIcon } from "assets/icons/chevron.svg";
+import { fetchNews } from "redux/newsSlice";
 
 import styles from "./HomeNewsNav.module.scss";
+
 
 const HomeNewsNav = () => {
   const dispatch = useDispatch();
@@ -40,7 +42,7 @@ const HomeNewsNav = () => {
           ))}
         </ul>
         <LinkTag linkStyle="newsSeeAll" to="/news">
-          Посмотреть все <ArrowIcon height="13" width="7" className={styles.arrow} />
+          Посмотреть все <ChevronIcon height="13" width="7" className={styles.arrow} />
         </LinkTag>
       </nav>
     );

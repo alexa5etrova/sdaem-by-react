@@ -1,22 +1,25 @@
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import cn from "classnames";
 import { useState } from "react";
 
-import { userSignIn } from "redux/authSlice";
-import Loader from "components/Loader/Loader";
+import AttentionIcon from "assets/icons/AttentionIcon";
+import cn from "classnames";
+import Button from "components/Button/Button";
+import Dialog from "components/forms/Dialog/Dialog";
+
 import FormWrapper from "components/forms/FormWrapper/FormWrapper";
 import Input from "components/forms/Input/Input";
-import Htag from "components/Htag/Htag";
-import Button from "components/Button/Button";
 import Switch from "components/forms/Switch/Switch";
-import Dialog from "components/forms/Dialog/Dialog";
-import { ReactComponent as AttentionIcon } from "assets/icons/attention.svg";
+import Htag from "components/Htag/Htag";
+import Loader from "components/Loader/Loader";
 import { AUTH_OK, AUTH_SENT_FAILED } from "data/auth";
+import { useFormik } from "formik";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { userSignIn } from "redux/authSlice";
+
+import * as Yup from "yup";
 
 import styles from "./SignIn.module.scss";
+
 
 const SignIn = (props) => {
   const { status, error } = useSelector((state) => state.auth);

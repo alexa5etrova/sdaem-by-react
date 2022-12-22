@@ -1,11 +1,13 @@
 import { useState } from "react";
 
-import Input from "components/forms/Input/Input";
+import SearchIcon from "assets/icons/Search";
 import Button from "components/Button/Button";
+import Input from "components/forms/Input/Input";
+
 import SearchContainer from "components/forms/SearchContainer/SearchContainer";
-import { ReactComponent as SearchIcon } from "assets/icons/search.svg";
 
 import styles from "./Search.module.scss";
+
 
 const Search = ({ searchHandler }) => {
   const [searchInput, setSearchInput] = useState("");

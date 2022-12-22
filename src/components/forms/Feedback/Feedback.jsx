@@ -1,19 +1,22 @@
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import cn from "classnames";
-import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
+import AttentionIcon from "assets/icons/AttentionIcon";
+import cn from "classnames";
+import Button from "components/Button/Button";
+import Dialog from "components/forms/Dialog/Dialog";
+
+import FormWrapper from "components/forms/FormWrapper/FormWrapper";
+import Input from "components/forms/Input/Input";
+import Loader from "components/Loader/Loader";
+import { MESSAGE_SENT, MESSAGE_SENT_FAILED } from "data/contacts";
+import { useFormik } from "formik";
+import { useDispatch, useSelector } from "react-redux";
 
 import { sendMessage } from "redux/messageSlice";
-import Loader from "components/Loader/Loader";
-import Button from "components/Button/Button";
-import Input from "components/forms/Input/Input";
-import FormWrapper from "components/forms/FormWrapper/FormWrapper";
-import Dialog from "components/forms/Dialog/Dialog";
-import { ReactComponent as AttentionIcon } from "assets/icons/attention.svg";
-import { MESSAGE_SENT, MESSAGE_SENT_FAILED } from "data/contacts";
+
+import * as Yup from "yup";
 
 import styles from "./Feedback.module.scss";
+
 
 const Feedback = (props) => {
   const dispatch = useDispatch();

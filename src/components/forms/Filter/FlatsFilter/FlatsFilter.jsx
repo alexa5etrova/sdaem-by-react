@@ -1,17 +1,19 @@
-import { Form, Formik, Field } from "formik";
-import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
+import ChevronIcon from "assets/icons/ChevronIcon";
+import SetupIcon from "assets/icons/SetupIcon";
 import cn from "classnames";
 
 import Button from "components/Button/Button";
-import Select from "components/forms/Select/Select";
 import Checkbox from "components/forms/Checkbox/Checkbox";
+import Select from "components/forms/Select/Select";
 import { ROOMS, SLEEPING_PLACES, DISTRICT, METRO, EQUIPMENT } from "data/flats";
 
-import { ReactComponent as SetupIcon } from "assets/icons/setup.svg";
-import { ReactComponent as ArrowIcon } from "assets/icons/chevron.svg";
+import { Form, Formik, Field } from "formik";
+import { useNavigate, useLocation } from "react-router-dom";
+
 
 import styles from "./FlatsFilter.module.scss";
+
 
 const FlatsFilter = ({ page }) => {
   const [showOptions, setShowOptions] = useState(false);
@@ -96,7 +98,7 @@ const FlatsFilter = ({ page }) => {
             </Button>
             <Button type="submit" btnStyle="violet">
               Показать объекты
-              <ArrowIcon width="7" height="11" className={styles.toFlatsIconWhite} />
+              <ChevronIcon width="7" height="11" className={styles.toFlatsIconWhite} />
             </Button>
           </div>
 

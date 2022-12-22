@@ -1,6 +1,9 @@
+import ChevronIcon from "assets/icons/ChevronIcon";
+
 import LinkTag from "../LinkTag/LinkTag";
-import { ReactComponent as ArrowIcon } from "assets/icons/chevron.svg";
+
 import styles from "./Total.module.scss";
+
 
 const Total = ({ total }) => {
   return (
@@ -10,7 +13,7 @@ const Total = ({ total }) => {
         <span>+</span>
       </div>
       <LinkTag to="flats?city=minsk" linkStyle="gradientHome">
-        Поcмотреть все <ArrowIcon width="9" height="11" className={styles.linkIcon} />
+        Поcмотреть все <ChevronIcon width="9" height="11" className={styles.linkIcon} />
       </LinkTag>
       <p className={styles.text}>Предложений по Минску</p>
     </div>

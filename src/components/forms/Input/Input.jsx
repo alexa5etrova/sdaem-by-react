@@ -1,11 +1,15 @@
 import React from "react";
 import { useState } from "react";
+import AttentionIcon from "assets/icons/AttentionIcon";
+
+import EnvelopeIcon from "assets/icons/EnvelopeIcon";
+import LockIcon from "assets/icons/LockIcon";
+import UserIcon from "assets/icons/UserIcon";
+
 import cn from "classnames";
-import { ReactComponent as UserIcon } from "assets/icons/user.svg";
-import { ReactComponent as LockIcon } from "assets/icons/lock.svg";
-import { ReactComponent as EmailIcon } from "assets/icons/envelope.svg";
-import { ReactComponent as AttentionIcon } from "assets/icons/attention.svg";
+
 import styles from "./Input.module.scss";
+
 
 const Input = (props) => {
   const [iconOnFocus, setIconOnFocus] = useState(false);
@@ -24,7 +28,7 @@ const Input = (props) => {
       icon = <UserIcon className={iconStyles} />;
       break;
     case "email":
-      icon = <EmailIcon className={iconStyles} />;
+      icon = <EnvelopeIcon className={iconStyles} />;
       break;
     case "password":
       icon = <LockIcon className={iconStyles} />;

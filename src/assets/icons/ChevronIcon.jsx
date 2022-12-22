@@ -1,8 +1,9 @@
-const ChevronIcon = ({ color, width = "20", height = "20" }) => {
+const ChevronIcon = ({ className, color, width = "20", height = "20" }) => {
   return (
     <svg
       width={width}
       height={height}
+      className={className}
       viewBox="0 0 9 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

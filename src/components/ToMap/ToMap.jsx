@@ -1,10 +1,12 @@
+import LocationIcon from "assets/icons/LocationIcon";
 import cn from "classnames";
+
 import Background from "../Background/Background";
 import Htag from "../Htag/Htag";
 import LinkTag from "../LinkTag/LinkTag";
-import { ReactComponent as LocationIcon } from "./../../assets/icons/location.svg";
 
 import styles from "./ToMap.module.scss";
+
 
 const ToMap = ({ header, page, body }) => {
   return (

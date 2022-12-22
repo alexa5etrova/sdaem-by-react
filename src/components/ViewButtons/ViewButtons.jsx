@@ -1,16 +1,19 @@
-import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
-import cn from "classnames";
+import ChevronIcon from "assets/icons/ChevronIcon";
+import ListIcon from "assets/icons/ListIcon";
 
+import LocationIcon from "assets/icons/LocationIcon";
+import SortIcon from "assets/icons/SortICon";
+
+import TileIcon from "assets/icons/TileIcon";
+import cn from "classnames";
 import Button from "components/Button/Button";
 import LinkTag from "components/LinkTag/LinkTag";
-import { ReactComponent as ListIcon } from "./list.svg";
-import { ReactComponent as TileIcon } from "./tile.svg";
-import { ReactComponent as SortIcon } from "./sort.svg";
-import { ReactComponent as LocationIcon } from "assets/icons/location.svg";
-import { ReactComponent as Arrow } from "assets/icons/chevron.svg";
+import { useLocation, useNavigate } from "react-router-dom";
+
 
 import styles from "./ViewButtons.module.scss";
+
 
 const ViewButtons = ({ view, setView }) => {
   const [sort, setSort] = useState("");
@@ -65,7 +68,7 @@ const ViewButtons = ({ view, setView }) => {
     <div className={styles.buttonsWrapper}>
       <div className={styles.selectWrapper}>
         <span className={styles.selectArrow}>
-          <Arrow width="13" height="13" />
+          <ChevronIcon width="13" height="13" />
         </span>
         <SortIcon width="15" height="15" className={styles.sortIcon} />
         <select

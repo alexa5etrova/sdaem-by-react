@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { ReactComponent as LocationIcon } from "assets/icons/location.svg";
 
+import LocationIcon from "assets/icons/LocationIcon";
 import logo from "assets/images/logo.png";
 import Button from "components/Button/Button";
 import Dropdown from "components/Dropdown/Dropdown";
 import { CATEGORIES, FLAT_CATEGORIES } from "data/nav";
-import { Link, useLocation } from "react-router-dom";
 
+import { Link, useLocation } from "react-router-dom";
 
 import styles from "./Nav.module.scss";
 

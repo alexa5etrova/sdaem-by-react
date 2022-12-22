@@ -1,14 +1,13 @@
-import { ReactComponent as ClockIcon } from "assets/icons/clock.svg";
+import ClockIcon from "assets/icons/ClockIcon";
+import EnvelopeIcon from "assets/icons/EnvelopeIcon";
 
-import { ReactComponent as EmailIcon } from "assets/icons/envelope.svg";
-import { ReactComponent as LocationIcon } from "assets/icons/location.svg";
-import { ReactComponent as PhoneIcon } from "assets/icons/phone.svg";
-import { ReactComponent as TelegramIcon } from "assets/icons/telegram.svg";
-import { ReactComponent as ViberIcon } from "assets/icons/viber.svg";
-import { ReactComponent as WhatsappIcon } from "assets/icons/whatsapp.svg";
+import LocationIcon from "assets/icons/LocationIcon";
+import PhoneIcon from "assets/icons/PhoneIcon";
+import TelegramIcon from "assets/icons/TelegramIcon";
+import ViberIcon from "assets/icons/ViberIcon";
+import WhatsappIcon from "assets/icons/WhatsappIcon";
 import cn from "classnames";
 import { COMPANY } from "data/contacts";
-
 
 import styles from "./ContactDetails.module.scss";
 
@@ -58,7 +57,7 @@ const ContactDetails = (props) => {
       </div>
       <div className={styles.contactRow}>
         <div className={styles.contactIcon}>
-          <EmailIcon />
+          <EnvelopeIcon />
         </div>
         <div className={styles.contactEmail}>
           <a href={email}>{COMPANY.email}</a>

@@ -1,17 +1,19 @@
+import { useState } from "react";
+import ChevronIcon from "assets/icons/ChevronIcon";
+import LocationIcon from "assets/icons/LocationIcon";
+import SetupIcon from "assets/icons/SetupIcon";
+
+import cn from "classnames";
+import Button from "components/Button/Button";
+import Checkbox from "components/forms/Checkbox/Checkbox";
+import Select from "components/forms/Select/Select";
+
+import { CITIES, ROOMS, SLEEPING_PLACES, DISTRICT, METRO, EQUIPMENT } from "data/flats";
 import { Form, Formik, Field } from "formik";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import cn from "classnames";
-
-import Button from "components/Button/Button";
-import Select from "components/forms/Select/Select";
-import Checkbox from "components/forms/Checkbox/Checkbox";
-import { CITIES, ROOMS, SLEEPING_PLACES, DISTRICT, METRO, EQUIPMENT } from "data/flats";
-import { ReactComponent as LocationIcon } from "assets/icons/location.svg";
-import { ReactComponent as SetupIcon } from "assets/icons/setup.svg";
-import { ReactComponent as ArrowIcon } from "assets/icons/chevron.svg";
 
 import styles from "./HomeFilter.module.scss";
+
 
 const HomeFilter = ({ page }) => {
   const [showOptions, setShowOptions] = useState(false);
@@ -97,7 +99,7 @@ const HomeFilter = ({ page }) => {
 
           <Button type="submit" btnStyle="filter">
             Показать
-            <ArrowIcon width="7" height="11" className={styles.toFlatsIcon} />
+            <ChevronIcon width="7" height="11" className={styles.toFlatsIcon} />
           </Button>
 
           {showOptions && (

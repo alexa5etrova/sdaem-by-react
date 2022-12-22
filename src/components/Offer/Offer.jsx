@@ -1,14 +1,17 @@
-import LinkTag from "components/LinkTag/LinkTag";
-import ToMap from "components/ToMap/ToMap";
-import OfferRegular from "./OfferRegular/OfferRegular";
-import { ReactComponent as ArrowIcon } from "assets/icons/chevron.svg";
+import ChevronIcon from "assets/icons/ChevronIcon";
 import dots from "assets/images/dotsWhite.png";
 import photo1 from "assets/images/offer1.png";
+
 import photo2 from "assets/images/offer2.png";
+import LinkTag from "components/LinkTag/LinkTag";
+import ToMap from "components/ToMap/ToMap";
 import { OFFERS } from "data/home";
+
 
 import styles from "./Offer.module.scss";
 import OfferGold from "./OfferGold/OfferGold";
+import OfferRegular from "./OfferRegular/OfferRegular";
+
 
 const Offer = () => {
   let offer1 = OFFERS.offersRegular[0];
@@ -32,7 +35,7 @@ const Offer = () => {
         </OfferRegular>
         <OfferRegular photo={photo2} title={offer2.title} text={offer2.text}>
           <LinkTag to={offer2.linkTo} linkStyle="yellowBtn">
-            {offer2.linkText} <ArrowIcon width="10" height="13" className={styles.arrow} />
+            {offer2.linkText} <ChevronIcon width="10" height="13" className={styles.arrow} />
             <span className={styles.arrowGap}></span>
           </LinkTag>
         </OfferRegular>

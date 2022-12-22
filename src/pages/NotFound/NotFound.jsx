@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
-import { ReactComponent as HomeIcon } from "assets/icons/home.svg";
-import Background from "components/Background/Background";
+import HomeIcon from "assets/icons/HomeIcon";
+
 import photo404 from "assets/images/404.png";
+import Background from "components/Background/Background";
 import Htag from "components/Htag/Htag";
+import { Link } from "react-router-dom";
+
 import styles from "./NotFound.module.scss";
+
 
 const NotFound = () => {
   return (

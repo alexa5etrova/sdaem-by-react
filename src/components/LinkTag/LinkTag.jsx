@@ -1,7 +1,10 @@
+import ChevronIcon from "assets/icons/ChevronIcon";
 import cn from "classnames";
 import { Link } from "react-router-dom";
-import { ReactComponent as ChevronIcon } from "assets/icons/chevron.svg";
+
+
 import styles from "./LinkTag.module.scss";
+
 
 const LinkTag = ({ children, linkStyle, to, ...props }) => {
   switch (linkStyle) {
@@ -26,7 +29,7 @@ const LinkTag = ({ children, linkStyle, to, ...props }) => {
     case "roundArrow":
       return (
         <Link to={to} className={styles.round} {...props}>
-          <ChevronIcon width="10" height="16" className={styles.icon} />
+          <ChevronIcon width="10" height="16" className={styles.icon} color="white" />
         </Link>
       );
     case "black":
