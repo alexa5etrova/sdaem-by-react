@@ -1,5 +1,6 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { HOME_URL } from "data/admin";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+
 
 export const fetchNews = createAsyncThunk("news/fetchNews", async function (url) {
   const responce = await fetch(`${HOME_URL}${url}`);

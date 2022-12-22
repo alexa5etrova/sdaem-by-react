@@ -1,12 +1,14 @@
-import ReactDOM from "react-dom";
 import { useState } from "react";
-
 import Background from "components/Background/Background";
+
+import Confirmed from "components/forms/Confirmed/Confirmed";
 import SignIn from "components/forms/SignIn/SignIn";
 import SignUp from "components/forms/Signup/Signup";
-import Confirmed from "components/forms/Confirmed/Confirmed";
+import ReactDOM from "react-dom";
+
 
 import styles from "./Auth.module.scss";
+
 
 const Auth = (props) => {
   const [showenDialog, setShowenDialog] = useState("login");

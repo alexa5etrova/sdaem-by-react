@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import Breadcrumbs from "components/Breadcrumbs/Breadcrumbs";
 
+import Search from "components/forms/Search/Search";
 import Htag from "components/Htag/Htag";
+import Loader from "components/Loader/Loader";
 import NewsCard from "components/NewsCard/NewsCard";
 import Pagination from "components/Pagination/Pagination";
-import Breadcrumbs from "components/Breadcrumbs/Breadcrumbs";
-import Search from "components/forms/Search/Search";
-import Loader from "components/Loader/Loader";
-import { fetchNews } from "redux/newsSlice";
+import { STATUSES } from "data/admin";
 import { CRUMBS } from "data/nav";
 import { NEWS_PER_PAGE } from "data/news";
+import { useSelector, useDispatch } from "react-redux";
+
+import { fetchNews } from "redux/newsSlice";
 
 import styles from "./News.module.scss";
-import { STATUSES } from "data/admin";
+
 
 const News = (props) => {
   const dispatch = useDispatch();

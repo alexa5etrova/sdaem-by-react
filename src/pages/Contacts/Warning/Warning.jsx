@@ -1,5 +1,7 @@
 import { ReactComponent as AttentionIcon } from "assets/icons/attention.svg";
+
 import styles from "./Warning.module.scss";
+
 
 const Warning = (props) => {
   return (

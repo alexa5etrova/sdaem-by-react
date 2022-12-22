@@ -11,6 +11,7 @@ import SocialsShared from "components/SocialsShared/SocialsShared";
 import { CRUMBS } from "data/nav";
 import { HOME_URL } from "data/admin";
 import { STATUSES } from "data/admin";
+import { NEWSITEM_READMORE } from "data/news";
 
 import styles from "./NewsItem.module.scss";
 import ReadMore from "./ReadMore/ReadMore";
@@ -20,13 +21,13 @@ const NewsItem = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchNews(`/news?_start=${newsId}&_limit=4`));
+    dispatch(fetchNews(`/news?_start=${newsId}&_limit=${NEWSITEM_READMORE}`));
   }, [dispatch, newsId]);
 
   const { news, status } = useSelector((state) => state.news);
 
   if (status === STATUSES.resolved && news.length > 0) {
-    let showenNews = news[0];
+    const showenNews = news[0];
     const crumbs = [
       ...CRUMBS.news,
       { title: showenNews.title, url: `/news/${showenNews.id}`, id: 202 },

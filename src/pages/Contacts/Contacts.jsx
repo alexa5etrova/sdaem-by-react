@@ -1,11 +1,13 @@
-import Htag from "components/Htag/Htag";
 import Background from "components/Background/Background";
 import Feedback from "components/forms/Feedback/Feedback";
-import ContactDetails from "./ContactsDetails/ContactDetails";
-import Warning from "./Warning/Warning";
+import Htag from "components/Htag/Htag";
 import { COMPANY } from "data/contacts";
 
 import styles from "./Contacts.module.scss";
+import ContactDetails from "./ContactsDetails/ContactDetails";
+
+import Warning from "./Warning/Warning";
+
 
 const Contacts = (props) => {
   return (

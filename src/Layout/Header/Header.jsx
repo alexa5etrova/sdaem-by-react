@@ -1,10 +1,9 @@
 import Nav from "./Nav/Nav";
 import SiteMapPanel from "./SiteMapPanel/SiteMapPanel";
-import styles from "./Header.module.scss";
 
-const Header = (props) => {
+const Header = () => {
   return (
-    <header className={styles.header}>
+    <header>
       <SiteMapPanel />
       <Nav />
     </header>

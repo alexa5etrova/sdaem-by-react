@@ -1,22 +1,26 @@
-import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
 import cn from "classnames";
-
-import { fetchFlats } from "redux/flatsSlice";
-import Filter from "components/forms/Filter/Filter";
 import Background from "components/Background/Background";
-import PhotoLink from "components/PhotoLink/PhotoLink";
-import SidebarNav from "components/SidebarNav/SidebarNav";
-import Loader from "components/Loader/Loader";
-import Carousel from "components/Carousel/Carousel";
-import Htag from "components/Htag/Htag";
-import Total from "components/Total/Total";
-import Offer from "components/Offer/Offer";
+
+import FlatCarousel from "components/FlatCarousel/FlatCarousel";
+import Filter from "components/forms/Filter/Filter";
 import HomeArticle from "components/HomeArticle/HomeArticle";
 import HomeNewsNav from "components/HomeNewsNav/HomeNewsNav";
+import Htag from "components/Htag/Htag";
+import Loader from "components/Loader/Loader";
+import Offer from "components/Offer/Offer";
+import PhotoLink from "components/PhotoLink/PhotoLink";
+import SidebarNav from "components/SidebarNav/SidebarNav";
+import Total from "components/Total/Total";
+import { STATUSES } from "data/admin";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+
+import { fetchFlats } from "redux/flatsSlice";
+
 
 import styles from "./Home.module.scss";
+
 
 const Home = (props) => {
   const dispatch = useDispatch();
@@ -27,13 +31,13 @@ const Home = (props) => {
 
   const { flats, status, error } = useSelector((state) => state.flats);
 
-  if (status === "loading") {
+  if (status === STATUSES.loading) {
     return <Loader />;
   }
-  if (status === "rejected") {
+  if (status === STATUSES.rejected) {
     return <p>{error}</p>;
   }
-  if (status === "resolved")
+  if (status === STATUSES.resolved)
     return (
       <>
         <div className={styles.container}>
@@ -54,7 +58,7 @@ const Home = (props) => {
             <Htag tag="h2">Аренда квартир в Минске</Htag>
           </div>
           <div className={styles.carousel}>
-            <Carousel flats={flats} />
+            <FlatCarousel flats={flats} />
             <Total total={flats.length} />
           </div>
         </div>

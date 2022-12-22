@@ -1,20 +1,23 @@
-import { Link } from "react-router-dom";
+import logo from "assets/images/logo.png";
 import cn from "classnames";
 
 import PaymentsLogo from "components/PaymentsLogo/PaymentsLogo";
 import SocialMediaLogo from "components/SocialMediaLogo/SocialMediaLogo";
-import logo from "assets/images/logo.png";
-import { CATEGORIES, FLAT_CATEGORIES, SITEMAP } from "data/nav";
 import { COMPANY } from "data/contacts";
+import { CATEGORIES, FLAT_CATEGORIES, SITEMAP } from "data/nav";
+import { Link } from "react-router-dom";
+
+
 import styles from "./Footer.module.scss";
+
 
 const Footer = () => {
   const navList = CATEGORIES.filter((item) => item.name !== "Квартиры");
   const flats = CATEGORIES.filter((item) => item.name === "Квартиры");
   const siteMap = SITEMAP.filter((item) => item.name !== "Главная");
 
-  let phone = "tel:" + COMPANY.phone;
-  let email = "mailto:" + COMPANY.email;
+  const phone = "tel:" + COMPANY.phone;
+  const email = "mailto:" + COMPANY.email;
 
   return (
     <footer className={styles.footer}>

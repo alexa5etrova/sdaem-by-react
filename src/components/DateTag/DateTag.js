@@ -1,25 +1,13 @@
-import styles from "./DateTag.module.scss";
 import cn from "classnames";
 
-const DateTag = ({ date, dateStyle }) => {
-  let months = [
-    "Январь",
-    "Февраль",
-    "Март",
-    "Апрель",
-    "Май",
-    "Июнь",
-    "Июль",
-    "Август",
-    "Сентябрь",
-    "Октябрь",
-    "Ноябрь",
-    "Декабрь",
-  ];
+import { MONTHS } from "./../../data/admin";
+import styles from "./DateTag.module.scss";
 
+
+const DateTag = ({ date, dateStyle }) => {
   let updDate = new Date(date);
-  let fullDate = updDate.getDay() + " " + months[updDate.getMonth()] + " " + updDate.getFullYear();
-  let withoutYear = updDate.getDay() + " " + months[updDate.getMonth()];
+  let fullDate = updDate.getDay() + " " + MONTHS[updDate.getMonth()] + " " + updDate.getFullYear();
+  let withoutYear = updDate.getDay() + " " + MONTHS[updDate.getMonth()];
 
   switch (dateStyle) {
     case "violet":

@@ -1,15 +1,18 @@
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import HomeFlatCard from "../FlatCard/HomeFlatCard/HomeFlatCard";
-import { SwiperButton } from "./SwiperButton/SwiperButton";
-import CarouselFilter from "components/forms/CarouselFilter/CarouselFilter";
-import styles from "./Carousel.module.scss";
 import { useState } from "react";
 
-const Carousel = ({ flats }) => {
+// Import Swiper styles
+import CarouselFilter from "components/forms/CarouselFilter/CarouselFilter";
+import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+
+import HomeFlatCard from "../FlatCard/HomeFlatCard/HomeFlatCard";
+import styles from "./FlatCarousel.module.scss";
+import { SwiperButton } from "./SwiperButton/SwiperButton";
+
+
+const FlatCarousel = ({ flats }) => {
   const [metro, setMetro] = useState("");
   const [district, setDistrict] = useState("");
 
@@ -40,4 +43,4 @@ const Carousel = ({ flats }) => {
   );
 };
 
-export default Carousel;
+export default FlatCarousel;
